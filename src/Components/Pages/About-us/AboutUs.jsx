@@ -1,15 +1,13 @@
 import React from 'react'
 import Navbar from '../../Navbar/Navbar'
 
-function Service() {
+function AboutUs() {
   return (
     <>
-
     <Navbar/>
-    <h1> Services</h1>
-    
+    about us
     </>
   )
 }
 
-export default Service
+export default AboutUs
