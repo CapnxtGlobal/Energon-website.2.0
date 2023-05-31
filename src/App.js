@@ -5,7 +5,7 @@ import Service from "./Components/Pages/Services/Service";
 import AboutUs from "./Components/Pages/About-us/About-us";
 import Contact from "./Components/Pages/Contact/Contact";
 
-import "./App.css";
+import "./App.scss";
 
 function App() {
   return (
