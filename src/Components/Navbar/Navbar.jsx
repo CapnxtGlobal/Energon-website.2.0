@@ -2,6 +2,7 @@ import React from "react";
 import logoWhite from "../../Assets/Images/logo white.svg";
 import logoBlack from "../../Assets/Images/logo black.svg";
 import { Link, useLocation } from "react-router-dom";
+import "./Navbar.scss"
 
 function Navbar() {
   const location = useLocation();
