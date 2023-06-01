@@ -1,0 +1,267 @@
+.Universal-Home {
+    margin: 0!important;
+    padding: 0!important;
+    text-decoration: none;
+    list-style: none;
+    background-color: whitesmoke;
+    overflow-x: hidden;
+
+    header {
+        height: 100vh;
+        width: 100vw;
+        background-image: url("../../../Assets/Images/Asset\ 1.png");
+        background-size: cover;
+        background-color: none;
+        margin-top: 0;
+        .power h1 {
+            padding: 265px;
+            padding-left: 15vw;
+            font-weight: bold;
+            color: white;
+            font-size: 3vw;
+            font-family: 'Montserrat', sans-serif;
+            letter-spacing: 0.55rem;
+
+            p {
+                font-size: 1.25vw;
+                font-weight: normal;
+                line-height: 4em;
+                word-spacing: 0;
+                letter-spacing: 0.25rem;
+                font-family: 'karla', sans-serif;
+            }
+        }
+
+    }
+
+
+    /*.navbar{
+    position: absolute;
+    background-color: none;
+    padding: 50px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  .navbar a{
+    color:white;
+  }
+  .navbar .logo{
+    color: white!important;
+  }
+  .navbar .nav-links ul{
+    display: flex;
+  }
+  .navbar .nav-links ul li{
+    margin: 0 25px ;
+    margin-left: 100px;
+  }
+  .navbar .menu-hamburger{
+    display: none;
+    background-color: none;
+    //position: absolute;
+     top: 50px;
+     right: 50px;
+     width: 55px;
+  }
+  a:hover{
+    color: rgba(251, 109, 15, 0.955);
+  }*/
+
+    .About {
+        display: flex;
+        margin-top: 10vw;
+        justify-content: space-between;
+        align-items: center;
+        font-family: 'karla', sans-serif;
+        background-color: whitesmoke;
+
+        p {
+            margin-bottom: 12vw;
+            font-family: 'karla', sans-serif;
+            margin-left: 19vw;
+        }
+
+        h1 {
+            padding: 2vw;
+            margin-left: 17vw;
+            color: rgba(251, 109, 15, 0.955);
+            font-weight: bold;
+        }
+
+        img {
+            width: 58%;
+            height: 65%;
+            margin-bottom: 8vw;
+        }
+    }
+
+    .Services {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        flex-direction: column;
+
+        .heading {
+            display: flex;
+            justify-content: flex-start;
+            align-items: baseline;
+            color: rgba(251, 109, 15, 0.955);
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .Logo {
+            justify-content: center;
+            text-align: center;
+            align-items: center;
+        }
+
+        .col {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: left;
+            margin: 4vw 0vw;
+            column-gap: 4rem;
+            //background-color: #ffffff;
+            //border: 1px solid rgb(251, 248, 248);
+        }
+
+        .row {
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            flex-direction: column;
+            width: 8vw;
+            height: 10vh;
+            background-color: #ffffff;
+            border-radius: 5px;
+            border: 2px solid #ffffff;
+            box-shadow: 2px 2px 6px #6c6969;
+            margin: 1vw 0vw;
+            padding: 4vw;
+            row-gap: 0.5rem;
+
+            img {
+                width: 3.5vw;
+                margin-left: 2vw;
+            }
+
+        }
+
+        .Ser {
+            font-size: 0.79vw;
+            font-weight: bold;
+            text-align: center;
+        }
+    }
+
+    .Team {
+        .heading {
+            color: rgba(251, 109, 15, 0.955);
+            padding: 4vw;
+            margin-right: 3vw;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.75rem;
+            letter-spacing: 0rem;
+        }
+
+        .Join {
+            display: flex;
+            margin-left: 10vw;
+
+            .content {
+                margin-left: 10vw;
+                margin-top: 4vw;
+                word-spacing: 0.25rem;
+            }
+
+            .image {
+                img {
+                    width: 30%;
+                    margin-left: 8vw;
+                    //padding: 5vw
+                }
+
+                p {
+                    margin-left: 11vw;
+                    color: rgba(225, 94, 7, 0.955);
+                    font-weight: bold;
+                    font-family: 'Montserrat', sans-serif;
+                }
+            }
+        }
+    }
+    .Touch{
+        display: flex;
+        //justify-content: center;
+        //align-items: center;
+        background-color: rgb(250, 102, 48);
+        width: 80vw;
+        margin-left: 10vw;
+        margin-top: 5vw;
+        .get {
+            color: white;
+            margin-left: 3vw;
+        }
+        .started{
+            background-color: black;
+        }
+        .FirstName{
+            color: black;
+        }
+    }
+
+    @media screen and (max-width:900px) {
+        .navbar {
+            padding: 0;
+            cursor: pointer;
+        }
+
+        .navbar .logo {
+            position: absolute !important;
+            top: 50px;
+            left: 50px;
+        }
+
+        .navbar .menu-hamburger {
+            display: block;
+            //background-color: red;
+        }
+
+        .nav-links {
+            top: 0;
+            left: 0;
+            position: absolute;
+            width: 80%;
+            height: 100vh;
+            background-color: rgba(255, 255, 255, 0.20);
+            backdrop-filter: blur(8px);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            //background-color: red;
+        }
+
+        .nav-links .mobile-menu {
+            margin-left: 0;
+
+        }
+
+        .nav-links ul {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .navbar .nav-links ul li {
+            margin: 25px 0;
+            font-size: 1.2rem;
+        }
+    }
+}
