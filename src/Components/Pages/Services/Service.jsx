@@ -13,6 +13,9 @@ function Service() {
         <section className="service-Content">
           <div className="header">
             <h1>Services</h1>
+            <p>
+              Delivering Comprehensive Energy Solutions Across Multiple Domains
+            </p>
           </div>
         </section>
         <footer>

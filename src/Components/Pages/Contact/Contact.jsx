@@ -39,9 +39,7 @@ function Contact() {
             Contact
           </h1>
           <p className={classConditionalRednering}>
-            For inquiries, feedback, or support, please feel free to contact us.
-            <br /> Our dedicated team is always ready to assist you
-          </p>
+            For inquiries, feedback, or support, please feel free to contact us.<br /> Our dedicated team is always ready to assist you</p>
         </div>
 
         <div className="call-email-address">
