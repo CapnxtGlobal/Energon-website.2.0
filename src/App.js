@@ -16,16 +16,7 @@ function App() {
       <Route path="/" element={<Home/>} />
       <Route path="/services" element={<Service/>} />
       <Route path="/aboutus" element={<AboutUs/>} />
-      <Route path="/Contact" element={<Contact/>} />
-      <Route path="/*" element={
-        <>
-        page not found return to home .
-        <a href="/" > home</a>
-        
-        </>
-      } />
-
-
+      <Route path="/contact" element={<Contact/>} />
 
     </Routes>
 
