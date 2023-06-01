@@ -20,7 +20,6 @@ function App() {
       <Route path="/*" element={
         <>
         page not found return to home .
-
         <a href="/" > home</a>
         
         </>

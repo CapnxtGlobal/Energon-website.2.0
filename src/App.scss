@@ -1,13 +1,17 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;600;700;800&display=swap');
-:root{
-  --swiper-theme-color : #fff !important;
+@import url("https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Quattrocento&display=swap");
+
+:root {
+  --swiper-theme-color: #fff !important;
 }
-*{
+* {
   margin: 0;
   padding: 0;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
 }
-body{
+body {
   /* // background-color: black; */
 }
 /* html {
@@ -19,25 +23,25 @@ body{
   user-select: none;
 } */
 
-@media screen and (max-width : 768px) {
-  html{
+@media screen and (max-width: 768px) {
+  html {
     overflow-x: hidden;
   }
-  body{
+  body {
     overflow-x: hidden;
   }
 }
-html{
+html {
   overflow-x: hidden;
   scroll-behavior: smooth;
 }
-li{
-  list-style-type: none  !important;
+li {
+  list-style-type: none !important;
 }
-a{
+a {
   text-decoration: none;
 }
-input{
+input {
   border: none;
   outline: none;
 }
