@@ -22,16 +22,16 @@ function Navbar() {
 
           <div className="nav-links">
             <li className={location.pathname === "/" ? "white" : "black"}>
-              Home
+             <Link to="/">Home</Link>
             </li>
             <li className={location.pathname === "/" ? "white" : "black"}>
-              About us
+              <Link to="/aboutus">About Us</Link>
             </li>
             <li className={location.pathname === "/" ? "white" : "black"}>
-              Services
+              <Link to="/services">Services</Link>
             </li>
             <li className={location.pathname === "/" ? "white" : "black"}>
-              Contact Us
+              <Link to="/contact">Contact Us</Link>
             </li>
           </div>
         </nav>

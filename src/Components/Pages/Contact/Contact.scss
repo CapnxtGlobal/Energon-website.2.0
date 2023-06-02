@@ -1,0 +1,118 @@
+// changing footer colour accordingly
+
+.black {
+  color: black;
+}
+.white {
+  color: white;
+}
+
+.Universal-Contact {
+  //   background-color: #1f2730;
+  padding: 5vw 5.5vw 0vw 5.5vw;
+
+  .header {
+    // border: 1px solid red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+
+    h1 {
+      font-family: "Montserrat", sans-serif;
+      color: white;
+      font-weight: 600;
+      font-size: 3.5vw;
+    }
+
+    p {
+      font-family: "Poppins", sans-serif;
+      padding: 1.6vw 0vw;
+      font-size: 1.2vw;
+      line-height: 2.2vw;
+    }
+  }
+
+  .call-email-address {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    text-align: center;
+    padding: 4vw 0vw 1vw 0vw;
+    // background-color:  red;
+    .address {
+      // background-color: hotpink;
+      width: 28vw !important;
+      img {
+        margin-right: 1.2vw;
+      }
+    }
+    .row {
+      // border: 1px solid white;
+      display: flex;
+      align-items: start;
+      text-align: left;
+      justify-content: center;
+      padding: 0.8vw;
+      width: 20vw;
+
+      img {
+        width: 3.2vw;
+        margin: 0vw 1.2vw;
+      }
+      .details {
+        margin-bottom: auto;
+        display: flex;
+        flex-direction: column;
+        font-family: "Montserrat";
+        font-weight: 500;
+
+        h1 {
+          font-size: 1.8vw;
+        }
+
+        a {
+          font-size: 1.1vw;
+          padding: 0.5vw 0vw;
+        }
+      }
+    }
+  }
+
+  .map {
+    color: white;
+    display: flex;
+    // width: fit-content;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-left: auto;
+    flex-direction: column;
+    margin-right: auto;
+    padding: 1.2vw 0vw 6vw 0vw;
+
+    .location p{
+      color : black;
+    }
+    h1 {
+      // padding: 5vw 0vw;
+      font-family: "Montserrat", sans-serif;
+      font-weight: 500;
+      font-size: 1.4vw;
+      cursor: pointer;
+      text-decoration: underline;
+    }
+  }
+}
+.mini-footer {
+  padding: 1vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  p a {
+    color: #e95c28;
+    font-size: 1.3vw;
+    font-family: "Montserrat", sans-serif;
+  }
+}
