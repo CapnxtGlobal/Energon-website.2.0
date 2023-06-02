@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 //import Logo from "../../assets/energon_logo-1.png";
-import Asset from "../../../Assets/Images/Asset 1.png";
+import Asset from "../../../Assets/Images/homeheaderimage.png";
 import about from "../../../Assets/Images/About-us.png";
 import Ploy from "../../../Assets/icons/Polybags.svg";
 import Bio_Cng from "../../../Assets/icons/Bio Cng Plant.svg";

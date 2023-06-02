@@ -1,7 +1,8 @@
 // changing footer colour accordingly
 
 .black {
-  color: black;
+     color: rgb(31, 31, 31);
+  
 }
 .white {
   color: white;
@@ -23,14 +24,17 @@
       font-family: "Montserrat", sans-serif;
       color: white;
       font-weight: 600;
-      font-size: 3.5vw;
+      font-size: 3vw;
     }
 
     p {
       font-family: "Poppins", sans-serif;
+      font-weight: 600;
       padding: 1.6vw 0vw;
-      font-size: 1.2vw;
-      line-height: 2.2vw;
+      // color: rgb(31, 31, 31);
+      font-size: 1vw;
+      line-height: 2vw;
+    
     }
   }
 
@@ -39,7 +43,7 @@
     justify-content: space-between;
     align-items: start;
     text-align: center;
-    padding: 4vw 0vw 1vw 0vw;
+    padding: 2vw 0vw 1vw 0vw;
     // background-color:  red;
     .address {
       // background-color: hotpink;
@@ -65,15 +69,18 @@
         margin-bottom: auto;
         display: flex;
         flex-direction: column;
-        font-family: "Montserrat";
-        font-weight: 500;
-
+        
         h1 {
-          font-size: 1.8vw;
+          font-family: "Montserrat";
+          font-weight: 600;
+          font-size: 1.5vw;
         }
 
         a {
-          font-size: 1.1vw;
+          font-size: 1vw;
+          font-family: "Poppins", sans-serif;
+          font-weight: 600;
+          // color: rgb(31, 31, 31);
           padding: 0.5vw 0vw;
         }
       }
@@ -90,16 +97,19 @@
     margin-left: auto;
     flex-direction: column;
     margin-right: auto;
-    padding: 1.2vw 0vw 6vw 0vw;
+    padding: 1.2vw 0vw 0vw 0vw;
 
-    .location p{
-      color : black;
+    .location {
+      p{
+        color : black;
+      }
     }
     h1 {
       // padding: 5vw 0vw;
       font-family: "Montserrat", sans-serif;
-      font-weight: 500;
-      font-size: 1.4vw;
+      font-weight: 700;
+      padding: 2vw 0vw;
+      font-size: 1.1vw;
       cursor: pointer;
       text-decoration: underline;
     }

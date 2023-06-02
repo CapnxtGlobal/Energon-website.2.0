@@ -8,16 +8,173 @@
       align-items: center;
       text-align: center;
       flex-direction: column;
-      h1{
+      h1 {
         font-size: 3.2vw;
         padding: 2vw 0vw;
+        font-weight: 700;
       }
-      p{
+      p {
         font-size: 1vw;
         color: rgb(77, 77, 77);
         font-family: "Montserrat", sans-serif;
-        font-weight: 400;
+        font-weight: 700;
         padding: 0vw 0vw 2vw 0vw;
+      }
+    }
+
+    .cards-container {
+      // background-color: red;
+      // border: 1px solid black;
+
+      padding: 2.5vw 0vw 0vw 0vw;
+
+      .reverse-card {
+        display: flex;
+        flex-direction: row-reverse;
+        padding: 4vw 0vw 4vw 0vw !important;
+
+        .content {
+          border-top-right-radius: 1.4vw;
+          border-bottom-right-radius: 1.4vw;
+          border-bottom-left-radius: 0vw !important;
+          border-top-left-radius: 0vw !important;
+          padding: 4vw 10vw 4vw 4vw !important;
+          // padding: 5vw 8vw 5vw 10vw;
+        }
+
+        .Card-Image {
+          margin-left: -5vw !important;
+        }
+
+        .Dots {
+          margin-left: 3vw !important;
+        }
+      }
+
+      .Card {
+        display: flex;
+        justify-content: flex-end;
+        align-items: start;
+        text-align: center;
+        padding: 4vw 0vw 4vw 4vw;
+
+        .Dots {
+          width: 8vw;
+          display: flex;
+          margin-right: -4vw;
+          margin-top: -2vw;
+        }
+        .Card-Image {
+          width: 35vw;
+          height: 21vw !important;
+          z-index: 1;
+          display: flex;
+          margin-top: auto;
+          margin-bottom: auto;
+          margin-right: -7vw;
+        }
+
+        .content {
+          display: flex;
+          overflow: hidden !important;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+          text-align: center;
+          // border: 1px solid red;
+          height: 17vw;
+          border-top-left-radius: 1.4vw;
+          border-bottom-left-radius: 1.4vw;
+          width: 45vw;
+          padding: 5vw 8vw 5vw 10vw;
+          box-shadow: 2px 2px 100px 2px rgba(0, 0, 0, 0.25);
+
+          header {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            text-align: left;
+            margin-right: auto;
+            width: 40vw;
+            // background-color: red;
+            // border: 1px solid black;
+
+            img {
+              width: 4.2vw;
+            }
+            h1 {
+              padding: 0vw 0.8vw;
+              color: #e95c28;
+              font-family: "Montserrat", sans-serif;
+              font-weight: 700;
+              font-size: 1.6vw;
+            }
+          }
+          p {
+            font-size: 1.2vw;
+            display: flex;
+            padding: 2vw 0vw;
+            text-align: left;
+            line-height: 2vw;
+            font-family: "Montserrat", sans-serif;
+            font-weight: 500;
+          }
+        }
+      }
+    }
+
+    .categories {
+      padding: 5.5vw 1vw;
+
+      .col {
+        display: flex;
+        justify-content: space-around;
+        align-items: start;
+        text-align: center;
+        padding: 2vw 0vw;
+
+        .row {
+          // border: 1px solid black;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          text-align: center;
+          flex-direction: column;
+          width: 18vw;
+          padding: 2vw 0vw;
+
+          img {
+            width: 6vw;
+            height: 6vw;
+            transition: transform 0.2s ease;
+          }
+          img:hover {
+            transform: scale(1.1);
+          }
+
+          .Value {
+            padding: 1.8vw 0vw 0.6vw 0vw;
+            color: #e95c28;
+            font-family: "Montserrat", sans-serif;
+            font-weight: 800;
+            font-size: 2.5vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+
+            .Metrics {
+              font-size: 1vw;
+              font-weight: 700;
+              padding: 0vw 0.2vw;
+            }
+          }
+          p {
+            line-height: 1.8vw;
+            font-family: "Montserrat", sans-serif;
+            font-weight: 600;
+          }
+        }
       }
     }
   }

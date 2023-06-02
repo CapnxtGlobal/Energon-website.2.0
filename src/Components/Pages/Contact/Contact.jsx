@@ -16,9 +16,7 @@ function Contact() {
 
   return (
     <>
-     {
-      location.pathname === "/contact" &&  <Navbar />
-     }
+      {location.pathname === "/contact" && <Navbar />}
 
       <section
         className="Universal-Contact"
@@ -36,10 +34,12 @@ function Contact() {
                 : { color: "white" }
             }
           >
-            Contact
+            Contact Us
           </h1>
           <p className={classConditionalRednering}>
-            For inquiries, feedback, or support, please feel free to contact us.<br /> Our dedicated team is always ready to assist you</p>
+            For inquiries, feedback, or support, please feel free to contact us.
+            <br /> Our dedicated team is always ready to assist you
+          </p>
         </div>
 
         <div className="call-email-address">
@@ -82,11 +82,35 @@ function Contact() {
         </div>
 
         <div className="map">
-          <h1 className={classConditionalRednering}>SEE ON THE MAP</h1>
+          <h1 className={classConditionalRednering}>
+            <a
+              target="_main"
+              href="https://www.google.com/maps/place/KMV+Spaces/@17.4315801,78.4460159,19z/data=!3m1!5s0x3bcb90ce86096c4b:0xf111483ea4056b70!4m9!1m2!2m1!1sSolitaire+Plaza,+Solitaire+Plaza,+701,+7th+Floor,+701,+7th,+behind+Image+Hospital,+Ameerpet,+Hyderabad,+Telangana+500073!3m5!1s0x3bcb91726d5d5d55:0x8f42070de1ffb442!8m2!3d17.4314277!4d78.4458418!16s%2Fg%2F11nnw44xsc?entry=ttu"
+            >
+              SEE ON THE MAP
+            </a>
+          </h1>
           {location.pathname === "/contact" && (
             <>
               <div className="location">
-                <p>Map Comes Here... </p>
+                <iframe
+                  style={{ width: "100vw", height: "30vw" }}
+                  id="gmap_canvas"
+                  src="https://maps.google.com/maps?q=2rd Floor, 95, Lumbini Avenue, Gachibowli, Hyderabad, Telangana 500032&t=&z=17&ie=UTF8&iwloc=&output=embed"
+                  frameborder="0"
+                  scrolling="no"
+                  marginheight="0"
+                  marginwidth="0"
+                ></iframe>
+                {/* <iframe
+                  style={{ width: "100vw", height: "30vw" }}
+                  id="gmap_canvas"
+                  src="https://maps.google.com/maps?q=Solitaire Plaza, Solitaire Plaza, 701, 7th Floor, 701, 7th, behind Image Hospital, Ameerpet, Hyderabad, Telangana 500073&t=&z=17&ie=UTF8&iwloc=&output=embed"
+                  frameborder="0"
+                  scrolling="no"
+                  marginheight="0"
+                  marginwidth="0"
+                ></iframe> */}
               </div>
             </>
           )}
