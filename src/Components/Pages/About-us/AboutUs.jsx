@@ -5,7 +5,6 @@ function AboutUs() {
   return (
     <>
     <Navbar/>
-    about us
     </>
   )
 }

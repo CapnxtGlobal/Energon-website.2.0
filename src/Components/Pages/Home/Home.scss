@@ -1,6 +1,6 @@
 .Universal-Home {
-    margin: 0!important;
-    padding: 0!important;
+    margin: 0 !important;
+    padding: 0 !important;
     text-decoration: none;
     list-style: none;
     background-color: whitesmoke;
@@ -13,13 +13,15 @@
         background-size: cover;
         background-color: none;
         margin-top: 0;
+
         .power h1 {
-            padding: 265px;
+            padding-top: 10vw;
             padding-left: 15vw;
             font-weight: bold;
             color: white;
             font-size: 3vw;
             font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
             letter-spacing: 0.55rem;
 
             p {
@@ -28,7 +30,8 @@
                 line-height: 4em;
                 word-spacing: 0;
                 letter-spacing: 0.25rem;
-                font-family: 'karla', sans-serif;
+                font-family: 'Quattrocento', sans-serif;
+                font-weight: 500;
             }
         }
 
@@ -71,15 +74,16 @@
 
     .About {
         display: flex;
-        margin-top: 10vw;
+        padding-top: 10vw;
         justify-content: space-between;
         align-items: center;
-        font-family: 'karla', sans-serif;
+        font-family: 'Montserrat', sans-serif;
         background-color: whitesmoke;
+       // background-color: rED;
 
         p {
             margin-bottom: 12vw;
-            font-family: 'karla', sans-serif;
+            font-family: 'Quattrocent', sans-serif;
             margin-left: 19vw;
         }
 
@@ -87,7 +91,7 @@
             padding: 2vw;
             margin-left: 17vw;
             color: rgba(251, 109, 15, 0.955);
-            font-weight: bold;
+            font-family: 'Oswald', sans-serif;
         }
 
         img {
@@ -97,19 +101,32 @@
         }
     }
 
+
+    .Innovative {
+        width: 100vw;
+        height: 50vh;
+        color: orangered;
+        background-color: pink;
+        text-align: center;
+        font-family: 'Oswald', sans-serif;
+    }
+
     .Services {
         display: flex;
         justify-content: center;
         align-items: center;
         text-align: center;
         flex-direction: column;
+        font-family: 'Montserrat', sans-serif;
+        //background-color: orange;
 
-        .heading {
-            display: flex;
+        .heading h1 {
             justify-content: flex-start;
             align-items: baseline;
             color: rgba(251, 109, 15, 0.955);
-            font-family: 'Montserrat', sans-serif;
+            font-size: 2vw;
+            //font-weight: bolder;
+            font-family: 'Oswald', sans-serif;
         }
 
         .Logo {
@@ -152,68 +169,145 @@
         }
 
         .Ser {
-            font-size: 0.79vw;
+            font-size: 0.89vw;
             font-weight: bold;
             text-align: center;
+            font-family: 'Oswald', sans-serif;
         }
     }
 
     .Team {
-        .heading {
+        //background-color: #1d2b3a;
+        .heading h1 {
             color: rgba(251, 109, 15, 0.955);
-            padding: 4vw;
+            padding-top: 4vw;
             margin-right: 3vw;
+            margin-bottom: -7vw;
             justify-content: center;
             align-items: center;
             text-align: center;
-            font-family: 'Montserrat', sans-serif;
-            font-size: 1.75rem;
+            font-family: 'Oswald', sans-serif;
+            font-size: 2vw;
             letter-spacing: 0rem;
         }
-
+         .line{
+            padding-left: 23vw;
+            padding-top: -10vw;
+            color: orangered;
+            font-size: 10vw;
+        }
         .Join {
             display: flex;
-            margin-left: 10vw;
-
-            .content {
-                margin-left: 10vw;
-                margin-top: 4vw;
+            padding-left: 10vw;
+            .content p {
+                padding-left: 13vw;
+                padding-top: 1vw;
                 word-spacing: 0.25rem;
+                font-family: 'Quattrocent', sans-serif;
             }
 
             .image {
                 img {
-                    width: 30%;
-                    margin-left: 8vw;
+                    width: 9vw;
+                    padding-left: 8vw;
+                    //margin-right: -5vw;
+                    padding-top: -2vw;
                     //padding: 5vw
                 }
 
                 p {
-                    margin-left: 11vw;
-                    color: rgba(225, 94, 7, 0.955);
-                    font-weight: bold;
-                    font-family: 'Montserrat', sans-serif;
+                    padding-left: 10vw;
+                    color: rgba(251, 109, 15, 0.955);
+                    //font-weight: bold;
+                    font-family: 'Oswald', sans-serif;
                 }
             }
         }
     }
-    .Touch{
+
+   /*.news h1 {
+        color: orangered;
+        text-align: center;
+        height: 50vh;
+        padding-top: 11vw;
+        font-family: 'Oswald', sans-serif;
+        background-color: antiquewhite;
+    }*/
+
+    .Touch {
         display: flex;
         //justify-content: center;
         //align-items: center;
         background-color: rgb(250, 102, 48);
-        width: 80vw;
+        width: 75vw;
+        //height: 40vh;
         margin-left: 10vw;
-        margin-top: 5vw;
+        margin-top: 10vw;
+        margin-bottom: 5vw;
+        border-radius: 1vw;
+
         .get {
             color: white;
-            margin-left: 3vw;
+            padding-left: 3vw;
+            padding-top: 2vw;
+
+            h1 {
+                font-size: 2.5vw;
+                padding-bottom: 1vw;
+                font-family: 'Oswald', sans-serif;
+            }
+
+            p {
+                color: rgb(232, 217, 217);
+                font-family: 'Quattrocent', sans-serif;
+            }
         }
-        .started{
-            background-color: black;
+
+        .started {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            background-color: #1d2b3a;
+            width: 65vw;
+            //height: 33vh;
+            margin-top: 1vw;
+            margin-left: 15vw;
+            margin-bottom: 1vw;
+            margin-right: 1vw;
+            border-radius: 1vw;
         }
-        .FirstName{
+
+        .started input {
+            background: #1d2b3a;
+            width: 20vw;
+            height: 5vh;
+            margin-top: 2vw;
+            border: 1px solid whitesmoke;
+            border-radius: 5vw;
+            outline: none;
+            color: #fff;
+            font-size: 0.75em;
+            margin-left: 1vw;
+            justify-content: center;
+        }
+
+        .arrow button {
             color: black;
+            border-radius: 5vw;
+            width: 10vw;
+            height: 5vh;
+            background-color: orangered;
+            justify-content: flex-start;
+            align-items: start;
+            margin-right: 9vw;
+            margin-top: 2vw;
+            font-family: 'Oswald', sans-serif;
+
+            .right{
+                width: 5vw; 
+                font-size: 1.75vw;
+            }
         }
     }
 
