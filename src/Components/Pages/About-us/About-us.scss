@@ -1,0 +1,108 @@
+.Universal-About{
+    //background-color: whitesmoke;
+.About {
+    display: flex;
+    //padding-top: 10vw;
+    justify-content: space-between;
+    align-items: left;
+    font-family: 'Montserrat', sans-serif;
+    //-color: whitesmoke;
+   // background-color: rED;
+
+    p {
+        padding-bottom: 12vw;
+        padding-top: 2vw;
+        font-family: 'Montserrat', sans-serif;
+        color: rgba(8, 0, 0, 0.722);
+        line-height: 1.75vw;
+        font-weight: bold;
+        padding-left: 7vw;
+        width: 36vw;
+    }
+
+    h1 {
+        padding: 2vw;
+        padding-left: 7vw;
+        //font-family: 'Oswald', sans-serif;
+        font-weight: bold;
+        font-size: 3vw;
+    }
+
+    img {
+        width: 38vw;
+        //height: 65%;
+        padding-top: 4vw;
+        padding-right: 7vw;
+    }
+}
+.Values{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    font-family: 'Montserrat', sans-serif;
+    .heading h1{
+        font-weight: bold;
+        font-size: 3.5vw;
+    }
+    .icons{
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+        width: 40vw!important;
+    }
+    .col{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: left;
+        margin:4vw 0vw;
+        column-gap: 15rem;
+    }
+    .row{
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        flex-direction: column;
+       // height: 10vh;
+       //margin: 1vw 0vw;
+       padding-bottom: 7vw;
+       row-gap: 1vw;
+       img{
+        width: 13vw;
+        height: 25vh;
+       }
+       p{
+        color: orangered;
+        font-weight: bold;
+        font-size: 1.5vw;
+       }
+    }
+}
+.location{
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    //text-align: start;
+    .heading h1{
+        color: orangered;
+        font-size: 3vw;
+        padding-right: 20vw;
+        padding-bottom: 10vw;
+        padding-top: 6vw;
+    }
+    .heading h3{
+        line-height: 2vw;
+        font-family: 'Montserrat', sans-serif;
+        color: rgba(8, 0, 0, 0.722);
+        font-weight: bold;
+        margin-top: -7vw;
+        //padding-bottom: 32vw;
+    }
+    .map{
+        width: 45vw;
+        //padding-right: 10vw;
+    }
+}
+}
