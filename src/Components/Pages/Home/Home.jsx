@@ -32,11 +32,10 @@ function Home() {
         <div className="About">
           <div className="Us">
             <h1>ABOUT US</h1>
-            <p>Established in 2012.Energon has grown into a leading organization in the petro products industry.
-              <br /><br/>
-              Energon was founded with the vision of pursuing various oil-related industry and outsourcing activities across India.We bagan with bitumen handling for Hindustan Petroleum Corporation Limited(HPCL)and expanded into drum<br />manufacturing for the Same.Today,our experienced team of over 60 years in business handles
-              20,000 MT of black oils and 1,000 KL of lubricants.<br /> <br />
-              Our commmitment to innovation and excellence has  positioned Energon as a key player in the petro product sector.</p>
+            <p>Established in 2012.Energon has grown into a leading organization in the petro products industry.</p>
+              <p>Energon was founded with the vision of pursuing various oil-related industry and outsourcing activities across India.We bagan with bitumen handling for Hindustan Petroleum Corporation Limited(HPCL)and expanded into drum<br />manufacturing for the Same.Today,our experienced team of over 60 years in business handles
+              20,000 MT of black oils and 1,000 KL of lubricants.</p>
+              <p>Our commmitment to innovation and excellence has  positioned Energon as a key player in the petro product sector.</p>
           </div>
           <div className="img">
             <img src={about} alt="" />

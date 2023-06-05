@@ -12,7 +12,7 @@
     p {
         padding-bottom: 12vw;
         padding-top: 2vw;
-        font-family: 'Montserrat', sans-serif;
+        font-family: 'Poppins', sans-serif;
         color: rgba(8, 0, 0, 0.722);
         line-height: 1.75vw;
         font-weight: bold;
@@ -84,6 +84,7 @@
     display: flex;
     justify-content: center;
     align-items: start;
+    //font-family: 'Montserrat', sans-serif;
     //text-align: start;
     .heading h1{
         color: orangered;
@@ -91,18 +92,96 @@
         padding-right: 20vw;
         padding-bottom: 10vw;
         padding-top: 6vw;
+        font-family: 'Montserrat', sans-serif;
     }
     .heading h3{
         line-height: 2vw;
-        font-family: 'Montserrat', sans-serif;
-        color: rgba(8, 0, 0, 0.722);
-        font-weight: bold;
+        font-family: 'Poppins', sans-serif;
+        color: rgb(75, 72, 72)!important;
+        font-weight: bolder!important;
+        font-size: 1.15vw;
         margin-top: -7vw;
         //padding-bottom: 32vw;
+        p{
+            font-family: 'Poppins', sans-serif;
+            color: rgba(8, 0, 0, 0.722);
+            font-weight: bold;
+        }
     }
     .map{
         width: 45vw;
         //padding-right: 10vw;
     }
+}
+.team{
+    .heading h1{
+        justify-content: center;
+        text-align: center;
+        color: orangered;
+        padding-left: 0vw;
+        padding-top: 5vw;
+        font-family: "Montserrat",sans-serif;
+        font-size: 2vw;
+    }
+    .heading p{
+        padding-top: 3vw;
+        font-size: 1vw;
+        padding-left: 20vw;  
+        font-family: 'Poppins', sans-serif;
+        color: rgba(8, 0, 0, 0.722);
+        font-weight: bold; 
+    }
+    .members{
+        display: flex;
+        justify-content:start;
+        align-items: start;
+        padding-top: 7vw;
+        //width: 10vw
+    .sripal{
+        width: 30vw;
+        padding-left: 10vw;
+        h1{
+            color: orangered;
+        }
+        p{
+            padding-top: 2vw;
+            font-family: 'Poppins', sans-serif;
+            color: rgba(8, 0, 0, 0.722);
+            line-height: 1.75vw;
+            font-weight: bold;
+            width: 33vw;
+            font-size: 1vw;
+
+        }
+    }
+    .title{
+        padding-top: 6vw;
+        padding-left: 15vw;
+        padding-bottom: 25vw;
+    }
+    .title h1{
+        //padding-top: 10vw;
+        font-family: "Montserrat",sans-serif;
+        font-size: 2vw;
+        font-weight: bold;
+    }
+    .title p{
+        padding-top: 3vw;
+        width: 30vw;
+        font-family: 'Poppins', sans-serif;
+        color: rgba(8, 0, 0, 0.722);
+        line-height: 1.75vw;
+        font-weight: bold;
+    }
+    .imge img{
+        width: 20vw;
+        padding-left: 10vw;
+    }
+    .image img{
+        width: 22vw;
+        padding-left: 10vw;
+        padding-bottom: 8vw;
+    }
+}
 }
 }

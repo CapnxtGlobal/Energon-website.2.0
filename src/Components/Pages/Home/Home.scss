@@ -77,6 +77,7 @@
     .About {
         display: flex;
         padding-top: 10vw;
+        padding-bottom: 5vw;
         justify-content: space-between;
         align-items: center;
         font-family: 'Montserrat', sans-serif;
@@ -84,13 +85,13 @@
        // background-color: rED;
 
         p {
-            padding-bottom: 12vw;
             font-family:'Montserrat', sans-serif;
-            font-size: 1.4vw;
+            font-size: 1.2vw;
+            line-height: 2vw;
             color:rgb(13, 13, 13);
             padding-left: 8vw;
             padding-top: 2vw;
-            width: 40vw;
+            width: 37vw;
         }
 
         h1 {
@@ -104,8 +105,8 @@
         img {
             width: 38vw;
             //height: 65%;
-            padding-bottom: 6vw;
-            padding-top: 2vw;
+            padding-bottom: vw;
+            padding-top: 5vw;
             padding-left: 1vw;
             padding-right: 7vw;
         }
