@@ -99,7 +99,7 @@ function AboutUs() {
             </div>
           </div>
           <div className='members'>
-            <div className='image'>
+            <div className='photo'>
               <img src={blackimage} alt='' />
             </div>
             <div className='Anand'>
@@ -117,7 +117,7 @@ function AboutUs() {
               <p>Kishore Chowdary,our co-founder and legal advisor,brings an exceptional legal mind and extensive entrepreneurial experience to the Energon team.A law graduate with a specialization in taxation and corporate laws,Kishore's expertise provides crucial guidance in navigating the complex legal landscape of the petroproduct industry.His profound understanding of the law coupled with his business accumen forms a solid foundation for our business practices,regulatory compliance,and corporate governance.</p>
               <p>In addition to his legal prowess,Kishore has made significant strides in the management of service and retail units.His successful involvement with several startups exhibits his ability to thrive in fast-paced,dynamic environments,traits that are invaluable to Energon's continuous growth and evolution.Kishore's robust legal background and entrepreneurial spirit not only add a unique dimension to our leadership but also contribute significantly to our strategic planning and risk management.</p>
             </div>
-            <div className='image'>
+            <div className='imag'>
               <img src={blackimage} alt='' />
             </div>
           </div>

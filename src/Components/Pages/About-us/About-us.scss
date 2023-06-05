@@ -44,13 +44,13 @@
     font-family: 'Montserrat', sans-serif;
     .heading h1{
         font-weight: bold;
-        font-size: 3.5vw;
+        font-size: 3vw;
     }
     .icons{
         justify-content: center;
         text-align: center;
         align-items: center;
-        width: 40vw!important;
+        width: 30vw!important;
     }
     .col{
         display: flex;
@@ -70,8 +70,13 @@
        padding-bottom: 7vw;
        row-gap: 1vw;
        img{
-        width: 13vw;
-        height: 25vh;
+        width: 15vw;
+        height: 15vh;
+        // border: 1px solid black;
+        transition: transform 0.2s ease;
+       }
+       img:hover{
+        transform: scale(1.1);
        }
        p{
         color: orangered;
@@ -121,7 +126,7 @@
         padding-left: 0vw;
         padding-top: 5vw;
         font-family: "Montserrat",sans-serif;
-        font-size: 2vw;
+        font-size: 3vw;
     }
     .heading p{
         padding-top: 3vw;
@@ -139,8 +144,9 @@
         padding-top: 7vw;
         //width: 10vw
     .sripal{
-        width: 40vw;
+        width: 42vw;
         align-items: start;
+        padding-left: 5vw;
         //padding-right: 4vw;
         h1{
             color: orangered;
@@ -154,6 +160,12 @@
             //width: 33vw;
             font-size: 1vw;
         }
+    }
+    .image img{
+        width: 20vw;
+       // padding-left: 8vw;
+        //padding-bottom: 8vw;
+        // padding-right: 15vw;
     }
     .Anand{
         //width: 40vw;
@@ -165,7 +177,29 @@
         }
         p{
             padding-top: 2vw;
-            padding-right: 5vw;
+            padding-right: 9vw;
+            font-family: 'Poppins', sans-serif;
+            color: rgba(8, 0, 0, 0.722);
+            line-height: 1.75vw;
+            font-weight: bold;
+            width: 45vw;
+            font-size: 1vw;
+        }
+    }
+    .photo img{
+        width: 20vw;
+        padding-left: 4vw;
+    }
+    .Kishore{
+        width: 42vw;
+        align-items: start;
+        padding-left: 5vw;
+        //padding-right: 4vw;
+        h1{
+            color: orangered;
+        }
+        p{
+            padding-top: 2vw;
             font-family: 'Poppins', sans-serif;
             color: rgba(8, 0, 0, 0.722);
             line-height: 1.75vw;
@@ -174,36 +208,35 @@
             font-size: 1vw;
         }
     }
-    .title{
-        padding-top: 6vw;
-        padding-left: 15vw;
-        padding-bottom: 25vw;
-    }
-    .title h1{
-        //padding-top: 10vw;
-        font-family: "Montserrat",sans-serif;
-        font-size: 2vw;
-        font-weight: bold;
-    }
-    .title p{
-        padding-top: 3vw;
-        width: 30vw;
-        font-family: 'Poppins', sans-serif;
-        color: rgba(8, 0, 0, 0.722);
-        line-height: 1.75vw;
-        font-weight: bold;
-    }
-    .imge img{
-        width: 15vw;
-        padding-left: 7vw;
-        //padding-right: 10vw;
-    }
-    .image img{
+    .imag img{
         width: 20vw;
        // padding-left: 8vw;
         //padding-bottom: 8vw;
-        padding-right: 10vw;
-        padding-left: 6vw;
+        // padding-right: 12vw;
+    }
+    .title{
+        padding-top: 6vw;
+        padding-right: 5vw;
+        padding-bottom: 25vw;
+        h1{
+            font-family: "Montserrat",sans-serif;
+            font-size: 2vw;
+            font-weight: bold;  
+        }
+        p{
+            padding-top: 3vw;
+            width: 35vw;
+            font-family: 'Poppins', sans-serif;
+            color: rgba(8, 0, 0, 0.722);
+            line-height: 1.75vw;
+            font-weight: bold;  
+        }
+    }
+
+    .imge img{
+        width: 20vw;
+        padding-left: 1vw;
+        //padding-right: 10vw;
     }
 }
 }

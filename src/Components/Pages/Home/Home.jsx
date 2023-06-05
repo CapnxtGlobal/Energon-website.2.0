@@ -10,11 +10,13 @@ import Drums from "../../../Assets/icons/Packaging Drums.svg";
 import Liquid from "../../../Assets/icons/Liquid Terminal.svg";
 import Warehouse from "../../../Assets/icons/Warehouse & Ligistics.svg";
 import camera from "../../../Assets/Images/camera.png";
-//import arrow from "../../../Assets/Images/right-arrow.png";
 import "../Home/Home.scss";
 //import navbar from "../../Navbar/Navbar";
 import Navbar from "../../Navbar/Navbar";
 import Contact from "../Contact/Contact";
+
+
+
 //import Aos from "aos";
 //import "aos/dist/aos.css"
 //import Navbar from "../../components/navbar/Navbar";
@@ -33,18 +35,15 @@ function Home() {
           <div className="Us">
             <h1>ABOUT US</h1>
             <p>Established in 2012.Energon has grown into a leading organization in the petro products industry.</p>
-              <p>Energon was founded with the vision of pursuing various oil-related industry and outsourcing activities across India.We bagan with bitumen handling for Hindustan Petroleum Corporation Limited(HPCL)and expanded into drum<br />manufacturing for the Same.Today,our experienced team of over 60 years in business handles
+            <p>Energon was founded with the vision of pursuing various oil-related industry and outsourcing activities across India.We bagan with bitumen handling for Hindustan Petroleum Corporation Limited(HPCL)and expanded into drum<br />manufacturing for the Same.Today,our experienced team of over 60 years in business handles
               20,000 MT of black oils and 1,000 KL of lubricants.</p>
-              <p>Our commmitment to innovation and excellence has  positioned Energon as a key player in the petro product sector.</p>
+            <p>Our commmitment to innovation and excellence has  positioned Energon as a key player in the petro product sector.</p>
           </div>
           <div className="img">
             <img src={about} alt="" />
           </div>
         </div>
 
-        <div className="Innovative">
-          INNOVATIVE SOLUTIONS FOR PETROPRODUCTS INDUSTRY
-        </div>
         <section className="Services">
 
           <div className="heading">
@@ -74,7 +73,7 @@ function Home() {
               </div>
               <div className="row">
                 <img src={Liquid} alt="" />
-                <p className="Ser">LIQUID TERMINAL HANDLING</p>
+                <p className="Ser">LIQUID TERMINAL <br /> HANDLING</p>
               </div>
               <div className="row">
                 <img src={Warehouse} alt="" />
@@ -90,7 +89,7 @@ function Home() {
 
           </div>
           <div className="Join">
-            <div className="content">            
+            <div className="content">
               <p>Energon is led by a team of four industry veterans with over 60 years of combined experience in the petrochemical,constructions,manu-facturing,trading,technical services,and logistics sectors.Our team includes M.Sripal Reddy,an IIT graduate with 15 years of experience in petrochemicalproducts,and Mr.Anand,an internationally experienced businessman.Together,they guide our skilled workforce to deliver outtsanding results and unmatched customer satisfaction.</p>
             </div>
             <div className="image">
@@ -107,8 +106,10 @@ function Home() {
             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Expedita voluptatem molestiae nam accusamus, maxime dolorem in amet a, nemo similique dolores aut id hic iste vel. Dignissimos ab facilis reprehenderit!</p>
           </div>
           <div className="started">
-            <input type="text" required="required" placeholder="FirstName" />
-            <input type="text" required="required" placeholder="Email" />
+            <form id="form">
+              <input type="text" required="required" placeholder="FirstName" />
+              <input type="text" required="required" placeholder="Email" />
+            </form>
             <div className="arrow">
               <button type="get started">GET STARTED <span className="right">→</span></button>
 
@@ -116,7 +117,7 @@ function Home() {
 
           </div>
         </section>
-        <Contact/>
+        <Contact />
       </main>
     </>
   )
