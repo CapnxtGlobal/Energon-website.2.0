@@ -73,7 +73,7 @@ function Contact() {
                 701,7th floor, Solitaire Plaza, 8-3-948/949, Behind image
                 hospital, Ameerpet, Hyderabad-500 073
               </a>
-              <a className={classConditionalRednering} href="#">
+              <a className={classConditionalRednering} target="_main" href="https://www.google.com/maps/place/2rd+Floor,+95,+Lumbini+Avenue,+Gachibowli,+Hyderabad,+Telangana+500032/@17.4322669,78.3711247,17z/data=!3m1!4b1!4m5!3m4!1s0x3bcb93fabac565f1:0x8d902808ebbdd33f!8m2!3d17.4322669!4d78.3736996?entry=ttu">
                 2rd Floor, 95, Lumbini Avenue, Gachibowli, Hyderabad, Telangana
                 500032
               </a>
