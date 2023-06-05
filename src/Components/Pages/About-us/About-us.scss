@@ -1,0 +1,210 @@
+.Universal-About{
+    //background-color: whitesmoke;
+.About {
+    display: flex;
+    //padding-top: 10vw;
+    justify-content: space-between;
+    align-items: left;
+    font-family: 'Montserrat', sans-serif;
+    //-color: whitesmoke;
+   // background-color: rED;
+
+    p {
+        padding-bottom: 12vw;
+        padding-top: 2vw;
+        font-family: 'Poppins', sans-serif;
+        color: rgba(8, 0, 0, 0.722);
+        line-height: 1.75vw;
+        font-weight: bold;
+        padding-left: 7vw;
+        width: 36vw;
+    }
+
+    h1 {
+        padding: 2vw;
+        padding-left: 7vw;
+        //font-family: 'Oswald', sans-serif;
+        font-weight: bold;
+        font-size: 3vw;
+    }
+
+    img {
+        width: 38vw;
+        //height: 65%;
+        padding-top: 4vw;
+        padding-right: 7vw;
+    }
+}
+.Values{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    font-family: 'Montserrat', sans-serif;
+    .heading h1{
+        font-weight: bold;
+        font-size: 3.5vw;
+    }
+    .icons{
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+        width: 40vw!important;
+    }
+    .col{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: left;
+        margin:4vw 0vw;
+        column-gap: 15rem;
+    }
+    .row{
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        flex-direction: column;
+       // height: 10vh;
+       //margin: 1vw 0vw;
+       padding-bottom: 7vw;
+       row-gap: 1vw;
+       img{
+        width: 13vw;
+        height: 25vh;
+       }
+       p{
+        color: orangered;
+        font-weight: bold;
+        font-size: 1.5vw;
+       }
+    }
+}
+.location{
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    //font-family: 'Montserrat', sans-serif;
+    //text-align: start;
+    .heading h1{
+        color: orangered;
+        font-size: 3vw;
+        padding-right: 20vw;
+        padding-bottom: 10vw;
+        padding-top: 6vw;
+        font-family: 'Montserrat', sans-serif;
+    }
+    .heading h3{
+        line-height: 2vw;
+        font-family: 'Poppins', sans-serif;
+        color: rgb(75, 72, 72)!important;
+        font-weight: bolder!important;
+        font-size: 1.15vw;
+        margin-top: -7vw;
+        //padding-bottom: 32vw;
+        p{
+            font-family: 'Poppins', sans-serif;
+            color: rgba(8, 0, 0, 0.722);
+            font-weight: bold;
+        }
+    }
+    .map{
+        width: 45vw;
+        //padding-right: 10vw;
+    }
+}
+.team{
+    .heading h1{
+        justify-content: center;
+        text-align: center;
+        color: orangered;
+        padding-left: 0vw;
+        padding-top: 5vw;
+        font-family: "Montserrat",sans-serif;
+        font-size: 2vw;
+    }
+    .heading p{
+        padding-top: 3vw;
+        font-size: 1vw;
+        padding-left: 20vw;  
+        font-family: 'Poppins', sans-serif;
+        color: rgba(8, 0, 0, 0.722);
+        font-weight: bold; 
+    }
+    .members{
+        display: flex;
+        justify-content:space-around;
+        align-items: start;
+        text-align: flex-start;
+        padding-top: 7vw;
+        //width: 10vw
+    .sripal{
+        width: 40vw;
+        align-items: start;
+        //padding-right: 4vw;
+        h1{
+            color: orangered;
+        }
+        p{
+            padding-top: 2vw;
+            font-family: 'Poppins', sans-serif;
+            color: rgba(8, 0, 0, 0.722);
+            line-height: 1.75vw;
+            font-weight: bold;
+            //width: 33vw;
+            font-size: 1vw;
+        }
+    }
+    .Anand{
+        //width: 40vw;
+        align-items: start;
+        justify-content: space-between;
+        //padding-right: 4vw;
+        h1{
+            color: orangered;
+        }
+        p{
+            padding-top: 2vw;
+            padding-right: 5vw;
+            font-family: 'Poppins', sans-serif;
+            color: rgba(8, 0, 0, 0.722);
+            line-height: 1.75vw;
+            font-weight: bold;
+            //width: 33vw;
+            font-size: 1vw;
+        }
+    }
+    .title{
+        padding-top: 6vw;
+        padding-left: 15vw;
+        padding-bottom: 25vw;
+    }
+    .title h1{
+        //padding-top: 10vw;
+        font-family: "Montserrat",sans-serif;
+        font-size: 2vw;
+        font-weight: bold;
+    }
+    .title p{
+        padding-top: 3vw;
+        width: 30vw;
+        font-family: 'Poppins', sans-serif;
+        color: rgba(8, 0, 0, 0.722);
+        line-height: 1.75vw;
+        font-weight: bold;
+    }
+    .imge img{
+        width: 15vw;
+        padding-left: 7vw;
+        //padding-right: 10vw;
+    }
+    .image img{
+        width: 20vw;
+       // padding-left: 8vw;
+        //padding-bottom: 8vw;
+        padding-right: 10vw;
+        padding-left: 6vw;
+    }
+}
+}
+}
