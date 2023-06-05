@@ -133,13 +133,15 @@
     }
     .members{
         display: flex;
-        justify-content:start;
+        justify-content:space-around;
         align-items: start;
+        text-align: flex-start;
         padding-top: 7vw;
         //width: 10vw
     .sripal{
-        width: 30vw;
-        padding-left: 10vw;
+        width: 40vw;
+        align-items: start;
+        //padding-right: 4vw;
         h1{
             color: orangered;
         }
@@ -149,9 +151,27 @@
             color: rgba(8, 0, 0, 0.722);
             line-height: 1.75vw;
             font-weight: bold;
-            width: 33vw;
+            //width: 33vw;
             font-size: 1vw;
-
+        }
+    }
+    .Anand{
+        //width: 40vw;
+        align-items: start;
+        justify-content: space-between;
+        //padding-right: 4vw;
+        h1{
+            color: orangered;
+        }
+        p{
+            padding-top: 2vw;
+            padding-right: 5vw;
+            font-family: 'Poppins', sans-serif;
+            color: rgba(8, 0, 0, 0.722);
+            line-height: 1.75vw;
+            font-weight: bold;
+            //width: 33vw;
+            font-size: 1vw;
         }
     }
     .title{
@@ -174,13 +194,16 @@
         font-weight: bold;
     }
     .imge img{
-        width: 20vw;
-        padding-left: 10vw;
+        width: 15vw;
+        padding-left: 7vw;
+        //padding-right: 10vw;
     }
     .image img{
-        width: 22vw;
-        padding-left: 10vw;
-        padding-bottom: 8vw;
+        width: 20vw;
+       // padding-left: 8vw;
+        //padding-bottom: 8vw;
+        padding-right: 10vw;
+        padding-left: 6vw;
     }
 }
 }
