@@ -20,6 +20,8 @@ import Transportation from "../../../Assets/Images/Transportation.png";
 import BitumenEmulsion from "../../../Assets/Images/bitumen emulsion.png";
 import TradingAndMarketing from "../../../Assets/Images/Trading & Marketing.png";
 import TradingAndMarketingIcon from "../../../Assets/icons/Trading & Marketing.svg";
+import MeterIcon from "../../../Assets/icons/Meter.svg";
+import wareHouseSpaceIcon from "../../../Assets/icons/Ware house space .svg";
 
 import "./Service.scss";
 import Contact from "../Contact/Contact";
@@ -220,6 +222,7 @@ function Service() {
 
           <section className="categories">
             <div className="col">
+              
               <div className="row">
                 <img src={Packgingicon} alt="" />
                 <h1 className="Value">100,000</h1>
@@ -243,7 +246,7 @@ function Service() {
               </div>
 
               <div className="row">
-                <img src={WareHouseicon} alt="" />
+                <img src={wareHouseSpaceIcon} alt="" />
                 <h1 className="Value">
                   100,000 <span className="Metrics">sq.ft.</span>
                 </h1>
@@ -252,7 +255,7 @@ function Service() {
             </div>
             <div className="col">
               <div className="row">
-                <img src={Packgingicon} alt="" />
+                <img src={MeterIcon} alt="" />
                 <h1 className="Value">7,000</h1>
                 <p>
                   monthly throughput for warehousing{" "}
@@ -261,7 +264,7 @@ function Service() {
               </div>
 
               <div className="row">
-                <img src={BulkBitumenicon} alt="" />
+                <img src={WareHouseicon} alt="" />
                 <h1 className="Value">
                   500,000 <span className="Metrics">sq.km</span>
                 </h1>
