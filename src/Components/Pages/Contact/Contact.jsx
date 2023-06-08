@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import Navbar from "../../Navbar/Navbar";
 import call from "./../../../Assets/icons/Call Icon.svg";
 import Email from "./../../../Assets/icons/Mail Icon.svg";
@@ -14,7 +14,64 @@ function Contact() {
     email: "",
     message: "",
   });
+  const [baseColor,setBaseColor] = useState('white');
+  const [formError, setFormError] = useState(null);
   const location = useLocation();
+  const sendMail = (e) => {
+    if (formData.name.length === 0) {
+      setFormError("Enter name");
+      return;
+    }
+    if (formData.email.length === 0) {
+      setFormError("Enter email");
+      return;
+    } else {
+      var match = formData.email
+        .toLowerCase()
+        .match(
+          /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+        );
+      if (!match) {
+        setFormError("Enter valid email");
+        return;
+      }
+    }
+    setFormError(null);
+    e.target.textContent = "sending...";
+    // send mail using emailjs
+    emailjs
+      .send(
+        "service_94kv1c9",
+        "template_2bbh2hi",
+        formData,
+        "d8lT77co0y5QoiHDe"
+      )
+      .then(
+        (response) => {
+          console.log("SUCCESS!", response.status, response.text);
+          setFormData({
+            email : '',
+            message : '',
+            name : ''
+          })
+          e.target.textContent = "Sent successfully";
+          setTimeout(()=>{  
+            e.target.textContent = "Send";
+          },2000)
+          
+        },
+        (err) => {
+          setFormError("Error while sending the message!. Try again");
+          e.target.textContent = "Send";
+        }
+      );
+  };
+  useEffect(()=>{
+    if(location.pathname === '/contact')
+      setBaseColor('white')
+    else  
+      setBaseColor('black');
+  },[location])
   return (
     <>
       {location.pathname === "/contact" ? <Navbar /> : ""}
@@ -24,7 +81,8 @@ function Contact() {
         </div>
         <div className="desc">
           <p>
-            For inquiries, feedback, or support, please feel free to contact us.
+            For inquiries, feedback, or support, please feel free to contact us.{" "}
+            <br />
             Our dedicated team is always ready to assist you.
           </p>
         </div>
@@ -36,7 +94,7 @@ function Contact() {
               </div>
               <div className="details">
                 <p className="title">Call Us</p>
-                <div className="contact">
+                <div className="contact-detail">
                   <a href="tel:+918056080595">+91 8056080595</a>
                 </div>
               </div>
@@ -47,7 +105,7 @@ function Contact() {
               </div>
               <div className="details">
                 <p className="title">Email</p>
-                <div className="contact">
+                <div className="contact-detail">
                   <a href="mailto:info@energon.in">info@energon.in</a>
                 </div>
               </div>
@@ -59,7 +117,7 @@ function Contact() {
             </div>
             <div className="content">
               <div className="title">Address</div>
-              <div className="address">
+              <div className="address-detail">
                 <div className="title">
                   <p>Headquarters</p>
                 </div>
@@ -68,7 +126,7 @@ function Contact() {
                   hospital, Ameerpet, Hyderabad-500 073
                 </div>
               </div>
-              <div className="address">
+              <div className="address-detail">
                 <div className="title">
                   <p>Reigonal Office</p>
                 </div>
@@ -87,6 +145,13 @@ function Contact() {
                   name="Name"
                   value={formData.name}
                   id="name"
+                  placeholder="Enter your name..."
+                  onChange={(e) => {
+                    setFormData({
+                      ...formData,
+                      name: e.target.value,
+                    });
+                  }}
                 />
               </div>
               <div className="input-field-container">
@@ -95,30 +160,53 @@ function Contact() {
                   name="Email"
                   value={formData.email}
                   id="email"
+                  placeholder="Enter e-mail ..."
+                  onChange={(e) => {
+                    setFormData({
+                      ...formData,
+                      email: e.target.value,
+                    });
+                  }}
                 />
               </div>
-              <div className="input-filed-container">
+              <div className="input-field-container">
                 <textarea
                   name="message"
                   id="message"
+                  placeholder="Write your query here..."
+                  onChange={(e) => {
+                    setFormData({
+                      ...formData,
+                      message: e.target.value,
+                    });
+                  }}
                   value={formData.message}
                   cols="30"
-                  rows="10"
+                  rows="5"
                 ></textarea>
+              </div>
+              <div className="error">
+                <p>{formError ? `*${formError}` : ""}</p>
+              </div>
+              <div className="input-field-container">
+                <button onClick={sendMail}>
+                  Submit <span>→</span>
+                </button>
               </div>
             </div>
           </div>
         </div>
         <div className="map">
           <iframe
-            style={{ width: "100vw", height: "30vw" }}
             id="gmap_canvas"
             src="https://maps.google.com/maps?q=2rd Floor, 95, Lumbini Avenue, Gachibowli, Hyderabad, Telangana 500032&t=&z=17&ie=UTF8&iwloc=&output=embed"
             title="map"
           ></iframe>
         </div>
         <div className="mini-footer">
-          
+          <p>
+            <a href="mailto:info@energon.in">info@energon.in</a>
+          </p>
         </div>
       </div>
     </>

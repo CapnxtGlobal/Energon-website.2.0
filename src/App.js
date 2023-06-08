@@ -26,14 +26,13 @@ function App() {
   return (
     <>
       <div>
-        {/* <Routes>
+        <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/services" element={<Service />} />
           <Route path="/aboutus" element={<AboutUs />} />
           <Route path="/contact" element={<Contact />} />
-        </Routes> */}
+        </Routes>
         {/* {/* <Navbar/> */}
-        <Contact/>
         <div
           className="scroll-to-top hide"
           onClick={() => {
