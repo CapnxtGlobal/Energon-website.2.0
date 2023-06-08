@@ -1,19 +1,56 @@
-import React from "react";
+import React, { useState,useRef } from "react";
 import Navbar from "../../Navbar/Navbar";
 import call from "./../../../Assets/icons/Call Icon.svg";
 import Email from "./../../../Assets/icons/Mail Icon.svg";
 import address from "./../../../Assets/icons/Location icon.svg";
 import { useLocation } from "react-router-dom";
+import emailjs from '@emailjs/browser';
 
 import "./Contact.scss";
+import { sendForm } from "emailjs-com";
 
 function Contact() {
   const location = useLocation();
 
-  let classConditionalRednering = `${
-    location.pathname === "/contact" ? "black" : "white"
-  }`;
+  let classConditionalRednering = `${location.pathname === "/contact" ? "black" : "white"
+    }`;
+    document.forms['sign-up-form']=function(event){
 
+      if(this.username.value.trim() === ""){
+        document.querySelector(".username-error").innerHTML = "Please enter a username";
+        document.querySelector(".username-error").style.display = "block";
+        event.preventDefault();
+        return false;
+     }
+     if(this.email.value.trim() === ""){
+      document.querySelector(".email-error").innerHTML = "Please enter a email";
+      document.querySelector(".email-error").style.display = "block";
+      event.preventDefault();
+      return false;
+   }
+      event.preventDefault();
+    }
+    const[formData,setFormData]=useState({
+      
+      name:"",
+      Email:"",
+      message:"",
+    })
+    const [formError, setFormError] = useState(null);
+    const form=useRef();
+    const sendEmail = (e) => {
+      e.preventDefault();
+  
+      emailjs.sendForm('service_94kv1c9', 'template_2bbh2hi', form.current, 'd8lT77co0y5QoiHDe')
+      .then(
+      (response) => {
+        console.log("SUCCESS!", response.status, response.text);
+      },
+      (err) => {
+        setFormError("Error while sending the message!. Try again");
+      }
+    );
+};
   return (
     <>
       {location.pathname === "/contact" && <Navbar />}
@@ -65,19 +102,44 @@ function Contact() {
               </a>
             </div>
           </div>
-          <div className="row address">
-            <img src={address} alt="" />
-            <div className="details">
-              <h1 className={classConditionalRednering}>Address</h1>
-              <a className={classConditionalRednering} href="#">
-                701,7th floor, Solitaire Plaza, 8-3-948/949, Behind image
-                hospital, Ameerpet, Hyderabad-500 073
-              </a>
-              <a className={classConditionalRednering} target="_main" href="https://www.google.com/maps/place/2rd+Floor,+95,+Lumbini+Avenue,+Gachibowli,+Hyderabad,+Telangana+500032/@17.4322669,78.3711247,17z/data=!3m1!4b1!4m5!3m4!1s0x3bcb93fabac565f1:0x8d902808ebbdd33f!8m2!3d17.4322669!4d78.3736996?entry=ttu">
-                2rd Floor, 95, Lumbini Avenue, Gachibowli, Hyderabad, Telangana
-                500032
-              </a>
-            </div>
+        </div>
+        <div className="row address">
+          <img src={address} alt="" />
+          <div className="details">
+            <h1 className={classConditionalRednering}>Address</h1>
+            <h4 className={classConditionalRednering}>Headquarters</h4>
+            <p className={classConditionalRednering} href="#">
+              701,7th floor, Solitaire Plaza, 8-3-948/949, Behind image
+              hospital, Ameerpet, Hyderabad-500 073
+            </p>
+            <h4 className={classConditionalRednering}>Regional office</h4>
+            <p className={classConditionalRednering} target="_main" href="https://www.google.com/maps/place/2rd+Floor,+95,+Lumbini+Avenue,+Gachibowli,+Hyderabad,+Telangana+500032/@17.4322669,78.3711247,17z/data=!3m1!4b1!4m5!3m4!1s0x3bcb93fabac565f1:0x8d902808ebbdd33f!8m2!3d17.4322669!4d78.3736996?entry=ttu">
+              2rd Floor, 95, Lumbini Avenue, Gachibowli, Hyderabad, Telangana
+              500032
+            </p>
+          </div>
+          <div className="started">
+            <form name="sign-up-form" action="" method="post" autoComplete="off"ref={form} onSubmit={sendEmail}>
+              <input
+                type="text"
+                required="required"
+                placeholder="FirstName"
+              />
+              <p class="error firstname-error"></p>
+              <input
+                type="email"
+                required="required"
+                placeholder="Email"
+              />
+              <p class="error email-error"></p>
+              <textarea name='enquiry' id='' cols="20"  rows="5" placeholder='enter here...'></textarea>
+              <p class="error text-error"></p>
+              <div className="arrow">
+                <button type="get started" onClick={sendEmail}>
+                  SUBMIT <span className="right">→</span>
+                </button>
+              </div>
+            </form>
           </div>
         </div>
 

@@ -76,7 +76,7 @@ function AboutUs() {
         <section className='location'>
           <div className='heading'>
             <h1>Our Locations</h1>
-            <h3><p>Energon's services span various</p> <p>locations in India.Explore our interactive</p><p> map to discover our facilities and regional offices.</p></h3>
+            <h3><p>Energon's services span various locations in India.Explore our interactive map to discover our facilities and regional offices.</p></h3>
           </div>
           <div className='map'>
             <img src={map} alt='' />
