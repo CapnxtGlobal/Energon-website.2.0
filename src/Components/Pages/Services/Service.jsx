@@ -36,7 +36,7 @@ function Service() {
     const { services } = useLocation();
   
     useEffect(() => {
-      window.scrollTo({top:0,behavior:'auto'});
+      window.scrollTo({top:0,behavior:'instant'});
     }, [services]);
   
     return null;

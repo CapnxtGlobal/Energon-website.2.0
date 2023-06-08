@@ -119,6 +119,7 @@ function Contact() {
             </p>
           </div>
           <div className="started">
+          <h1>Contact form</h1>
             <form name="sign-up-form" action="" method="post" autoComplete="off"ref={form} onSubmit={sendEmail}>
               <input
                 type="text"
