@@ -2,7 +2,7 @@
     //background-color: whitesmoke;
 .About {
     display: flex;
-    //padding-top: 10vw;
+    padding-top: 10vw;
     justify-content: space-between;
     align-items: left;
     font-family: 'Montserrat', sans-serif;
@@ -86,21 +86,22 @@
     }
 }
 .location{
-    display: flex;
+    flex-direction: column;
     justify-content: center;
-    align-items: start;
+    align-items:center;
+    text-align: center;
     //font-family: 'Montserrat', sans-serif;
     //text-align: start;
     .heading h1{
         color: orangered;
         font-size: 3vw;
-        padding-right: 20vw;
-        padding-bottom: 10vw;
-        padding-top: 6vw;
+        padding: 6vw 20vw 10vw;
+        text-align: center;
         font-family: 'Montserrat', sans-serif;
     }
     .heading h3{
         line-height: 2vw;
+        text-align: center;
         font-family: 'Poppins', sans-serif;
         color: rgb(75, 72, 72)!important;
         font-weight: bolder!important;
@@ -115,7 +116,7 @@
     }
     .map{
         width: 45vw;
-        //padding-right: 10vw;
+        padding: 5vw 0vw 0vw 30vw;
     }
 }
 .team{

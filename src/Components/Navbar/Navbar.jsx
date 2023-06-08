@@ -1,20 +1,33 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import logoWhite from "../../Assets/Images/logo white.svg";
 import logoBlack from "../../Assets/Images/logo black.svg";
 import { Link, useLocation } from "react-router-dom";
-import "./Navbar.scss"
+import "./Navbar.scss";
 
 function Navbar() {
   const location = useLocation();
 
+
+   useEffect(() => {
+    const NavbarheaderEl = document.querySelector('.Navbarheader')
+
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) {
+        NavbarheaderEl.classList.add('Navbarheader-scrolled');
+      } else if (window.scrollY <= 50) {
+        NavbarheaderEl.classList.remove('Navbarheader-scrolled');
+      }
+    })
+  }, [])
   return (
     <>
-      <section className="Navbar">
+      <section className="Navbarheader Navbarheader-scrolled ">
         <nav>
           <div className="logo">
             <Link to="/" className="conditional-rendering-logo">
               <img
                 src={location.pathname === "/" ? logoWhite : logoBlack}
+                changeBackground color="white"
                 alt="error loading in image"
               />
             </Link>
@@ -22,16 +35,40 @@ function Navbar() {
 
           <div className="nav-links">
             <li className={location.pathname === "/" ? "white" : "black"}>
-             <Link to="/">Home</Link>
+              <Link to="/"
+                style={
+                  location.pathname === "/"
+                    ? { color: "#e95c28" }
+                    : { color: "black" }
+                }
+              >Home</Link>
             </li>
             <li className={location.pathname === "/" ? "white" : "black"}>
-              <Link to="/aboutus">About Us</Link>
+              <Link to="/aboutus"
+                style={
+                  location.pathname === "/aboutus"
+                    ? { color: "#e95c28" }
+                    : { color: "black" }
+                }
+              >About Us</Link>
             </li>
             <li className={location.pathname === "/" ? "white" : "black"}>
-              <Link to="/services">Services</Link>
+              <Link to="/services"
+                style={
+                  location.pathname === "/services"
+                    ? { color: "#e95c28" }
+                    : { color: "black" }
+                }
+              >Services</Link>
             </li>
             <li className={location.pathname === "/" ? "white" : "black"}>
-              <Link to="/contact">Contact Us</Link>
+              <Link to="/contact"
+                style={
+                  location.pathname === "/contact"
+                    ? { color: "#e95c28" }
+                    : { color: "black" }
+                }
+              >Contact Us</Link>
             </li>
           </div>
         </nav>

@@ -1,5 +1,11 @@
-.Navbar {
-    //   background-color: rgb(247, 211, 144);
+.Navbarheader-scrolled{
+  background-color: black!important;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+}
+.Navbarheader {
+      // background-color: rgb(247, 211, 144);
+      padding-top: 3vw;
+      
     nav {
     //   border: 1px solid black;
       background-color: transparent;
@@ -7,12 +13,17 @@
       justify-content: space-between;
       align-items: center;
       text-align: center;
-      padding: 2.5vw 5vw;
+      width: 100%;
+      //padding-left: 2.5vw;
+      position: fixed;
+      transition: all 0.5s;
+      z-index: 1000;
   
       .logo {
         // border: 1px solid red;
         .conditional-rendering-logo img {
           width: 16vw;
+          padding-left: 4vw;
         }
       }
   
@@ -20,6 +31,7 @@
         //   border: 1px solid red;
         display: flex;
         justify-content: space-around;
+        padding-right: 8vw;
         align-items: end;
         text-align: center;
         cursor: pointer;
@@ -43,5 +55,9 @@
         }
       }
     }
+  }
+  .Navbarheader-scrolled{
+    background-color: black!important;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.15);
   }
   

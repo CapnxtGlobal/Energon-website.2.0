@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link, redirect, useLocation, useNavigate } from "react-router-dom";
 //import Logo from "../../assets/energon_logo-1.png";
 import home from "../../../Assets/Images/homeheaderimage.png";
 import about from "../../../Assets/Images/About-us.png";
@@ -14,7 +14,7 @@ import "../Home/Home.scss";
 //import navbar from "../../Navbar/Navbar";
 import Navbar from "../../Navbar/Navbar";
 import Contact from "../Contact/Contact";
-
+import { useHistory } from 'react-router-dom';
 
 
 //import Aos from "aos";
@@ -36,28 +36,30 @@ import {
 } from "swiper";
 
 function Home() {
-  const [FormData, setFormData] = useState({
-    name: "",
-    email: "",
-  });
-  const Submit = (e) => {
-    e.preventDefault();
-    if (FormData.name.length == 0) {
-      window.alert("name cannot be empty");
-    } else if (!isValidEmail(FormData.email)) {
-      window.alert("Enter A Valid Email");
-    } else {
-      console.log(FormData);
-      window.alert("Success ! need to add email js verification");
+  const location = useLocation();
+
+  const navigate = useNavigate();
+  const navigateToServices = () => {
+    navigate('/services')
+  }
+
+  document.forms['sign-up-form'] = function (event) {
+
+    if (this.username.value.trim() === "") {
+      document.querySelector(".username-error").innerHTML = "Please enter a username";
+      document.querySelector(".username-error").style.display = "block";
+      event.preventDefault();
+      return false;
     }
-  };
-
-  const isValidEmail = (email) => {
-    // Simple email validation regex pattern
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return emailRegex.test(email);
-  };
-
+    if (this.email.value.trim() === "") {
+      document.querySelector(".email-error").innerHTML = "Please enter a email";
+      document.querySelector(".email-error").style.display = "block";
+      event.preventDefault();
+      return false;
+    }
+    
+    event.preventDefault();
+  }
   return (
     <>
       <main className="Universal-Home">
@@ -75,22 +77,20 @@ function Home() {
           <div className="Us">
             <h1>ABOUT US</h1>
             <p>
-              Established in 2012.Energon has grown into a leading organization
-              in the petro products industry.
+              Established in 2012 , We began our journey in the dynamic petroproducts industry and have since
+              broadened our reach to diverse sectors, continually enriching lives and bolstering industries.
             </p>
             <p>
-              Energon was founded with the vision of pursuing various
-              oil-related industry and outsourcing activities across India.We
-              bagan with bitumen handling for Hindustan Petroleum Corporation
-              Limited(HPCL)and expanded into drum
-              <br />
-              manufacturing for the Same.Today,our experienced team of over 60
-              years in business handles 20,000 MT of black oils and 1,000 KL of
-              lubricants.
-            </p>
+              Our diverse portfolio of services, ranging from petroleum product handling to sustainable energy
+              production, has set new standards of excellence in the industry. These services are driven by our
+              unwavering commitment to quality, safety, and efficiency.</p>
+
+            <p>At the helm of Energon are seasoned leaders, who with their rich experience and industry insight,
+              guide our endeavor to make a significant impact in the energy sector. As we move ahead, we stay
+              true to our mission: To be an ally of growth, a catalyst of positive change, and a beacon of
+              sustainable energy practices.</p>
             <p>
-              Our commmitment to innovation and excellence has positioned
-              Energon as a key player in the petro product sector.
+              Welcome to Energon. We don't just power industries; we empower futures.
             </p>
           </div>
           <div className="img">
@@ -116,6 +116,7 @@ function Home() {
             slidesPerView={2}
             initialSlide={3}
             navigation={true}
+            loop={true}
             spaceBetween={180}
             coverflowEffect={{
               rotate: 50,
@@ -129,7 +130,7 @@ function Home() {
             modules={[EffectCoverflow, Autoplay, Navigation, Pagination]}
             className="mySwiper"
             autoplay={{
-              delay: 2500,
+              delay: 5000,
               // duration : 10000,
               disableOnInteraction: false,
             }}
@@ -137,15 +138,13 @@ function Home() {
             <SwiperSlide>
               <div className="slider-card">
                 <div className="content">
-                  <h1>ENERGON GAS</h1>
+                  <h1>Manufacturing Excellence in Polybags</h1>
                   <p>
-                    We are committed to promoting sustainable energy solutions,
-                    processing agricultural waste into bio gas, which is then
-                    sold as CNG to auto fuel stations. Our innovative approach
-                    to waste management contributes to a greener and more
-                    sustainable future
+                    At Energon, we produce an astounding 12 million polybags per month, reflecting our
+                    commitment to high-quality and durable packaging solutions. Explore how our
+                    manufacturing prowess caters to diverse industrial needs.
                   </p>
-                  <button>EXPLORE OUR SERVICES</button>
+                  <button onClick={navigateToServices}>EXPLORE OUR SERVICES</button>
                 </div>
                 <div className="img">
                   <img src={home} alt="" />
@@ -156,35 +155,13 @@ function Home() {
               {/* <img src={home} alt="" /> */}
               <div className="slider-card">
                 <div className="content">
-                  <h1>ENERGON GAS</h1>
+                  <h1>Championing Sustainability with Bio CNG</h1>
                   <p>
-                    We are committed to promoting sustainable energy solutions,
-                    processing agricultural waste into bio gas, which is then
-                    sold as CNG to auto fuel stations. Our innovative approach
-                    to waste management contributes to a greener and more
-                    sustainable future
+                    Pioneering the transition towards renewable energy, we convert agricultural waste
+                    into BioGas at our technologically advanced Bio CNG plants. Harness the power of
+                    sustainable energy with our innovative waste-to-energy solutions.
                   </p>
-                  <button>EXPLORE OUR SERVICES</button>
-                </div>
-                <div className="img">
-                  <img src={home} alt="" />
-                </div>
-              </div>
-            </SwiperSlide>
-
-            <SwiperSlide>
-              {/* <img src={home} alt="" /> */}
-              <div className="slider-card">
-                <div className="content">
-                  <h1>ENERGON GAS</h1>
-                  <p>
-                    We are committed to promoting sustainable energy solutions,
-                    processing agricultural waste into bio gas, which is then
-                    sold as CNG to auto fuel stations. Our innovative approach
-                    to waste management contributes to a greener and more
-                    sustainable future
-                  </p>
-                  <button>EXPLORE OUR SERVICES</button>
+                  <button onClick={navigateToServices}>EXPLORE OUR SERVICES</button>
                 </div>
                 <div className="img">
                   <img src={home} alt="" />
@@ -196,15 +173,14 @@ function Home() {
               {/* <img src={home} alt="" /> */}
               <div className="slider-card">
                 <div className="content">
-                  <h1>ENERGON GAS</h1>
+                  <h1>Bulk Bitumen Handling &Transportation</h1>
                   <p>
-                    We are committed to promoting sustainable energy solutions,
-                    processing agricultural waste into bio gas, which is then
-                    sold as CNG to auto fuel stations. Our innovative approach
-                    to waste management contributes to a greener and more
-                    sustainable future
+                    With state-of-the-art handling equipment and a fleet of specialized vehicles, we
+                    ensure safe and efficient delivery of bitumen under strict temperature controls, adhering to
+                    industry standards. From refinery gates to the heart of your operations, trust us for the
+                    seamless logistics of this critical petroproduct.
                   </p>
-                  <button>EXPLORE OUR SERVICES</button>
+                  <button onClick={navigateToServices}>EXPLORE OUR SERVICES</button>
                 </div>
                 <div className="img">
                   <img src={home} alt="" />
@@ -216,55 +192,13 @@ function Home() {
               {/* <img src={home} alt="" /> */}
               <div className="slider-card">
                 <div className="content">
-                  <h1>ENERGON GAS</h1>
+                  <h1>Seamlessly Streamlining Global Trade</h1>
                   <p>
-                    We are committed to promoting sustainable energy solutions,
-                    processing agricultural waste into bio gas, which is then
-                    sold as CNG to auto fuel stations. Our innovative approach
-                    to waste management contributes to a greener and more
-                    sustainable future
+                    Enabling smooth trade across borders, Energon expertly handles over 2000 TEUs per
+                    year in Container Terminal Operations and Rake Movements, spread over 7 key locations.
+                    Embark on your journey towards efficient and secure logistics with us.
                   </p>
-                  <button>EXPLORE OUR SERVICES</button>
-                </div>
-                <div className="img">
-                  <img src={home} alt="" />
-                </div>
-              </div>
-            </SwiperSlide>
-
-            <SwiperSlide>
-              {/* <img src={home} alt="" /> */}
-              <div className="slider-card">
-                <div className="content">
-                  <h1>ENERGON GAS</h1>
-                  <p>
-                    We are committed to promoting sustainable energy solutions,
-                    processing agricultural waste into bio gas, which is then
-                    sold as CNG to auto fuel stations. Our innovative approach
-                    to waste management contributes to a greener and more
-                    sustainable future
-                  </p>
-                  <button>EXPLORE OUR SERVICES</button>
-                </div>
-                <div className="img">
-                  <img src={home} alt="" />
-                </div>
-              </div>
-            </SwiperSlide>
-
-            <SwiperSlide>
-              {/* <img src={home} alt="" /> */}
-              <div className="slider-card">
-                <div className="content">
-                  <h1>ENERGON GAS</h1>
-                  <p>
-                    We are committed to promoting sustainable energy solutions,
-                    processing agricultural waste into bio gas, which is then
-                    sold as CNG to auto fuel stations. Our innovative approach
-                    to waste management contributes to a greener and more
-                    sustainable future
-                  </p>
-                  <button>EXPLORE OUR SERVICES</button>
+                  <button onClick={navigateToServices}>EXPLORE OUR SERVICES</button>
                 </div>
                 <div className="img">
                   <img src={home} alt="" />
@@ -354,36 +288,29 @@ function Home() {
               reprehenderit!
             </p>
           </div>
+
           <div className="started">
-            <input
-              type="text"
-              required="required"
-              placeholder="FirstName"
-              value={FormData.name}
-              onChange={(e) => {
-                setFormData({
-                  ...FormData,
-                  name: e.target.value,
-                });
-              }}
-            />
-            <input
-              type="email"
-              required="required"
-              placeholder="Email"
-              value={FormData.email}
-              onChange={(e) => {
-                setFormData({
-                  ...FormData,
-                  email: e.target.value,
-                });
-              }}
-            />
-            <div className="arrow">
-              <button type="get started" onClick={Submit}>
-                GET STARTED <span className="right">→</span>
-              </button>
-            </div>
+            <form name="sign-up-form" action="" method="post" autoComplete="off">
+              <input
+                type="text"
+                required="required"
+                placeholder="FirstName"
+              />
+              <p class="error firstname-error"></p>
+              <input
+                type="email"
+                required="required"
+                placeholder="Email"
+              />
+              <p class="error email-error"></p>
+              <textarea name='enquiry' id='' cols="20"  rows="5" placeholder='enter here...'></textarea>
+              <p class="error text-error"></p>
+              <div className="arrow">
+                <button type="get started">
+                  SUBMIT <span className="right">→</span>
+                </button>
+              </div>
+            </form>
           </div>
         </section>
         <Contact />

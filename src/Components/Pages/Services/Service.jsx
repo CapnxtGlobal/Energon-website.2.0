@@ -23,10 +23,24 @@ import TradingAndMarketingIcon from "../../../Assets/icons/Trading & Marketing.s
 import MeterIcon from "../../../Assets/icons/Meter.svg";
 import wareHouseSpaceIcon from "../../../Assets/icons/Ware house space .svg";
 
+
 import "./Service.scss";
 import Contact from "../Contact/Contact";
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
+import { delay } from "q";
+
 
 function Service() {
+  function ScrollToTop() {
+    const { services } = useLocation();
+  
+    useEffect(() => {
+      window.scrollTo({top:0,behavior:'auto'});
+    }, [services]);
+  
+    return null;
+  }
   let serviceCardsData = [
     {
       icon: BulkBitumenicon,
@@ -79,15 +93,6 @@ function Service() {
     },
 
     {
-      icon: BitumenEmulsionIcon,
-      heading: "Bitumen Emulsion Manufacturing",
-      content:
-        "Our bitumen emulsion manufacturing division produces top-quality emulsion grades that adhere to IS standards. We use advanced technology and rigorous quality control measures to ensure that our clients receive industry-leading products for their specific needs.",
-      image: BitumenEmulsion,
-      DotsImage: Dots,
-    },
-
-    {
       icon: CustamizationIcon,
       heading: "Customized Technical Services",
       content:
@@ -96,19 +101,12 @@ function Service() {
       DotsImage: Dots,
     },
 
-    {
-      icon: TradingAndMarketingIcon,
-      heading: "Trading and Marketing",
-      content:
-        "Our trading and marketing division handles a diverse range of products, including base oils, lubricants, greases, transformer oils, rubber process oils, and solvents. We have established a strong network of suppliers and buyers, enabling us to cater to the needs of various industries efficiently and effectively.",
-      image: TradingAndMarketing,
-      DotsImage: Dots,
-    },
   ];
 
   return (
     <>
-      <section className="Universal-Service">
+    <ScrollToTop/>
+      <section className="Universal-Service" id="services">
         <nav>
           <Navbar />
         </nav>
