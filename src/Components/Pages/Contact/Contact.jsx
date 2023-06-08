@@ -14,7 +14,7 @@ function Contact() {
     email: "",
     message: "",
   });
-  const [baseColor,setBaseColor] = useState('white');
+  const [isContactPage, setIsContactPage] = useState(true);
   const [formError, setFormError] = useState(null);
   const location = useLocation();
   const sendMail = (e) => {
@@ -50,15 +50,14 @@ function Contact() {
         (response) => {
           console.log("SUCCESS!", response.status, response.text);
           setFormData({
-            email : '',
-            message : '',
-            name : ''
-          })
+            email: "",
+            message: "",
+            name: "",
+          });
           e.target.textContent = "Sent successfully";
-          setTimeout(()=>{  
+          setTimeout(() => {
             e.target.textContent = "Send";
-          },2000)
-          
+          }, 2000);
         },
         (err) => {
           setFormError("Error while sending the message!. Try again");
@@ -66,16 +65,16 @@ function Contact() {
         }
       );
   };
-  useEffect(()=>{
-    if(location.pathname === '/contact')
-      setBaseColor('white')
-    else  
-      setBaseColor('black');
-  },[location])
+  useEffect(() => {
+    if (location.pathname === "/contact") setIsContactPage(true);
+    else {
+      setIsContactPage(false);
+    }
+  }, [location]);
   return (
     <>
       {location.pathname === "/contact" ? <Navbar /> : ""}
-      <div className="contact">
+      <div className={`contact ${isContactPage ? '' : 'dark'}`}>
         <div className="title">
           <h1>Contact Us</h1>
         </div>
@@ -196,13 +195,17 @@ function Contact() {
             </div>
           </div>
         </div>
-        <div className="map">
-          <iframe
-            id="gmap_canvas"
-            src="https://maps.google.com/maps?q=2rd Floor, 95, Lumbini Avenue, Gachibowli, Hyderabad, Telangana 500032&t=&z=17&ie=UTF8&iwloc=&output=embed"
-            title="map"
-          ></iframe>
-        </div>
+        {isContactPage ? (
+          <div className="map">
+            <iframe
+              id="gmap_canvas"
+              src="https://maps.google.com/maps?q=2rd Floor, 95, Lumbini Avenue, Gachibowli, Hyderabad, Telangana 500032&t=&z=17&ie=UTF8&iwloc=&output=embed"
+              title="map"
+            ></iframe>
+          </div>
+        ) : (
+          ""
+        )}
         <div className="mini-footer">
           <p>
             <a href="mailto:info@energon.in">info@energon.in</a>
