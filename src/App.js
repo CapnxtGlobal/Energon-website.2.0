@@ -1,4 +1,3 @@
-import logo from "./logo.svg";
 import { Routes, Route } from "react-router-dom";
 import Home from "./Components/Pages/Home/Home";
 import Service from "./Components/Pages/Services/Service";
@@ -7,7 +6,6 @@ import Contact from "./Components/Pages/Contact/Contact";
 import topIcon from "./Assets/icons/go-to-top.svg";
 import "./App.scss";
 import { useEffect } from "react";
-import Navbar from "./Components/Navbar/Navbar";
 
 function App() {
   useEffect(() => {

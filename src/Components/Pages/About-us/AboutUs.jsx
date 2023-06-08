@@ -13,13 +13,6 @@ import "../About-us/About-us.scss";
 import Contact from '../Contact/Contact';
 
 function AboutUs() {
-  let teamCardData = [
-    {
-      heading: "M.Sripal Reddy",
-      content: "Founder and Chief Executive Officer,"
-    }
-  ];
-  
   return (
     <>
       <Navbar />

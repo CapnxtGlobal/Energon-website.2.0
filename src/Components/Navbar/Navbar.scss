@@ -94,8 +94,9 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 1.5rem;
-
+    padding:1.5rem;
+    background-color: #fff;
+    box-shadow: 1px 2px 120px 2px #71717128;
     .ham-menu {
       z-index: 9999;
       .ham-icon {
@@ -104,7 +105,6 @@
           width: 1.75rem;
           height: 0.15rem;
           margin: 0.25rem;
-          background-color: #e0e0d7;
           transition: 0.2s ease;
         }
       }
@@ -115,7 +115,7 @@
       }
       .ham-icon.white {
         span {
-          background-color: #e0e0d7;
+          background-color: #000;
         }
       }
     }
@@ -166,7 +166,7 @@
       }
     }
     .contact {
-      opacity: 0;
+      display: none;
       p {
         font-size: 0.1rem;
         text-align: right;
@@ -209,6 +209,11 @@
             padding: 1rem 0;
             font-size: 1.25rem;
             font-weight: 600;
+          }
+        }
+        li.active{
+          a{
+            color: #ff4500;
           }
         }
       }

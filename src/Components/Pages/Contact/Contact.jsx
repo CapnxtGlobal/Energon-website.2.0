@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import Navbar from "../../Navbar/Navbar";
 import call from "./../../../Assets/icons/Call Icon.svg";
 import Email from "./../../../Assets/icons/Mail Icon.svg";
@@ -92,7 +92,7 @@ function Contact() {
                 <img src={call} alt="" />
               </div>
               <div className="details">
-                <p className="title">Call Us</p>
+                <p className="title"><img src={call} alt="" />Call Us</p>
                 <div className="contact-detail">
                   <a href="tel:+918056080595">+91 8056080595</a>
                 </div>
@@ -103,7 +103,7 @@ function Contact() {
                 <img src={Email} alt="" />
               </div>
               <div className="details">
-                <p className="title">Email</p>
+                <p className="title"><img src={Email} alt="" />Email</p>
                 <div className="contact-detail">
                   <a href="mailto:info@energon.in">info@energon.in</a>
                 </div>
@@ -115,7 +115,7 @@ function Contact() {
               <img src={address} alt="" />
             </div>
             <div className="content">
-              <div className="title">Address</div>
+              <div className="title"><img src={address} alt="" />Address</div>
               <div className="address-detail">
                 <div className="title">
                   <p>Headquarters</p>

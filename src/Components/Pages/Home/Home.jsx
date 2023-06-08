@@ -1,5 +1,4 @@
-import { useEffect, useState } from "react";
-import { Link, redirect, useLocation, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import home from "../../../Assets/Images/homeheaderimage.png";
 import about from "../../../Assets/Images/About-us.png";
 import Ploy from "../../../Assets/icons/Polybags.svg";
@@ -24,8 +23,7 @@ import "swiper/css/pagination";
 import { Autoplay, Navigation, Pagination, EffectCoverflow } from "swiper";
 
 function Home() {
-  const location = useLocation();
-  const clientLogos = [hp,  hmel, indianOil, rfcl, hmwsb];
+  const clientLogos = [hp, hmel, indianOil, rfcl, hmwsb];
   const navigate = useNavigate();
   const navigateToServices = () => {
     navigate("/services");
@@ -62,35 +60,40 @@ function Home() {
           </div>
         </header>
         <div className="About">
-          <div className="Us">
+          <div className="title">
             <h1>ABOUT US</h1>
-            <p>
-              Established in 2012 , We began our journey in the dynamic
-              petroproducts industry and have since broadened our reach to
-              diverse sectors, continually enriching lives and bolstering
-              industries.
-            </p>
-            <p>
-              Our diverse portfolio of services, ranging from petroleum product
-              handling to sustainable energy production, has set new standards
-              of excellence in the industry. These services are driven by our
-              unwavering commitment to quality, safety, and efficiency.
-            </p>
-
-            <p>
-              At the helm of Energon are seasoned leaders, who with their rich
-              experience and industry insight, guide our endeavor to make a
-              significant impact in the energy sector. As we move ahead, we stay
-              true to our mission: To be an ally of growth, a catalyst of
-              positive change, and a beacon of sustainable energy practices.
-            </p>
-            <p>
-              Welcome to Energon. We don't just power industries; we empower
-              futures.
-            </p>
           </div>
-          <div className="img">
-            <img src={about} alt="" />
+          <div className="container">
+            <div className="Us col">
+              <p>
+                Established in 2012 , We began our journey in the dynamic
+                petroproducts industry and have since broadened our reach to
+                diverse sectors, continually enriching lives and bolstering
+                industries.
+              </p>
+              <p>
+                Our diverse portfolio of services, ranging from petroleum
+                product handling to sustainable energy production, has set new
+                standards of excellence in the industry. These services are
+                driven by our unwavering commitment to quality, safety, and
+                efficiency.
+              </p>
+
+              <p>
+                At the helm of Energon are seasoned leaders, who with their rich
+                experience and industry insight, guide our endeavor to make a
+                significant impact in the energy sector. As we move ahead, we
+                stay true to our mission: To be an ally of growth, a catalyst of
+                positive change, and a beacon of sustainable energy practices.
+              </p>
+              <p>
+                Welcome to Energon. We don't just power industries; we empower
+                futures.
+              </p>
+            </div>
+            <div className="img col">
+              <img src={about} alt="" />
+            </div>
           </div>
         </div>
 
@@ -110,6 +113,11 @@ function Home() {
             grabCursor={true}
             centeredSlides={true}
             slidesPerView={2}
+            breakpoints={{
+              768: {
+                slidesPerView: 1,
+              },
+            }}
             initialSlide={3}
             navigation={true}
             loop={true}
@@ -126,11 +134,11 @@ function Home() {
             pagination={false}
             modules={[EffectCoverflow, Autoplay, Navigation, Pagination]}
             className="mySwiper"
-            autoplay={{
-              delay: 1000,
-              // duration : 10000,
-              disableOnInteraction: false,
-            }}
+            // autoplay={{
+            //   delay: 1000,
+            //   // duration : 10000,
+            //   disableOnInteraction: false,
+            // }}
           >
             <SwiperSlide>
               <div className="slider-card">
@@ -245,9 +253,7 @@ function Home() {
                   <br /> BOTTLING
                 </p>
               </div>
-            </div>
 
-            <div className="col">
               <div className="row">
                 <img src={Drums} alt="" />
                 <p className="Ser">PACKAGING DRUMS</p>

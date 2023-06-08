@@ -75,22 +75,22 @@ function Navbar() {
       >
         <div className="side-bar-menu">
           <ul>
-            <li>
+            <li className={location.pathname === "/" ? "active" : ""}>
               <Link to="/" onClick={hamMenuOpen}>
                 Home
               </Link>
             </li>
-            <li>
-              <Link to="/abourus" onClick={hamMenuOpen}>
+            <li className={location.pathname === "/aboutus" ? "active" : ""}>
+              <Link to="/aboutus" onClick={hamMenuOpen}>
                 About Us
               </Link>
             </li>
-            <li>
+            <li className={location.pathname === "/services" ? "active" : ""}>
               <Link to="/services" onClick={hamMenuOpen}>
                 Services
               </Link>
             </li>
-            <li>
+            <li className={location.pathname === "/contact" ? "active" : ""}>
               <Link to="/contact" onClick={hamMenuOpen}>
                 Contact Us
               </Link>

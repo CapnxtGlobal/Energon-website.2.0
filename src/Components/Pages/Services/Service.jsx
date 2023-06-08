@@ -11,15 +11,11 @@ import CustamizationIcon from "../../../Assets/icons/Customized Technical Servic
 import Custamization from "../../../Assets/Images/Custamization.png";
 import Cylindericon from "../../../Assets/icons/LPG Bottling 2.svg";
 import BioGasCngIcon from "../../../Assets/icons/Bio Gas & CNG.svg";
-import BitumenEmulsionIcon from "../../../Assets/icons/Bitumen Emulsion.svg";
 import serviceStorageTankers from "../../../Assets/Images/service storage tankers.png";
 import BioGasCNG from "../../../Assets/Images/Bio gas CNG.png";
 import LpgBottling from "../../../Assets/Images/miniLpgCylinders.png";
 import wareHouse from "../../../Assets/Images/Ware House.png";
 import Transportation from "../../../Assets/Images/Transportation.png";
-import BitumenEmulsion from "../../../Assets/Images/bitumen emulsion.png";
-import TradingAndMarketing from "../../../Assets/Images/Trading & Marketing.png";
-import TradingAndMarketingIcon from "../../../Assets/icons/Trading & Marketing.svg";
 import MeterIcon from "../../../Assets/icons/Meter.svg";
 import wareHouseSpaceIcon from "../../../Assets/icons/Ware house space .svg";
 
@@ -120,12 +116,12 @@ function Service() {
           <section className="cards-container">
             {serviceCardsData.map((data, index) => {
               return (
-                <>
                   <div
                     className={`Card ${index % 2 !== 0 ? "reverse-card" : ""}`}
                     // onClick={() => {
                     //   window.alert(index + 1);
                     // }}
+                    key={`card-${index}`}
                   >
                     <img
                       className="Dots"
@@ -149,7 +145,6 @@ function Service() {
                       <p>{data.content}</p>
                     </div>
                   </div>
-                </>
               );
             })}
 
