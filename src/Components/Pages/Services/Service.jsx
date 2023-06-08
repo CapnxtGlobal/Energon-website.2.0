@@ -28,7 +28,6 @@ import "./Service.scss";
 import Contact from "../Contact/Contact";
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
-import { delay } from "q";
 
 
 function Service() {
@@ -36,7 +35,7 @@ function Service() {
     const { services } = useLocation();
   
     useEffect(() => {
-      window.scrollTo({top:0,behavior:'auto'});
+      // window.scrollTo({top:0,behavior:'auto'});
     }, [services]);
   
     return null;
@@ -131,19 +130,19 @@ function Service() {
                     <img
                       className="Dots"
                       src={data.DotsImage}
-                      alt="error while loading the image"
+                      alt="error while loading"
                     />
                     <img
                       className="Card-Image"
                       src={data.image}
-                      alt="error while loading the image"
+                      alt="error while loading"
                     />
                     <div className="content">
                       <header>
                         <img
                           className="Icon"
                           src={data.icon}
-                          alt="error while loading the image"
+                          alt="error while loading"
                         />
                         <h1>{data.heading}</h1>
                       </header>
