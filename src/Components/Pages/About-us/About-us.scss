@@ -10,7 +10,7 @@
    // background-color: rED;
 
     p {
-        padding-bottom: 12vw;
+        //padding-bottom: 12vw;
         padding-top: 2vw;
         font-family: 'Poppins', sans-serif;
         color: rgba(8, 0, 0, 0.722);
@@ -18,6 +18,7 @@
         font-weight: bold;
         padding-left: 7vw;
         width: 36vw;
+        
     }
 
     h1 {
@@ -28,8 +29,8 @@
         font-size: 3vw;
     }
 
-    img {
-        width: 38vw;
+    .photo img {
+        width: 36vw;
         //height: 65%;
         padding-top: 4vw;
         padding-right: 7vw;
@@ -42,6 +43,7 @@
     text-align: center;
     flex-direction: column;
     font-family: 'Montserrat', sans-serif;
+    padding-top: 7vw;
     .heading h1{
         font-weight: bold;
         font-size: 3vw;
@@ -98,6 +100,7 @@
         padding: 6vw 20vw 10vw;
         text-align: center;
         font-family: 'Montserrat', sans-serif;
+        font-weight: bold;
     }
     .heading h3{
         line-height: 2vw;
@@ -241,4 +244,229 @@
     }
 }
 }
+}
+@media screen and (max-width: 768px) {
+    .Universal-About{
+        .About{
+            h1{
+                text-align: center;
+                //background-color: palevioletred;
+                font-size: 2rem;
+                margin: 1rem 0 0 7rem;
+                width: 70%;
+                color: orangered;
+            }
+            .body{
+                margin: 5rem 0rem 0 0;
+                flex-direction: column-reverse;
+                justify-content: start;
+            }
+            .photo img{
+                //background-color: papayawhip;
+                width: 50vw;
+                display: inline-block;
+                margin:4rem 0 0 -26rem;
+                margin-right: 10rem;
+            }
+            p{
+                width: 55vw;
+                margin: 22rem 0  0 12rem;
+                
+                font-size: 1rem;
+                line-height: 5.2vw;
+            }
+        }
+        .Values{
+            h1{
+                color: orangered;
+                font-size: 2rem!important;
+            }
+            .icons{
+                //background-color: palevioletred;
+                display:grid;
+                grid-template-columns: repeat(2,1fr)!important;
+                column-gap: 6rem;
+            }
+            .col{
+                display:grid;
+                //width: 100vw;
+                height: 100vh;
+
+            }
+            .row{
+                row-gap: 1rem;
+                 img{
+                    width: 100%;
+                    //height: 100%;
+                }
+                p{
+                    font-size: 1rem;
+                }
+            }           
+        }
+        .location{
+            .heading h1{
+                font-size: 2rem;
+            }
+            p{
+                font-size: 0.95rem;
+                line-height: 4vw;
+                margin-left: 4rem;
+                text-align: center;
+            }
+            .map img{
+                width: 50%;
+            }
+        }
+        //team section
+        .team{
+            .heading h1{
+                font-size: 2rem;
+            }
+            .heading p{
+                font-size: 0.95rem;
+                line-height: 4vw;
+                margin:1rem 0 0 4rem ;
+                text-align: center;
+                padding: 0;
+            }
+            .members{
+                width: 100%;
+                .sripal{
+                    h1{
+                        margin:16rem 0 0 17rem;
+                        padding: 0;
+                        text-align: center;
+                        width: 30vw;
+                    }
+                    .founder{
+                        margin: 1rem 0 0 15rem;
+
+                        font-size: 1.05rem;
+                        //color: orange!important;
+                        padding: 0;
+                        width: 40vw;
+                    }
+                    .Ceo{
+                        margin: 0 0 0 12rem;
+                        width: 60vw;
+                        font-size: 0.85rem;
+                        font-weight: normal;
+                        line-height: 3vw;
+                    }
+                    .esteem{
+                        margin: 0 0 0 12rem;
+                        width: 60vw;
+                        font-size: 0.85rem;
+                        font-weight: normal;
+                        line-height: 3vw; 
+                    }
+                }
+                .image img{
+                    width: 40vw;
+                    height: 30vw;
+                    margin: 0 13rem 0 -5rem;
+                }
+                .Anand{
+                    h1{
+                        margin:15rem 0 0 5rem;
+                        padding: 0;
+                        text-align: center;
+                        width: 30vw;
+                    }
+                    .director{
+                        margin: 1rem 0 0 4rem;
+
+                        font-size: 1.02rem;
+                        //color: orange!important;
+                        padding: 0;
+                        width: 40vw;
+                    }
+                    .chief{
+                        margin: 0 0  0 1rem;
+                        width: 60vw;
+                        font-size: 0.85rem;
+                        font-weight: normal;
+                        line-height: 3vw;
+                    }
+                    .global{
+                        margin: 0 0 0 1rem;
+                        width: 60vw; 
+                        font-size: 0.85rem;
+                        font-weight: normal;
+                        line-height: 3vw;
+                    }
+                    .leader{
+                        margin: 0 0 0 1rem;
+                        width: 60vw;
+                        font-size: 0.85rem;
+                        font-weight: normal;
+                        line-height: 3vw; 
+                    }
+                }
+                .photo img{
+                    width: 40vw;
+                    height: 30vw;
+                    margin: 0 -30rem 0 12rem;
+                }
+                .Kishore{
+                    h1{
+                        margin: 16rem 0 0 17rem;
+                        padding: 0;
+                        text-align: center;
+                        width: 30vw;
+                    }
+                    .founder{
+                        margin: 1rem 0 0 16rem;
+
+                        font-size: 1.05rem;
+                        //color: orange!important;
+                        padding: 0;
+                        width: 40vw;
+                    }
+                    .Ceo{
+                        margin: 0 0 0 12rem;
+                        width: 60vw;
+                        font-size: 0.85rem;
+                        font-weight: normal;
+                        line-height: 3vw;
+                    }
+                    .esteem{
+                        margin: 0 0 0 12rem;
+                        width: 60vw;
+                        font-size: 0.85rem;
+                        font-weight: normal;
+                        line-height: 3vw;
+                    }
+                }
+                .imag img{
+                    width: 40vw;
+                    height: 30vw;
+                    margin: 0 13rem 0 -5rem;
+                }
+                .title{
+                    h1{
+                        margin:15rem 0 0 5rem;
+                        padding: 0;
+                        text-align: center;
+                        width: 30vw;
+                        font-size: 1.5rem;
+                    }
+                    p{
+                        margin: 0 0  0 1rem;
+                        width: 60vw;
+                        font-size: 0.85rem;
+                        font-weight: normal;
+                        line-height: 3vw;  
+                    }
+                }
+                .imge img{
+                    width: 40vw;
+                    height: 30vw;
+                    margin: 0 -30rem 0 12rem;
+                }
+            }
+        }
+
+    }
 }
