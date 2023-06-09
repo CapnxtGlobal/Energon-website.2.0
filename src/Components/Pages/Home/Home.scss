@@ -294,117 +294,85 @@
       }
     }
   }
-
-  .Touch {
-    display: flex;
-    //justify-content: center;
-    //align-items: center;
-    background-color: rgb(250, 102, 48);
-    width: 80vw;
-    height: 20vw;
-    margin-left: 10vw;
-    margin-top: 10vw;
-    margin-bottom: 5vw;
-    border-radius: 1vw;
-
-    .get {
-      color: white;
-      padding-left: 3vw;
-      padding-top: 2vw;
-
-      h1 {
-        font-size: 2.5vw;
-        padding-bottom: 1.5vw;
-        padding-top: 1vw;
-        font-family: "Oswald", sans-serif;
-      }
-
-      p {
-        color: rgb(232, 217, 217);
-        font-family: "Montserrat", sans-serif;
-        font-size: 1.15vw;
-        line-height: 2vw;
-      }
-    }
-    .form .started {
+  .get-in-touch {
+    .body {
+      margin: 2rem 3rem;
+      background-color: #ff4500;
+      padding: 2rem 3rem;
+      border-radius: 1.2rem;
       display: flex;
-      justify-content: center;
       align-items: center;
-      flex-direction: column;
-      background-color: #1d2b3a;
-      width: 100vw;
-      //height: 33vh;
-      //margin-top: 1vw;
-      //margin-left: 15vw;
-      //margin-bottom: 1vw;
-      //margin-right: 1vw;
-      //border-radius: 1vw;
-    }
-    .started {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-      background-color: #1d2b3a;
-      width: 85vw;
-      height: 17.5vw;
-      margin-top: 1vw;
-      margin-left: 15vw;
-      margin-bottom: 1vw;
-      margin-right: 1vw;
-      border-radius: 1vw;
-    }
-
-    .started input {
-      background: #1d2b3a;
-      width: 18vw;
-      height: 5vh;
-      margin-top: 1vw;
-      border: 1px solid whitesmoke;
-      padding-left: 1vw;
-      border-radius: 5vw;
-      outline: none;
-      color: #fff;
-      font-size: 0.75em;
-      margin-left: 1vw;
-      justify-content: center;
-    }
-    .started textarea {
-      background: #1d2b3a;
-      width: 18vw;
-      height: 10vh;
-      margin-top: 1vw;
-      border: 1px solid whitesmoke;
-      padding-left: 1vw;
-      border-radius: 1vw;
-      outline: none;
-      color: #fff;
-      font-size: 0.75em;
-      margin-left: 1vw;
-      justify-content: center;
-    }
-
-    .arrow button {
-      color: black;
-      cursor: pointer;
-      border-radius: 5vw;
-      width: 8vw;
-      height: 3vw;
-      background-color: orangered;
-      justify-content: center;
-      align-items: center;
-      margin-left: 6vw;
-      margin-top: 1vw;
-      margin-bottom: 0.5vw;
-      font-family: "Oswald", sans-serif;
-
-      .right {
-        width: 5vw;
-        font-size: 1.75vw;
+      justify-content: space-between;
+      .col:first-child {
+        width: 55%;
+      }
+      .col:last-child {
+        width: 35%;
+      }
+      .col {
+        .title {
+          h2 {
+            margin: 0.5rem 0;
+            font-size: 3rem;
+            font-weight: 500;
+            font-family: "Oswald", sans-serif;
+            color: #fff;
+            margin: 1rem 0;
+          }
+        }
+        .desc {
+          p {
+            font-size: 1.25rem;
+            color: #fff;
+          }
+        }
+        .form {
+          .error {
+            p {
+              text-align: center;
+              color: #f00;
+            }
+          }
+          background-color: #1f2730;
+          padding: 1rem;
+          border-radius: 1.2rem;
+          width: 100%;
+          form {
+            width: 100%;
+            display: block;
+            position: relative;
+            .input-field-container {
+              width: 100%;
+              margin: 1rem 0;
+              input,
+              textarea {
+                width: 96%;
+                padding: 1rem 2%;
+                border: none;
+                outline: none;
+                border-radius: 0.75rem;
+                background-color: transparent;
+                border: 1px solid #c1c1c1;
+                color: #fff;
+              }
+              text-align: center;
+              button {
+                outline: none;
+                border: none;
+                padding: 1rem 2rem;
+                border-radius: 1.2rem;
+                background-color: #ff4500;
+                font-size: 1rem;
+              }
+              button:hover {
+                cursor: pointer;
+              }
+            }
+          }
+        }
       }
     }
   }
-
   @media screen and (max-width: 900px) {
     .navbar {
       padding: 0;
@@ -484,19 +452,6 @@
       .Heading {
         font-size: 1.25rem;
       }
-      .mySwiper{
-        .slider-card{
-          flex-direction: column-reverse;
-          // padding: 1rem;
-          border-radius: .5rem;
-          .img{
-            img{
-              width: 100%;
-              border-radius: .5rem .5rem 0 0;
-            }
-          }
-        }
-      }
     }
     .Services {
       .heading {
@@ -531,6 +486,47 @@
         .client-logo {
           width: 30%;
           margin: 1rem;
+        }
+      }
+    }
+    .get-in-touch {
+      .body{
+        margin: 1rem;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 1rem;
+        .col:first-child,.col:last-child{
+          width: fit-content;
+        }
+        .col{
+          .title{
+            h2{
+              font-size: 2.25rem;
+              text-align: center;
+            }
+          }
+          .desc{
+            margin: 2rem 0;
+            p{
+              font-size: 1rem;
+              text-align: center;
+            }
+          }
+          .form{
+            width:fit-content;
+            margin: auto;
+            form{
+              .input-field-container{
+                input,textarea{
+                  padding: .75rem 2%;
+                }
+                button{
+                  padding: .75rem 1.5rem;
+                }
+              }
+            }
+          }
         }
       }
     }

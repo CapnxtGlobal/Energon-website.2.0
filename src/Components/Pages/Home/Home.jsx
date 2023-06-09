@@ -16,14 +16,22 @@ import hp from "../../../Assets/Images/hp.png";
 import hmel from "../../../Assets/Images/hmel.jpg";
 import hmwsb from "../../../Assets/Images/hmwssb.jpg";
 import rfcl from "../../../Assets/Images/rfcl.jpg";
+import emailjs, { send } from '@emailjs/browser';
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { Autoplay, Navigation, Pagination, EffectCoverflow } from "swiper";
+import { useState } from "react";
 
 function Home() {
   const clientLogos = [hp, hmel, indianOil, rfcl, hmwsb];
+  const [formError, setFormError] = useState(null);
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
   const navigate = useNavigate();
   const navigateToServices = () => {
     navigate("/services");
@@ -45,6 +53,55 @@ function Home() {
     }
 
     event.preventDefault();
+  };
+  const sendMail = (e) => {
+    e.preventDefault();
+    if (formData.name.length === 0) {
+      setFormError("Enter name");
+      return;
+    }
+    if (formData.email.length === 0) {
+      setFormError("Enter email");
+      return;
+    } else {
+      var match = formData.email
+        .toLowerCase()
+        .match(
+          /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+        );
+      if (!match) {
+        setFormError("Enter valid email");
+        return;
+      }
+    }
+    setFormError(null);
+    e.target.textContent = "sending...";
+    // send mail using emailjs
+    emailjs
+      .send(
+        "service_94kv1c9",
+        "template_2bbh2hi",
+        formData,
+        "d8lT77co0y5QoiHDe"
+      )
+      .then(
+        (response) => {
+          console.log("SUCCESS!", response.status, response.text);
+          setFormData({
+            email: "",
+            message: "",
+            name: "",
+          });
+          e.target.textContent = "Sent successfully";
+          setTimeout(() => {
+            e.target.textContent = "Send";
+          }, 2000);
+        },
+        (err) => {
+          setFormError("Error while sending the message!. Try again");
+          e.target.textContent = "Send";
+        }
+      );
   };
   return (
     <>
@@ -285,44 +342,83 @@ function Home() {
             })}
           </div>
         </section>
-        <section className="Touch">
-          <div className="get">
-            <h1>GET IN TOUCH WITH US</h1>
-            <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Expedita
-              voluptatem molestiae nam accusamus, maxime dolorem in amet a, nemo
-              similique dolores aut id hic iste vel. Dignissimos ab facilis
-              reprehenderit!
-            </p>
-          </div>
-
-          <div className="started">
-            <form
-              name="sign-up-form"
-              action=""
-              method="post"
-              autoComplete="off"
-            >
-              <input type="text" required="required" placeholder="FirstName" />
-              <p className="error firstname-error"></p>
-              <input type="email" required="required" placeholder="Email" />
-              <p className="error email-error"></p>
-              <textarea
-                name="enquiry"
-                id=""
-                cols="20"
-                rows="5"
-                placeholder="enter here..."
-              ></textarea>
-              <p className="error text-error"></p>
-              <div className="arrow">
-                <button type="get started">
-                  SUBMIT <span className="right">→</span>
-                </button>
+        <div className="section get-in-touch">
+          <div className="body">
+            <div className="col">
+              <div className="title">
+                <h2>Get in touch us</h2>
               </div>
-            </form>
+              <div className="desc">
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Nostrum et labore nesciunt accusantium ut. Ea quidem
+                  perspiciatis omnis ad assumenda, illo architecto eius voluptas
+                  beatae iusto cupiditate dolorem molestiae labore.
+                </p>
+              </div>
+            </div>
+            <div className="col">
+              <div className="form">
+                <form action="">
+                  <div className="input-field-container">
+                    <input
+                      type="text"
+                      name="name"
+                      id=""
+                      placeholder="enter your name"
+                      value={formData.name}
+                      onChange={(e)=>{
+                        setFormData({
+                          ...formData,
+                          name : e.target.value
+                        })
+                      }}
+                    />
+                  </div>
+                  <div className="input-field-container">
+                    <input
+                      type="email"
+                      name=""
+                      id=""
+                      placeholder="enter your email"
+                      value={formData.email}
+                      onChange={(e)=>{
+                        setFormData({
+                          ...formData,
+                          email : e.target.value
+                        })
+                      }}
+                    />
+                  </div>
+                  <div className="input-field-container">
+                    <textarea
+                      name="message"
+                      id=""
+                      cols="30"
+                      rows="5"
+                      placeholder="enter your query"
+                      value={formData.message}
+                      onChange={(e)=>{
+                        setFormData({
+                          ...formData,
+                          message : e.target.value
+                        })
+                      }}
+                    ></textarea>
+                  </div>
+                  <div className="error">
+                    <p>
+                      {formError ? `*${formError}` : ''}
+                    </p>
+                  </div>
+                  <div className="input-field-container" onClick={sendMail}>
+                    <button>Submit</button>
+                  </div>
+                </form>
+              </div>
+            </div>
           </div>
-        </section>
+        </div>
         <Contact />
       </main>
     </>
