@@ -161,7 +161,7 @@ function Home() {
         </div>
          */}
 
-        <section className="slider-container">
+<section className="slider-container">
           <h1 className="Heading">
             INNOVATIVE SOLUTIONS FOR PETROPRODUCTS INDUSTRY
           </h1>
@@ -170,16 +170,9 @@ function Home() {
             grabCursor={true}
             centeredSlides={true}
             slidesPerView={2}
-            breakpoints={{
-              768: {
-                slidesPerView: 1,
-              },
-            }}
             initialSlide={3}
             navigation={true}
-            loop={true}
             spaceBetween={180}
-            speed={1000}
             coverflowEffect={{
               rotate: 50,
               stretch: 10,
@@ -191,25 +184,24 @@ function Home() {
             pagination={false}
             modules={[EffectCoverflow, Autoplay, Navigation, Pagination]}
             className="mySwiper"
-            // autoplay={{
-            //   delay: 1000,
-            //   // duration : 10000,
-            //   disableOnInteraction: false,
-            // }}
+            autoplay={{
+              delay: 2500,
+              // duration : 10000,
+              disableOnInteraction: false,
+            }}
           >
             <SwiperSlide>
               <div className="slider-card">
                 <div className="content">
-                  <h1>Manufacturing Excellence in Polybags</h1>
+                  <h1>ENERGON GAS</h1>
                   <p>
-                    At Energon, we produce an astounding 12 million polybags per
-                    month, reflecting our commitment to high-quality and durable
-                    packaging solutions. Explore how our manufacturing prowess
-                    caters to diverse industrial needs.
+                    We are committed to promoting sustainable energy solutions,
+                    processing agricultural waste into bio gas, which is then
+                    sold as CNG to auto fuel stations. Our innovative approach
+                    to waste management contributes to a greener and more
+                    sustainable future
                   </p>
-                  <button onClick={navigateToServices}>
-                    EXPLORE OUR SERVICES
-                  </button>
+                  <button>EXPLORE OUR SERVICES</button>
                 </div>
                 <div className="img">
                   <img src={home} alt="" />
@@ -220,40 +212,15 @@ function Home() {
               {/* <img src={home} alt="" /> */}
               <div className="slider-card">
                 <div className="content">
-                  <h1>Championing Sustainability with Bio CNG</h1>
+                  <h1>ENERGON GAS</h1>
                   <p>
-                    Pioneering the transition towards renewable energy, we
-                    convert agricultural waste into BioGas at our
-                    technologically advanced Bio CNG plants. Harness the power
-                    of sustainable energy with our innovative waste-to-energy
-                    solutions.
+                    We are committed to promoting sustainable energy solutions,
+                    processing agricultural waste into bio gas, which is then
+                    sold as CNG to auto fuel stations. Our innovative approach
+                    to waste management contributes to a greener and more
+                    sustainable future
                   </p>
-                  <button onClick={navigateToServices}>
-                    EXPLORE OUR SERVICES
-                  </button>
-                </div>
-                <div className="img">
-                  <img src={home} alt="" />
-                </div>
-              </div>
-            </SwiperSlide>
-
-            <SwiperSlide>
-              {/* <img src={home} alt="" /> */}
-              <div className="slider-card">
-                <div className="content">
-                  <h1>Bulk Bitumen Handling &Transportation</h1>
-                  <p>
-                    With state-of-the-art handling equipment and a fleet of
-                    specialized vehicles, we ensure safe and efficient delivery
-                    of bitumen under strict temperature controls, adhering to
-                    industry standards. From refinery gates to the heart of your
-                    operations, trust us for the seamless logistics of this
-                    critical petroproduct.
-                  </p>
-                  <button onClick={navigateToServices}>
-                    EXPLORE OUR SERVICES
-                  </button>
+                  <button>EXPLORE OUR SERVICES</button>
                 </div>
                 <div className="img">
                   <img src={home} alt="" />
@@ -265,17 +232,95 @@ function Home() {
               {/* <img src={home} alt="" /> */}
               <div className="slider-card">
                 <div className="content">
-                  <h1>Seamlessly Streamlining Global Trade</h1>
+                  <h1>ENERGON GAS</h1>
                   <p>
-                    Enabling smooth trade across borders, Energon expertly
-                    handles over 2000 TEUs per year in Container Terminal
-                    Operations and Rake Movements, spread over 7 key locations.
-                    Embark on your journey towards efficient and secure
-                    logistics with us.
+                    We are committed to promoting sustainable energy solutions,
+                    processing agricultural waste into bio gas, which is then
+                    sold as CNG to auto fuel stations. Our innovative approach
+                    to waste management contributes to a greener and more
+                    sustainable future
                   </p>
-                  <button onClick={navigateToServices}>
-                    EXPLORE OUR SERVICES
-                  </button>
+                  <button>EXPLORE OUR SERVICES</button>
+                </div>
+                <div className="img">
+                  <img src={home} alt="" />
+                </div>
+              </div>
+            </SwiperSlide>
+
+            <SwiperSlide>
+              {/* <img src={home} alt="" /> */}
+              <div className="slider-card">
+                <div className="content">
+                  <h1>ENERGON GAS</h1>
+                  <p>
+                    We are committed to promoting sustainable energy solutions,
+                    processing agricultural waste into bio gas, which is then
+                    sold as CNG to auto fuel stations. Our innovative approach
+                    to waste management contributes to a greener and more
+                    sustainable future
+                  </p>
+                  <button>EXPLORE OUR SERVICES</button>
+                </div>
+                <div className="img">
+                  <img src={home} alt="" />
+                </div>
+              </div>
+            </SwiperSlide>
+
+            <SwiperSlide>
+              {/* <img src={home} alt="" /> */}
+              <div className="slider-card">
+                <div className="content">
+                  <h1>ENERGON GAS</h1>
+                  <p>
+                    We are committed to promoting sustainable energy solutions,
+                    processing agricultural waste into bio gas, which is then
+                    sold as CNG to auto fuel stations. Our innovative approach
+                    to waste management contributes to a greener and more
+                    sustainable future
+                  </p>
+                  <button>EXPLORE OUR SERVICES</button>
+                </div>
+                <div className="img">
+                  <img src={home} alt="" />
+                </div>
+              </div>
+            </SwiperSlide>
+
+            <SwiperSlide>
+              {/* <img src={home} alt="" /> */}
+              <div className="slider-card">
+                <div className="content">
+                  <h1>ENERGON GAS</h1>
+                  <p>
+                    We are committed to promoting sustainable energy solutions,
+                    processing agricultural waste into bio gas, which is then
+                    sold as CNG to auto fuel stations. Our innovative approach
+                    to waste management contributes to a greener and more
+                    sustainable future
+                  </p>
+                  <button>EXPLORE OUR SERVICES</button>
+                </div>
+                <div className="img">
+                  <img src={home} alt="" />
+                </div>
+              </div>
+            </SwiperSlide>
+
+            <SwiperSlide>
+              {/* <img src={home} alt="" /> */}
+              <div className="slider-card">
+                <div className="content">
+                  <h1>ENERGON GAS</h1>
+                  <p>
+                    We are committed to promoting sustainable energy solutions,
+                    processing agricultural waste into bio gas, which is then
+                    sold as CNG to auto fuel stations. Our innovative approach
+                    to waste management contributes to a greener and more
+                    sustainable future
+                  </p>
+                  <button>EXPLORE OUR SERVICES</button>
                 </div>
                 <div className="img">
                   <img src={home} alt="" />
