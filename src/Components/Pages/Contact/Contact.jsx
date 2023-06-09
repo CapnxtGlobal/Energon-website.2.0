@@ -80,7 +80,7 @@ function Contact() {
         </div>
         <div className="desc">
           <p>
-            For inquiries, feedback, or support, please feel free to contact us.{" "}
+            For inquiries, feedback, or support, please feel free to contact us.
             <br />
             Our dedicated team is always ready to assist you.
           </p>

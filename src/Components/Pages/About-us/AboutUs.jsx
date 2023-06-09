@@ -49,7 +49,6 @@ function AboutUs() {
                 <p>Integrity</p>
               </div>
             </div>
-
             <div className='col'>
               <div className='row'>
                 <img src={innovation} alt='' />

@@ -47,7 +47,6 @@ function Navbar() {
               />
             </Link>
           </div>
-
           <div
             className={`nav-links ${
               location.pathname === "/" ? "white" : "black"
@@ -95,6 +94,16 @@ function Navbar() {
                 Contact Us
               </Link>
             </li>
+            <li>
+              <div className="contact">
+                <p className="email">
+                  <a href="mailto:info@energon.in">info@energon.in</a>
+                </p>
+                <p className="phone">
+                  <a href="tel:+918056080595">+91 8056080595</a>
+                </p>
+              </div>
+            </li>
           </ul>
         </div>
         <div className="ham-menu" onClick={hamMenuOpen}>
@@ -112,19 +121,6 @@ function Navbar() {
           <Link to="/" className="conditional-rendering-logo">
             <img src={logoBlack} color="white" alt="error loading" />
           </Link>
-        </div>
-
-        <div
-          className={`contact ${location.pathname === "/" ? "white" : "black"}`}
-        >
-          <p>
-            <a href="mailto:hello@vaikharidigital.com">
-              hello@vaikahridigital.com
-            </a>
-          </p>
-          <p>
-            <a href="tel:918803755555">+91 88037 55555</a>
-          </p>
         </div>
       </div>
     </>

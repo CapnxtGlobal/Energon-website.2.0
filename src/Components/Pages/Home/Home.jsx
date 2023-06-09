@@ -16,7 +16,7 @@ import hp from "../../../Assets/Images/hp.png";
 import hmel from "../../../Assets/Images/hmel.jpg";
 import hmwsb from "../../../Assets/Images/hmwssb.jpg";
 import rfcl from "../../../Assets/Images/rfcl.jpg";
-import emailjs, { send } from '@emailjs/browser';
+import emailjs from "@emailjs/browser";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/navigation";
@@ -153,15 +153,7 @@ function Home() {
             </div>
           </div>
         </div>
-
-        {/* initial one .. */}
-
-        {/* <div className="Innovative">
-          INNOVATIVE SOLUTIONS FOR PETROPRODUCTS INDUSTRY
-        </div>
-         */}
-
-<section className="slider-container">
+        <section className="slider-container">
           <h1 className="Heading">
             INNOVATIVE SOLUTIONS FOR PETROPRODUCTS INDUSTRY
           </h1>
@@ -178,17 +170,15 @@ function Home() {
               stretch: 10,
               depth: 100,
               modifier: 1,
-              //  delay : 200,
               slideShadows: false,
             }}
             pagination={false}
             modules={[EffectCoverflow, Autoplay, Navigation, Pagination]}
             className="mySwiper"
-            autoplay={{
-              delay: 2500,
-              // duration : 10000,
-              disableOnInteraction: false,
-            }}
+            // autoplay={{
+            //   delay: 2500,
+            //   disableOnInteraction: false,
+            // }}
           >
             <SwiperSlide>
               <div className="slider-card">
@@ -201,7 +191,9 @@ function Home() {
                     to waste management contributes to a greener and more
                     sustainable future
                   </p>
-                  <button>EXPLORE OUR SERVICES</button>
+                  <button onClick={navigateToServices}>
+                    EXPLORE OUR SERVICES
+                  </button>
                 </div>
                 <div className="img">
                   <img src={home} alt="" />
@@ -209,7 +201,6 @@ function Home() {
               </div>
             </SwiperSlide>
             <SwiperSlide>
-              {/* <img src={home} alt="" /> */}
               <div className="slider-card">
                 <div className="content">
                   <h1>ENERGON GAS</h1>
@@ -220,27 +211,9 @@ function Home() {
                     to waste management contributes to a greener and more
                     sustainable future
                   </p>
-                  <button>EXPLORE OUR SERVICES</button>
-                </div>
-                <div className="img">
-                  <img src={home} alt="" />
-                </div>
-              </div>
-            </SwiperSlide>
-
-            <SwiperSlide>
-              {/* <img src={home} alt="" /> */}
-              <div className="slider-card">
-                <div className="content">
-                  <h1>ENERGON GAS</h1>
-                  <p>
-                    We are committed to promoting sustainable energy solutions,
-                    processing agricultural waste into bio gas, which is then
-                    sold as CNG to auto fuel stations. Our innovative approach
-                    to waste management contributes to a greener and more
-                    sustainable future
-                  </p>
-                  <button>EXPLORE OUR SERVICES</button>
+                  <button onClick={navigateToServices}>
+                    EXPLORE OUR SERVICES
+                  </button>
                 </div>
                 <div className="img">
                   <img src={home} alt="" />
@@ -249,7 +222,6 @@ function Home() {
             </SwiperSlide>
 
             <SwiperSlide>
-              {/* <img src={home} alt="" /> */}
               <div className="slider-card">
                 <div className="content">
                   <h1>ENERGON GAS</h1>
@@ -260,7 +232,9 @@ function Home() {
                     to waste management contributes to a greener and more
                     sustainable future
                   </p>
-                  <button>EXPLORE OUR SERVICES</button>
+                  <button onClick={navigateToServices}>
+                    EXPLORE OUR SERVICES
+                  </button>
                 </div>
                 <div className="img">
                   <img src={home} alt="" />
@@ -269,7 +243,6 @@ function Home() {
             </SwiperSlide>
 
             <SwiperSlide>
-              {/* <img src={home} alt="" /> */}
               <div className="slider-card">
                 <div className="content">
                   <h1>ENERGON GAS</h1>
@@ -280,7 +253,9 @@ function Home() {
                     to waste management contributes to a greener and more
                     sustainable future
                   </p>
-                  <button>EXPLORE OUR SERVICES</button>
+                  <button onClick={navigateToServices}>
+                    EXPLORE OUR SERVICES
+                  </button>
                 </div>
                 <div className="img">
                   <img src={home} alt="" />
@@ -289,7 +264,6 @@ function Home() {
             </SwiperSlide>
 
             <SwiperSlide>
-              {/* <img src={home} alt="" /> */}
               <div className="slider-card">
                 <div className="content">
                   <h1>ENERGON GAS</h1>
@@ -300,7 +274,9 @@ function Home() {
                     to waste management contributes to a greener and more
                     sustainable future
                   </p>
-                  <button>EXPLORE OUR SERVICES</button>
+                  <button onClick={navigateToServices}>
+                    EXPLORE OUR SERVICES
+                  </button>
                 </div>
                 <div className="img">
                   <img src={home} alt="" />
@@ -309,7 +285,6 @@ function Home() {
             </SwiperSlide>
 
             <SwiperSlide>
-              {/* <img src={home} alt="" /> */}
               <div className="slider-card">
                 <div className="content">
                   <h1>ENERGON GAS</h1>
@@ -320,7 +295,30 @@ function Home() {
                     to waste management contributes to a greener and more
                     sustainable future
                   </p>
-                  <button>EXPLORE OUR SERVICES</button>
+                  <button onClick={navigateToServices}>
+                    EXPLORE OUR SERVICES
+                  </button>
+                </div>
+                <div className="img">
+                  <img src={home} alt="" />
+                </div>
+              </div>
+            </SwiperSlide>
+
+            <SwiperSlide>
+              <div className="slider-card">
+                <div className="content">
+                  <h1>ENERGON GAS</h1>
+                  <p>
+                    We are committed to promoting sustainable energy solutions,
+                    processing agricultural waste into bio gas, which is then
+                    sold as CNG to auto fuel stations. Our innovative approach
+                    to waste management contributes to a greener and more
+                    sustainable future
+                  </p>
+                  <button onClick={navigateToServices}>
+                    EXPLORE OUR SERVICES
+                  </button>
                 </div>
                 <div className="img">
                   <img src={home} alt="" />
@@ -412,11 +410,11 @@ function Home() {
                       id=""
                       placeholder="enter your name"
                       value={formData.name}
-                      onChange={(e)=>{
+                      onChange={(e) => {
                         setFormData({
                           ...formData,
-                          name : e.target.value
-                        })
+                          name: e.target.value,
+                        });
                       }}
                     />
                   </div>
@@ -427,11 +425,11 @@ function Home() {
                       id=""
                       placeholder="enter your email"
                       value={formData.email}
-                      onChange={(e)=>{
+                      onChange={(e) => {
                         setFormData({
                           ...formData,
-                          email : e.target.value
-                        })
+                          email: e.target.value,
+                        });
                       }}
                     />
                   </div>
@@ -443,18 +441,16 @@ function Home() {
                       rows="5"
                       placeholder="enter your query"
                       value={formData.message}
-                      onChange={(e)=>{
+                      onChange={(e) => {
                         setFormData({
                           ...formData,
-                          message : e.target.value
-                        })
+                          message: e.target.value,
+                        });
                       }}
                     ></textarea>
                   </div>
                   <div className="error">
-                    <p>
-                      {formError ? `*${formError}` : ''}
-                    </p>
+                    <p>{formError ? `*${formError}` : ""}</p>
                   </div>
                   <div className="input-field-container" onClick={sendMail}>
                     <button>Submit</button>

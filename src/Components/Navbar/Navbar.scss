@@ -94,7 +94,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding:1.5rem;
+    padding: 1.5rem;
     background-color: #fff;
     box-shadow: 1px 2px 120px 2px #71717128;
     .ham-menu {
@@ -165,13 +165,7 @@
         margin-left: auto !important;
       }
     }
-    .contact {
-      display: none;
-      p {
-        font-size: 0.1rem;
-        text-align: right;
-      }
-    }
+
     .contact.black {
       p {
         a {
@@ -210,9 +204,15 @@
             font-size: 1.25rem;
             font-weight: 600;
           }
+          p {
+            a {
+              font-size: 1rem;
+            }
+            text-align: right;
+          }
         }
-        li.active{
-          a{
+        li.active {
+          a {
             color: #ff4500;
           }
         }

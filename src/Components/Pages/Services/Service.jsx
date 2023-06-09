@@ -18,7 +18,6 @@ import wareHouse from "../../../Assets/Images/Ware House.png";
 import Transportation from "../../../Assets/Images/Transportation.png";
 import MeterIcon from "../../../Assets/icons/Meter.svg";
 import wareHouseSpaceIcon from "../../../Assets/icons/Ware house space .svg";
-
 import "./Service.scss";
 import Contact from "../Contact/Contact";
 import { useEffect } from "react";
@@ -107,9 +106,6 @@ function Service() {
               return (
                 <div
                   className={`Card ${index % 2 !== 0 ? "reverse-card" : ""}`}
-                  // onClick={() => {
-                  //   window.alert(index + 1);
-                  // }}
                   key={`card-${index}`}
                 >
                   <img className="Dots" src={Dots} alt="error while loading" />
@@ -132,77 +128,13 @@ function Service() {
                 </div>
               );
             })}
-
-            {/* for refrence code cards */}
-            {/* <div className="Card">
-              <img
-                className="Dots"
-                src={Dots}
-                alt="error while loading the image"
-              />
-              <img
-                className="Card-Image"
-                src={BulkBitumen}
-                alt="error while loading the image"
-              />
-              <div className="content">
-                <header>
-                  <img
-                    className="Icon"
-                    src={BulkBitumenicon}
-                    alt="error while loading the image"
-                  />
-                  <h1>Bulk Bitumen Handling and Packing</h1>
-                </header>
-                <p>
-                  Our team of experts specializes in the entire process of
-                  handling and packing bulk bitumen into drums. We have
-                  state-of-the-art facilities to ensure the utmost efficiency,
-                  making sure our clients in the oil and gas industry receive
-                  the highest quality service
-                </p>
-              </div>
-            </div> */}
-
-            {/* for refrence of reverse cards */}
-            {/* <div className="Card reverse-card">
-              <img
-                className="Dots"
-                src={Dots}
-                alt="error while loading the image"
-              />
-              <img
-                className="Card-Image"
-                src={BulkBitumen}
-                alt="error while loading the image"
-              />
-              <div className="content">
-                <header>
-                  <img
-                    className="Icon"
-                    src={BulkBitumenicon}
-                    alt="error while loading the image"
-                  />
-                  <h1>Bulk Bitumen Handling and Packing</h1>
-                </header>
-                <p>
-                  Our team of experts specializes in the entire process of
-                  handling and packing bulk bitumen into drums. We have
-                  state-of-the-art facilities to ensure the utmost efficiency,
-                  making sure our clients in the oil and gas industry receive
-                  the highest quality service
-                </p>
-              </div>
-            </div> */}
           </section>
-
           <section className="categories">
             <div className="row">
               <img src={Packgingicon} alt="" />
               <h1 className="Value">100,000</h1>
               <p>Drums manufactured per month</p>
             </div>
-
             <div className="row">
               <img src={BulkBitumenicon} alt="" />
               <h1 className="Value">
@@ -210,7 +142,6 @@ function Service() {
               </h1>
               <p>of Bitumen handled per month</p>
             </div>
-
             <div className="row">
               <img src={StorageTankicon} alt="" />
               <h1 className="Value">
@@ -218,7 +149,6 @@ function Service() {
               </h1>
               <p>of Bitumen emulsions manufactured per month </p>
             </div>
-
             <div className="row">
               <img src={wareHouseSpaceIcon} alt="" />
               <h1 className="Value">
@@ -226,7 +156,6 @@ function Service() {
               </h1>
               <p>of warehousing space</p>
             </div>
-
             <div className="row">
               <img src={MeterIcon} alt="" />
               <h1 className="Value">7,000</h1>
@@ -235,7 +164,6 @@ function Service() {
                 <span className="Metrics">KL</span>{" "}
               </p>
             </div>
-
             <div className="row">
               <img src={WareHouseicon} alt="" />
               <h1 className="Value">
@@ -243,7 +171,6 @@ function Service() {
               </h1>
               <p>secondary transportation coverage</p>
             </div>
-
             <div className="row">
               <img src={Cylindericon} alt="" />
               <h1 className="Value">200,000</h1>
@@ -251,7 +178,6 @@ function Service() {
             </div>
           </section>
         </section>
-
         <footer>
           <Contact />
         </footer>
