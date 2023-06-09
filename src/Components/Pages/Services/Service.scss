@@ -55,7 +55,7 @@
       .Card {
         display: flex;
         justify-content: flex-end;
-        align-items: start;
+        align-items: flex-start;
         text-align: center;
         // z-index: 5;
         padding: 4vw 0vw 4vw 4vw;
@@ -136,7 +136,7 @@
       .col {
         display: flex;
         justify-content: space-around;
-        align-items: start;
+        align-items: flex-start;
         text-align: center;
         padding: 2vw 0vw;
 
