@@ -93,7 +93,7 @@ function AboutUs() {
               <img src={blackimage} alt='' />
             </div>
           </div>
-          <div className='members'>
+          <div className='mem'>
             <div className='photo'>
               <img src={blackimage} alt='' />
             </div>
@@ -114,15 +114,6 @@ function AboutUs() {
             </div>
             <div className='imag'>
               <img src={blackimage} alt='' />
-            </div>
-          </div>
-          <div className='members'>
-            <div className='imge'>
-              <img src={blackimage} alt='' />
-            </div>
-            <div className='title'>
-              <h1>Title Here</h1>
-              <p>Our LPG bottling service the safe and efficient conversion of bulk LPG into easy-to-handle cylinders.We have a dedicated team and advanced equipment to meet the growing demand for LPG across various industries.</p>
             </div>
           </div>
         </section>
