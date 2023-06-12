@@ -30,7 +30,6 @@ function App() {
           <Route path="/aboutus" element={<AboutUs />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
-        {/* {/* <Navbar/> */}
         <div
           className="scroll-to-top hide"
           onClick={() => {

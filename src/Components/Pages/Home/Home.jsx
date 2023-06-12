@@ -16,14 +16,17 @@ import hp from "../../../Assets/Images/hp.png";
 import hmel from "../../../Assets/Images/hmel.jpg";
 import hmwsb from "../../../Assets/Images/hmwssb.jpg";
 import rfcl from "../../../Assets/Images/rfcl.jpg";
-import emailjs, { send } from '@emailjs/browser';
+import emailjs from "@emailjs/browser";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { Autoplay, Navigation, Pagination, EffectCoverflow } from "swiper";
 import { useState } from "react";
-
+import BulkBitumen from "../../../Assets/Images/Bulk Bitumen .png";
+import BioGasCNG from "../../../Assets/Images/Bio gas CNG.png";
+import Transportation from "../../../Assets/Images/Transportation.png";
+import polyBags from "../../../Assets/Images/polybags.jpg";
 function Home() {
   const clientLogos = [hp, hmel, indianOil, rfcl, hmwsb];
   const [formError, setFormError] = useState(null);
@@ -32,10 +35,39 @@ function Home() {
     email: "",
     message: "",
   });
+  let serviceCardsData = [
+    {
+      heading: "Bulk Bitumen Handling & Transportation",
+      content: `With state-of-the-art handling equipment and a fleet of specialized vehicles, we
+      ensure safe and efficient delivery of bitumen under strict temperature controls, adhering to
+      industry standards. From refinery gates to the heart of your operations, trust us for the
+      seamless logistics of this critical petroproduct.`,
+      image: BulkBitumen,
+    },
+    {
+      heading: "Manufacturing Excellence in Polybags",
+      content: `At Energon, we produce an astounding 12 million polybags per month, reflecting our
+        commitment to high-quality and durable packaging solutions. Explore how our
+        manufacturing prowess caters to diverse industrial needs`,
+      image: polyBags,
+    },
+    {
+      heading: `Championing Sustainability with Bio CNG`,
+      content: `Pioneering the transition towards renewable energy, we convert agricultural waste
+        into BioGas at our technologically advanced Bio CNG plants. Harness the power of
+        sustainable energy with our innovative waste-to-energy solutions.`,
+      image: BioGasCNG,
+    },
+
+    {
+      heading: "Seamlessly Streamlining Global Trade",
+      content: `Enabling smooth trade across borders, Energon expertly handles over 2000 TEUs per
+      year in Container Terminal Operations and Rake Movements, spread over 7 key locations.
+      Embark on your journey towards efficient and secure logistics with us.`,
+      image: Transportation,
+    },
+  ];
   const navigate = useNavigate();
-  const navigateToServices = () => {
-    navigate("/services");
-  };
 
   document.forms["sign-up-form"] = function (event) {
     if (this.username.value.trim() === "") {
@@ -153,14 +185,6 @@ function Home() {
             </div>
           </div>
         </div>
-
-        {/* initial one .. */}
-
-        {/* <div className="Innovative">
-          INNOVATIVE SOLUTIONS FOR PETROPRODUCTS INDUSTRY
-        </div>
-         */}
-
         <section className="slider-container">
           <h1 className="Heading">
             INNOVATIVE SOLUTIONS FOR PETROPRODUCTS INDUSTRY
@@ -170,118 +194,47 @@ function Home() {
             grabCursor={true}
             centeredSlides={true}
             slidesPerView={2}
-            breakpoints={{
-              768: {
-                slidesPerView: 1,
-              },
-            }}
+            speed={800}
             initialSlide={3}
             navigation={true}
-            loop={true}
             spaceBetween={180}
-            speed={1000}
             coverflowEffect={{
               rotate: 50,
               stretch: 10,
               depth: 100,
               modifier: 1,
-              //  delay : 200,
               slideShadows: false,
             }}
             pagination={false}
             modules={[EffectCoverflow, Autoplay, Navigation, Pagination]}
             className="mySwiper"
-            // autoplay={{
-            //   delay: 1000,
-            //   // duration : 10000,
-            //   disableOnInteraction: false,
-            // }}
+            autoplay={{
+              delay: 2500,
+              disableOnInteraction: false,
+            }}
           >
-            <SwiperSlide>
-              <div className="slider-card">
-                <div className="content">
-                  <h1>Manufacturing Excellence in Polybags</h1>
-                  <p>
-                    At Energon, we produce an astounding 12 million polybags per
-                    month, reflecting our commitment to high-quality and durable
-                    packaging solutions. Explore how our manufacturing prowess
-                    caters to diverse industrial needs.
-                  </p>
-                  <button onClick={navigateToServices}>
-                    EXPLORE OUR SERVICES
-                  </button>
-                </div>
-                <div className="img">
-                  <img src={home} alt="" />
-                </div>
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              {/* <img src={home} alt="" /> */}
-              <div className="slider-card">
-                <div className="content">
-                  <h1>Championing Sustainability with Bio CNG</h1>
-                  <p>
-                    Pioneering the transition towards renewable energy, we
-                    convert agricultural waste into BioGas at our
-                    technologically advanced Bio CNG plants. Harness the power
-                    of sustainable energy with our innovative waste-to-energy
-                    solutions.
-                  </p>
-                  <button onClick={navigateToServices}>
-                    EXPLORE OUR SERVICES
-                  </button>
-                </div>
-                <div className="img">
-                  <img src={home} alt="" />
-                </div>
-              </div>
-            </SwiperSlide>
-
-            <SwiperSlide>
-              {/* <img src={home} alt="" /> */}
-              <div className="slider-card">
-                <div className="content">
-                  <h1>Bulk Bitumen Handling &Transportation</h1>
-                  <p>
-                    With state-of-the-art handling equipment and a fleet of
-                    specialized vehicles, we ensure safe and efficient delivery
-                    of bitumen under strict temperature controls, adhering to
-                    industry standards. From refinery gates to the heart of your
-                    operations, trust us for the seamless logistics of this
-                    critical petroproduct.
-                  </p>
-                  <button onClick={navigateToServices}>
-                    EXPLORE OUR SERVICES
-                  </button>
-                </div>
-                <div className="img">
-                  <img src={home} alt="" />
-                </div>
-              </div>
-            </SwiperSlide>
-
-            <SwiperSlide>
-              {/* <img src={home} alt="" /> */}
-              <div className="slider-card">
-                <div className="content">
-                  <h1>Seamlessly Streamlining Global Trade</h1>
-                  <p>
-                    Enabling smooth trade across borders, Energon expertly
-                    handles over 2000 TEUs per year in Container Terminal
-                    Operations and Rake Movements, spread over 7 key locations.
-                    Embark on your journey towards efficient and secure
-                    logistics with us.
-                  </p>
-                  <button onClick={navigateToServices}>
-                    EXPLORE OUR SERVICES
-                  </button>
-                </div>
-                <div className="img">
-                  <img src={home} alt="" />
-                </div>
-              </div>
-            </SwiperSlide>
+            {serviceCardsData.map((rec, i) => {
+              return (
+                <SwiperSlide>
+                  <div className="slider-card" data-hash={rec.link}>
+                    <div className="content">
+                      <h1>{rec.heading}</h1>
+                      <p>{rec.content}</p>
+                      <button
+                        onClick={() => {
+                          navigate(`/services`);
+                        }}
+                      >
+                        EXPLORE OUR SERVICES
+                      </button>
+                    </div>
+                    <div className="img">
+                      <img src={rec.image} alt="" />
+                    </div>
+                  </div>
+                </SwiperSlide>
+              );
+            })}
           </Swiper>
         </section>
 
@@ -346,7 +299,7 @@ function Home() {
           <div className="body">
             <div className="col">
               <div className="title">
-                <h2>Get in touch us</h2>
+                <h2>Get in touch with us</h2>
               </div>
               <div className="desc">
                 <p>
@@ -367,11 +320,11 @@ function Home() {
                       id=""
                       placeholder="enter your name"
                       value={formData.name}
-                      onChange={(e)=>{
+                      onChange={(e) => {
                         setFormData({
                           ...formData,
-                          name : e.target.value
-                        })
+                          name: e.target.value,
+                        });
                       }}
                     />
                   </div>
@@ -382,11 +335,11 @@ function Home() {
                       id=""
                       placeholder="enter your email"
                       value={formData.email}
-                      onChange={(e)=>{
+                      onChange={(e) => {
                         setFormData({
                           ...formData,
-                          email : e.target.value
-                        })
+                          email: e.target.value,
+                        });
                       }}
                     />
                   </div>
@@ -398,18 +351,16 @@ function Home() {
                       rows="5"
                       placeholder="enter your query"
                       value={formData.message}
-                      onChange={(e)=>{
+                      onChange={(e) => {
                         setFormData({
                           ...formData,
-                          message : e.target.value
-                        })
+                          message: e.target.value,
+                        });
                       }}
                     ></textarea>
                   </div>
                   <div className="error">
-                    <p>
-                      {formError ? `*${formError}` : ''}
-                    </p>
+                    <p>{formError ? `*${formError}` : ""}</p>
                   </div>
                   <div className="input-field-container" onClick={sendMail}>
                     <button>Submit</button>

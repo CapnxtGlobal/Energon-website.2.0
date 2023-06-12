@@ -18,7 +18,8 @@ import wareHouse from "../../../Assets/Images/Ware House.png";
 import Transportation from "../../../Assets/Images/Transportation.png";
 import MeterIcon from "../../../Assets/icons/Meter.svg";
 import wareHouseSpaceIcon from "../../../Assets/icons/Ware house space .svg";
-
+import polyBags from "../../../Assets/Images/polybags.jpg";
+import polyIcon from '../../../Assets/icons/Polybags.svg'
 import "./Service.scss";
 import Contact from "../Contact/Contact";
 import { useEffect } from "react";
@@ -41,6 +42,7 @@ function Service() {
       content:
         "Our team of experts specializes in the entire process of handling and packing bulk bitumen into drums. We have state-of-the-art facilities to ensure the utmost efficiency, making sure our clients in the oil and gas industry receive the highest quality service",
       image: BulkBitumen,
+      link: "#bitumen",
     },
     {
       icon: StorageTankicon,
@@ -48,6 +50,7 @@ function Service() {
       content:
         "Our storage tank and infrastructure manufacturing division is dedicated to producing high-quality storage tankages and allied infrastructure. We work closely with clients to understand their specific requirements and deliver tailor-made solutions that meet their needs in the oil and gas industry",
       image: serviceStorageTankers,
+      link: "#storage",
     },
     {
       icon: BioGasCngIcon,
@@ -55,6 +58,7 @@ function Service() {
       content:
         "We are committed to promoting sustainable energy solutions, processing agricultural waste into bio gas, which is then sold as CNG to auto fuel stations. Our innovative approach to waste management contributes to a greener and more sustainable future.",
       image: BioGasCNG,
+      link: "#bio",
     },
     {
       icon: Cylindericon,
@@ -62,6 +66,16 @@ function Service() {
       content:
         "Our LPG bottling service ensures the safe and efficient conversion of bulk LPG into easy-to-handle cylinders. We have a dedicated team and advanced equipment to meet the growing demand for LPG across various industries.",
       image: LpgBottling,
+      link: "#bottle",
+    },
+    {
+      icon: polyIcon,
+      heading: "Manufacturing Excellence in Polybags",
+      content: `At Energon, we produce an astounding 12 million polybags per month, reflecting our
+        commitment to high-quality and durable packaging solutions. Explore how our
+        manufacturing prowess caters to diverse industrial needs`,
+      image: polyBags,
+      link: "#poly",
     },
     {
       icon: WareHouseicon,
@@ -69,6 +83,7 @@ function Service() {
       content:
         "Our warehousing services offer secure storage solutions for clients such as IOCL and HPCL. With 100,000 sq. ft. of space and a 7,000 KL monthly throughput capacity, we can manage a wide range of products. Our secondary transportation services guarantee timely delivery to clients, covering an extensive area of 500,000 sq. km.",
       image: wareHouse,
+      link: "#ware",
     },
     {
       icon: TransportationIcon,
@@ -76,6 +91,7 @@ function Service() {
       content:
         "We provide a comprehensive transportation solution for a wide variety of bulk black oils. Our well-maintained fleet of vehicles and experienced drivers guarantee the safe and efficient delivery of products like bitumen, furnace oil, base oil, aromatic oils, and transformer oils. ",
       image: Transportation,
+      link: "#black",
     },
 
     {
@@ -84,6 +100,7 @@ function Service() {
       content:
         "We provide a range of customized technical services, including total fluid management and complete lubrication management solutions for industrial customers. Our in-house facilities feature laboratories, fuel testing equipment, and POL handling machinery, enabling us to cater to the unique requirements of each client.",
       image: Custamization,
+      link: "#tech",
     },
   ];
 
@@ -107,10 +124,8 @@ function Service() {
               return (
                 <div
                   className={`Card ${index % 2 !== 0 ? "reverse-card" : ""}`}
-                  // onClick={() => {
-                  //   window.alert(index + 1);
-                  // }}
                   key={`card-${index}`}
+                  id={data.link}
                 >
                   <img className="Dots" src={Dots} alt="error while loading" />
                   <img
@@ -132,77 +147,13 @@ function Service() {
                 </div>
               );
             })}
-
-            {/* for refrence code cards */}
-            {/* <div className="Card">
-              <img
-                className="Dots"
-                src={Dots}
-                alt="error while loading the image"
-              />
-              <img
-                className="Card-Image"
-                src={BulkBitumen}
-                alt="error while loading the image"
-              />
-              <div className="content">
-                <header>
-                  <img
-                    className="Icon"
-                    src={BulkBitumenicon}
-                    alt="error while loading the image"
-                  />
-                  <h1>Bulk Bitumen Handling and Packing</h1>
-                </header>
-                <p>
-                  Our team of experts specializes in the entire process of
-                  handling and packing bulk bitumen into drums. We have
-                  state-of-the-art facilities to ensure the utmost efficiency,
-                  making sure our clients in the oil and gas industry receive
-                  the highest quality service
-                </p>
-              </div>
-            </div> */}
-
-            {/* for refrence of reverse cards */}
-            {/* <div className="Card reverse-card">
-              <img
-                className="Dots"
-                src={Dots}
-                alt="error while loading the image"
-              />
-              <img
-                className="Card-Image"
-                src={BulkBitumen}
-                alt="error while loading the image"
-              />
-              <div className="content">
-                <header>
-                  <img
-                    className="Icon"
-                    src={BulkBitumenicon}
-                    alt="error while loading the image"
-                  />
-                  <h1>Bulk Bitumen Handling and Packing</h1>
-                </header>
-                <p>
-                  Our team of experts specializes in the entire process of
-                  handling and packing bulk bitumen into drums. We have
-                  state-of-the-art facilities to ensure the utmost efficiency,
-                  making sure our clients in the oil and gas industry receive
-                  the highest quality service
-                </p>
-              </div>
-            </div> */}
           </section>
-
           <section className="categories">
             <div className="row">
               <img src={Packgingicon} alt="" />
               <h1 className="Value">100,000</h1>
               <p>Drums manufactured per month</p>
             </div>
-
             <div className="row">
               <img src={BulkBitumenicon} alt="" />
               <h1 className="Value">
@@ -210,7 +161,6 @@ function Service() {
               </h1>
               <p>of Bitumen handled per month</p>
             </div>
-
             <div className="row">
               <img src={StorageTankicon} alt="" />
               <h1 className="Value">
@@ -218,7 +168,6 @@ function Service() {
               </h1>
               <p>of Bitumen emulsions manufactured per month </p>
             </div>
-
             <div className="row">
               <img src={wareHouseSpaceIcon} alt="" />
               <h1 className="Value">
@@ -226,7 +175,6 @@ function Service() {
               </h1>
               <p>of warehousing space</p>
             </div>
-
             <div className="row">
               <img src={MeterIcon} alt="" />
               <h1 className="Value">7,000</h1>
@@ -235,7 +183,6 @@ function Service() {
                 <span className="Metrics">KL</span>{" "}
               </p>
             </div>
-
             <div className="row">
               <img src={WareHouseicon} alt="" />
               <h1 className="Value">
@@ -243,7 +190,6 @@ function Service() {
               </h1>
               <p>secondary transportation coverage</p>
             </div>
-
             <div className="row">
               <img src={Cylindericon} alt="" />
               <h1 className="Value">200,000</h1>
@@ -251,7 +197,6 @@ function Service() {
             </div>
           </section>
         </section>
-
         <footer>
           <Contact />
         </footer>

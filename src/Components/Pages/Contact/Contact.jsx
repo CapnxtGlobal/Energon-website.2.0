@@ -74,13 +74,13 @@ function Contact() {
   return (
     <>
       {location.pathname === "/contact" ? <Navbar /> : ""}
-      <div className={`contact ${isContactPage ? '' : 'dark'}`}>
+      <div className={`contact ${isContactPage ? "" : "dark"}`}>
         <div className="title">
           <h1>Contact Us</h1>
         </div>
         <div className="desc">
           <p>
-            For inquiries, feedback, or support, please feel free to contact us.{" "}
+            For inquiries, feedback, or support, please feel free to contact us.
             <br />
             Our dedicated team is always ready to assist you.
           </p>
@@ -92,7 +92,10 @@ function Contact() {
                 <img src={call} alt="" />
               </div>
               <div className="details">
-                <p className="title"><img src={call} alt="" />Call Us</p>
+                <p className="title">
+                  <img src={call} alt="" />
+                  Call Us
+                </p>
                 <div className="contact-detail">
                   <a href="tel:+918056080595">+91 8056080595</a>
                 </div>
@@ -103,7 +106,10 @@ function Contact() {
                 <img src={Email} alt="" />
               </div>
               <div className="details">
-                <p className="title"><img src={Email} alt="" />Email</p>
+                <p className="title">
+                  <img src={Email} alt="" />
+                  Email
+                </p>
                 <div className="contact-detail">
                   <a href="mailto:info@energon.in">info@energon.in</a>
                 </div>
@@ -115,14 +121,19 @@ function Contact() {
               <img src={address} alt="" />
             </div>
             <div className="content">
-              <div className="title"><img src={address} alt="" />Address</div>
+              <div className="title">
+                <img src={address} alt="" />
+                Address
+              </div>
               <div className="address-detail">
                 <div className="title">
                   <p>Headquarters</p>
                 </div>
                 <div className="data">
-                  701,7th floor, Soliataire Plaza, 8-3-948/949, Behind image
-                  hospital, Ameerpet, Hyderabad-500 073
+                  <a href="https://goo.gl/maps/xgngYeMtMWGEMSV28" target="_blank" rel="noreferrer">
+                    701,7th floor, Soliataire Plaza, 8-3-948/949, Behind image
+                    hospital, Ameerpet, Hyderabad-500 073
+                  </a>
                 </div>
               </div>
               <div className="address-detail">
@@ -130,8 +141,11 @@ function Contact() {
                   <p>Reigonal Office</p>
                 </div>
                 <div className="data">
+                  <a href="https://goo.gl/maps/5qJQv89LBfwtqhhP9" target="_blank" rel="noreferrer">
                   2nd Floor, 95, Lumbini Avenue, Gachibowli, Hyderabad,
                   Telangana 530032
+                  </a>
+                  
                 </div>
               </div>
             </div>
