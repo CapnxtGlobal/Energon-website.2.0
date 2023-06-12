@@ -1,5 +1,5 @@
 .contact.dark {
-  background-color: #1f2730;
+  background-color: #1d2b3a;
   * {
     color: #fff;
   }
@@ -35,7 +35,7 @@
       width: calc(100% / 3.5);
       .element {
         display: flex;
-        margin: 1rem 0;
+        margin-bottom: 1.5rem;
         .icon {
           margin-right: 1rem;
           img {
@@ -105,11 +105,11 @@
           textarea {
             background-color: transparent;
             outline: none;
-            border: 1px solid #ffffff77;
+            border: 1px solid #ffffff;
             width: 100%;
-            padding: 0.5rem 0.75rem;
+            padding: 0.75rem 0.75rem;
             margin-bottom: 0.5rem;
-            border-radius: 1.2rem;
+            border-radius: 1rem;
             color: #fff;
           }
           button {

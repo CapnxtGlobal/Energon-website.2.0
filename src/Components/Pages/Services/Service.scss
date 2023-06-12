@@ -1,6 +1,5 @@
 .Universal-Service {
   background-color: white;
-
   .service-Content {
     .header {
       display: flex;
@@ -8,7 +7,6 @@
       align-items: center;
       text-align: center;
       flex-direction: column;
-      padding-top: 10vw;
       h1 {
         font-size: 3.2vw;
         padding: 2vw 0vw;
@@ -54,14 +52,8 @@
         justify-content: flex-end;
         align-items: flex-start;
         text-align: center;
-        // z-index: 5;
         padding: 4vw 0vw 4vw 4vw;
-        // border: 1px solid black;
-        // background-image: url("../../../Assets/Images/servicesBG.svg");
-        // background-position: center;
-        // background-repeat: no-repeat;
-        // background-size:cover;
-
+       
         .Dots {
           width: 8vw;
           display: flex;

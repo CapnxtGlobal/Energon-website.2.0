@@ -23,7 +23,10 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { Autoplay, Navigation, Pagination, EffectCoverflow } from "swiper";
 import { useState } from "react";
-
+import BulkBitumen from "../../../Assets/Images/Bulk Bitumen .png";
+import BioGasCNG from "../../../Assets/Images/Bio gas CNG.png";
+import Transportation from "../../../Assets/Images/Transportation.png";
+import polyBags from "../../../Assets/Images/polybags.jpg";
 function Home() {
   const clientLogos = [hp, hmel, indianOil, rfcl, hmwsb];
   const [formError, setFormError] = useState(null);
@@ -32,10 +35,39 @@ function Home() {
     email: "",
     message: "",
   });
+  let serviceCardsData = [
+    {
+      heading: "Bulk Bitumen Handling & Transportation",
+      content: `With state-of-the-art handling equipment and a fleet of specialized vehicles, we
+      ensure safe and efficient delivery of bitumen under strict temperature controls, adhering to
+      industry standards. From refinery gates to the heart of your operations, trust us for the
+      seamless logistics of this critical petroproduct.`,
+      image: BulkBitumen,
+    },
+    {
+      heading: "Manufacturing Excellence in Polybags",
+      content: `At Energon, we produce an astounding 12 million polybags per month, reflecting our
+        commitment to high-quality and durable packaging solutions. Explore how our
+        manufacturing prowess caters to diverse industrial needs`,
+      image: polyBags,
+    },
+    {
+      heading: `Championing Sustainability with Bio CNG`,
+      content: `Pioneering the transition towards renewable energy, we convert agricultural waste
+        into BioGas at our technologically advanced Bio CNG plants. Harness the power of
+        sustainable energy with our innovative waste-to-energy solutions.`,
+      image: BioGasCNG,
+    },
+
+    {
+      heading: "Seamlessly Streamlining Global Trade",
+      content: `Enabling smooth trade across borders, Energon expertly handles over 2000 TEUs per
+      year in Container Terminal Operations and Rake Movements, spread over 7 key locations.
+      Embark on your journey towards efficient and secure logistics with us.`,
+      image: Transportation,
+    },
+  ];
   const navigate = useNavigate();
-  const navigateToServices = () => {
-    navigate("/services");
-  };
 
   document.forms["sign-up-form"] = function (event) {
     if (this.username.value.trim() === "") {
@@ -162,6 +194,7 @@ function Home() {
             grabCursor={true}
             centeredSlides={true}
             slidesPerView={2}
+            speed={800}
             initialSlide={3}
             navigation={true}
             spaceBetween={180}
@@ -175,156 +208,33 @@ function Home() {
             pagination={false}
             modules={[EffectCoverflow, Autoplay, Navigation, Pagination]}
             className="mySwiper"
-            // autoplay={{
-            //   delay: 2500,
-            //   disableOnInteraction: false,
-            // }}
+            autoplay={{
+              delay: 2500,
+              disableOnInteraction: false,
+            }}
           >
-            <SwiperSlide>
-              <div className="slider-card">
-                <div className="content">
-                  <h1>ENERGON GAS</h1>
-                  <p>
-                    We are committed to promoting sustainable energy solutions,
-                    processing agricultural waste into bio gas, which is then
-                    sold as CNG to auto fuel stations. Our innovative approach
-                    to waste management contributes to a greener and more
-                    sustainable future
-                  </p>
-                  <button onClick={navigateToServices}>
-                    EXPLORE OUR SERVICES
-                  </button>
-                </div>
-                <div className="img">
-                  <img src={home} alt="" />
-                </div>
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div className="slider-card">
-                <div className="content">
-                  <h1>ENERGON GAS</h1>
-                  <p>
-                    We are committed to promoting sustainable energy solutions,
-                    processing agricultural waste into bio gas, which is then
-                    sold as CNG to auto fuel stations. Our innovative approach
-                    to waste management contributes to a greener and more
-                    sustainable future
-                  </p>
-                  <button onClick={navigateToServices}>
-                    EXPLORE OUR SERVICES
-                  </button>
-                </div>
-                <div className="img">
-                  <img src={home} alt="" />
-                </div>
-              </div>
-            </SwiperSlide>
-
-            <SwiperSlide>
-              <div className="slider-card">
-                <div className="content">
-                  <h1>ENERGON GAS</h1>
-                  <p>
-                    We are committed to promoting sustainable energy solutions,
-                    processing agricultural waste into bio gas, which is then
-                    sold as CNG to auto fuel stations. Our innovative approach
-                    to waste management contributes to a greener and more
-                    sustainable future
-                  </p>
-                  <button onClick={navigateToServices}>
-                    EXPLORE OUR SERVICES
-                  </button>
-                </div>
-                <div className="img">
-                  <img src={home} alt="" />
-                </div>
-              </div>
-            </SwiperSlide>
-
-            <SwiperSlide>
-              <div className="slider-card">
-                <div className="content">
-                  <h1>ENERGON GAS</h1>
-                  <p>
-                    We are committed to promoting sustainable energy solutions,
-                    processing agricultural waste into bio gas, which is then
-                    sold as CNG to auto fuel stations. Our innovative approach
-                    to waste management contributes to a greener and more
-                    sustainable future
-                  </p>
-                  <button onClick={navigateToServices}>
-                    EXPLORE OUR SERVICES
-                  </button>
-                </div>
-                <div className="img">
-                  <img src={home} alt="" />
-                </div>
-              </div>
-            </SwiperSlide>
-
-            <SwiperSlide>
-              <div className="slider-card">
-                <div className="content">
-                  <h1>ENERGON GAS</h1>
-                  <p>
-                    We are committed to promoting sustainable energy solutions,
-                    processing agricultural waste into bio gas, which is then
-                    sold as CNG to auto fuel stations. Our innovative approach
-                    to waste management contributes to a greener and more
-                    sustainable future
-                  </p>
-                  <button onClick={navigateToServices}>
-                    EXPLORE OUR SERVICES
-                  </button>
-                </div>
-                <div className="img">
-                  <img src={home} alt="" />
-                </div>
-              </div>
-            </SwiperSlide>
-
-            <SwiperSlide>
-              <div className="slider-card">
-                <div className="content">
-                  <h1>ENERGON GAS</h1>
-                  <p>
-                    We are committed to promoting sustainable energy solutions,
-                    processing agricultural waste into bio gas, which is then
-                    sold as CNG to auto fuel stations. Our innovative approach
-                    to waste management contributes to a greener and more
-                    sustainable future
-                  </p>
-                  <button onClick={navigateToServices}>
-                    EXPLORE OUR SERVICES
-                  </button>
-                </div>
-                <div className="img">
-                  <img src={home} alt="" />
-                </div>
-              </div>
-            </SwiperSlide>
-
-            <SwiperSlide>
-              <div className="slider-card">
-                <div className="content">
-                  <h1>ENERGON GAS</h1>
-                  <p>
-                    We are committed to promoting sustainable energy solutions,
-                    processing agricultural waste into bio gas, which is then
-                    sold as CNG to auto fuel stations. Our innovative approach
-                    to waste management contributes to a greener and more
-                    sustainable future
-                  </p>
-                  <button onClick={navigateToServices}>
-                    EXPLORE OUR SERVICES
-                  </button>
-                </div>
-                <div className="img">
-                  <img src={home} alt="" />
-                </div>
-              </div>
-            </SwiperSlide>
+            {serviceCardsData.map((rec, i) => {
+              return (
+                <SwiperSlide>
+                  <div className="slider-card" data-hash={rec.link}>
+                    <div className="content">
+                      <h1>{rec.heading}</h1>
+                      <p>{rec.content}</p>
+                      <button
+                        onClick={() => {
+                          navigate(`/services`);
+                        }}
+                      >
+                        EXPLORE OUR SERVICES
+                      </button>
+                    </div>
+                    <div className="img">
+                      <img src={rec.image} alt="" />
+                    </div>
+                  </div>
+                </SwiperSlide>
+              );
+            })}
           </Swiper>
         </section>
 
@@ -389,7 +299,7 @@ function Home() {
           <div className="body">
             <div className="col">
               <div className="title">
-                <h2>Get in touch us</h2>
+                <h2>Get in touch with us</h2>
               </div>
               <div className="desc">
                 <p>

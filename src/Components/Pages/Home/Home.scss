@@ -146,13 +146,16 @@
           font-size: 0.8vw;
           font-weight: 400;
         }
+        button:hover{
+          cursor: pointer;
+        }
       }
       .img {
         img {
           width: 30vw;
           border-top-right-radius: 0.5vw;
           border-bottom-right-radius: 0.5vw;
-          height: 23.5vw;
+          height: 26vw;
         }
       }
     }
@@ -427,14 +430,14 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            width: 55vw;
+            width: 50vw;
             padding: 1rem;
             h1{
               font-size: 1rem;
               text-align: start;
             }
             p{
-              font-size: .8rem;
+              font-size: .7rem;
               line-height: normal;
               margin: .5rem 0;
               text-align: center;

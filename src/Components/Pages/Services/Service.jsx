@@ -18,6 +18,8 @@ import wareHouse from "../../../Assets/Images/Ware House.png";
 import Transportation from "../../../Assets/Images/Transportation.png";
 import MeterIcon from "../../../Assets/icons/Meter.svg";
 import wareHouseSpaceIcon from "../../../Assets/icons/Ware house space .svg";
+import polyBags from "../../../Assets/Images/polybags.jpg";
+import polyIcon from '../../../Assets/icons/Polybags.svg'
 import "./Service.scss";
 import Contact from "../Contact/Contact";
 import { useEffect } from "react";
@@ -40,6 +42,7 @@ function Service() {
       content:
         "Our team of experts specializes in the entire process of handling and packing bulk bitumen into drums. We have state-of-the-art facilities to ensure the utmost efficiency, making sure our clients in the oil and gas industry receive the highest quality service",
       image: BulkBitumen,
+      link: "#bitumen",
     },
     {
       icon: StorageTankicon,
@@ -47,6 +50,7 @@ function Service() {
       content:
         "Our storage tank and infrastructure manufacturing division is dedicated to producing high-quality storage tankages and allied infrastructure. We work closely with clients to understand their specific requirements and deliver tailor-made solutions that meet their needs in the oil and gas industry",
       image: serviceStorageTankers,
+      link: "#storage",
     },
     {
       icon: BioGasCngIcon,
@@ -54,6 +58,7 @@ function Service() {
       content:
         "We are committed to promoting sustainable energy solutions, processing agricultural waste into bio gas, which is then sold as CNG to auto fuel stations. Our innovative approach to waste management contributes to a greener and more sustainable future.",
       image: BioGasCNG,
+      link: "#bio",
     },
     {
       icon: Cylindericon,
@@ -61,6 +66,16 @@ function Service() {
       content:
         "Our LPG bottling service ensures the safe and efficient conversion of bulk LPG into easy-to-handle cylinders. We have a dedicated team and advanced equipment to meet the growing demand for LPG across various industries.",
       image: LpgBottling,
+      link: "#bottle",
+    },
+    {
+      icon: polyIcon,
+      heading: "Manufacturing Excellence in Polybags",
+      content: `At Energon, we produce an astounding 12 million polybags per month, reflecting our
+        commitment to high-quality and durable packaging solutions. Explore how our
+        manufacturing prowess caters to diverse industrial needs`,
+      image: polyBags,
+      link: "#poly",
     },
     {
       icon: WareHouseicon,
@@ -68,6 +83,7 @@ function Service() {
       content:
         "Our warehousing services offer secure storage solutions for clients such as IOCL and HPCL. With 100,000 sq. ft. of space and a 7,000 KL monthly throughput capacity, we can manage a wide range of products. Our secondary transportation services guarantee timely delivery to clients, covering an extensive area of 500,000 sq. km.",
       image: wareHouse,
+      link: "#ware",
     },
     {
       icon: TransportationIcon,
@@ -75,6 +91,7 @@ function Service() {
       content:
         "We provide a comprehensive transportation solution for a wide variety of bulk black oils. Our well-maintained fleet of vehicles and experienced drivers guarantee the safe and efficient delivery of products like bitumen, furnace oil, base oil, aromatic oils, and transformer oils. ",
       image: Transportation,
+      link: "#black",
     },
 
     {
@@ -83,6 +100,7 @@ function Service() {
       content:
         "We provide a range of customized technical services, including total fluid management and complete lubrication management solutions for industrial customers. Our in-house facilities feature laboratories, fuel testing equipment, and POL handling machinery, enabling us to cater to the unique requirements of each client.",
       image: Custamization,
+      link: "#tech",
     },
   ];
 
@@ -107,6 +125,7 @@ function Service() {
                 <div
                   className={`Card ${index % 2 !== 0 ? "reverse-card" : ""}`}
                   key={`card-${index}`}
+                  id={data.link}
                 >
                   <img className="Dots" src={Dots} alt="error while loading" />
                   <img
