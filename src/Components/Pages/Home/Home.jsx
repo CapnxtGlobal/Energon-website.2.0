@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import home from "../../../Assets/Images/homeheaderimage.png";
-import about from "../../../Assets/Images/About-us.png";
+import about from '../../../Assets/Images/About-us.png'
 import Ploy from "../../../Assets/icons/Polybags.svg";
 import Bio_Cng from "../../../Assets/icons/Bio Cng Plant.svg";
 import Lpg from "../../../Assets/icons/LPG Bottling 2.svg";
@@ -17,16 +17,17 @@ import hmel from "../../../Assets/Images/hmel.jpg";
 import hmwsb from "../../../Assets/Images/hmwssb.jpg";
 import rfcl from "../../../Assets/Images/rfcl.jpg";
 import emailjs from "@emailjs/browser";
-// Import Swiper styles
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
-import { Autoplay, Navigation, Pagination, EffectCoverflow } from "swiper";
 import { useState } from "react";
 import BulkBitumen from "../../../Assets/Images/Bulk Bitumen .png";
 import BioGasCNG from "../../../Assets/Images/Bio gas CNG.png";
 import Transportation from "../../../Assets/Images/Transportation.png";
 import polyBags from "../../../Assets/Images/polybags.jpg";
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import { Autoplay, Navigation, Pagination, EffectCoverflow } from "swiper";
+
 function Home() {
   const clientLogos = [hp, hmel, indianOil, rfcl, hmwsb];
   const [formError, setFormError] = useState(null);
@@ -138,16 +139,39 @@ function Home() {
   return (
     <>
       <main className="Universal-Home">
-        <header>
-          <Navbar />
-          <div className="power">
+        <div className="home-header">
+          <div className="navbar-home">
+            <Navbar />
+          </div>
+          <div className="tags">
             <h1>
               Powering the <br />
               Petrochemical Industry
-              <p>"Experience, Innovation, and Excellence since 2012"</p>
             </h1>
+            <p>"Experience, Innovation, and Excellence since 2012"</p>
           </div>
-        </header>
+          <div className="slider">
+            <Swiper
+              className="myswiper"
+              effect="fade"
+              modules={[Autoplay, Navigation, Pagination]}
+              autoplay={true}
+              keyboard={true}
+              speed={800}
+              loop={true}
+            >
+              <SwiperSlide className="swiper-slide">
+                <img src={home} alt="" />
+              </SwiperSlide>
+              <SwiperSlide className="swiper-slide">
+                <img src={home} alt="" />
+              </SwiperSlide>
+              <SwiperSlide className="swiper-slide">
+                <img src={home} alt="" />
+              </SwiperSlide>
+            </Swiper>
+          </div>
+        </div>
         <div className="About">
           <div className="title">
             <h1>ABOUT US</h1>
@@ -175,9 +199,9 @@ function Home() {
                 stay true to our mission: To be an ally of growth, a catalyst of
                 positive change, and a beacon of sustainable energy practices.
               </p>
-              <p>
-                Welcome to Energon. We don't just power industries; we empower
-                futures.
+              <p className="highlight">
+                "Welcome to Energon. We don't just power industries; we empower
+                futures."
               </p>
             </div>
             <div className="img col">
@@ -198,6 +222,7 @@ function Home() {
             initialSlide={3}
             navigation={true}
             spaceBetween={180}
+            loop={true}
             coverflowEffect={{
               rotate: 50,
               stretch: 10,
@@ -215,8 +240,8 @@ function Home() {
           >
             {serviceCardsData.map((rec, i) => {
               return (
-                <SwiperSlide>
-                  <div className="slider-card" data-hash={rec.link}>
+                <SwiperSlide key={`${rec.heading}-${i}`}>
+                  <div className="slider-card">
                     <div className="content">
                       <h1>{rec.heading}</h1>
                       <p>{rec.content}</p>
@@ -303,10 +328,9 @@ function Home() {
               </div>
               <div className="desc">
                 <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Nostrum et labore nesciunt accusantium ut. Ea quidem
-                  perspiciatis omnis ad assumenda, illo architecto eius voluptas
-                  beatae iusto cupiditate dolorem molestiae labore.
+                  Questions or inquiries? Don't hesitate to reach out. Complete
+                  the form, and let's connect. Your journey with Energon starts
+                  here!
                 </p>
               </div>
             </div>

@@ -6,29 +6,49 @@
   background-color: whitesmoke;
   overflow-x: hidden;
 
-  header {
+  .home-header {
     height: 100vh;
-    width: 100vw;
-    background-image: url("../../../Assets/Images/homeheaderimage.png");
-    background-size: cover;
-    background-color: none;
-    margin-top: 0;
-
-    .power h1 {
-      padding-top: 15vw;
-      padding-left: 5vw;
-      font-weight: bold;
-      color: white;
-      font-size: 4vw;
-      font-family: "Montserrat", sans-serif;
-      letter-spacing: 0.25rem;
-      word-spacing: 0.5rem;
-
-      p {
-        font-size: 1.25vw;
-        line-height: 4em;
-        word-spacing: 0;
+    position: relative;
+    width: 100%;
+    .navbar-home {
+      position: absolute;
+      z-index: 99;
+      width: 100%;
+    }
+    .tags {
+      position: absolute;
+      z-index: 9;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      height: 100%;
+      margin: 0 5rem;
+      h1 {
+        font-size: 4rem;
         font-family: "Montserrat", sans-serif;
+        font-weight: 700;
+        color: #fff;
+      }
+      p {
+        color: #fff;
+        font-size: 1.2rem;
+        margin: 2rem 0;
+      }
+    }
+    .slider {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      .myswiper {
+        height: 100%;
+        width: 100%;
+        .swiper-slide {
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+        }
       }
     }
   }
@@ -54,6 +74,11 @@
       .Us {
         p {
           margin: 2rem 0;
+        }
+        p.highlight{
+          color: #ff4500;
+          font-size: 1.5rem;
+          font-weight: 600;
         }
       }
       .col {
@@ -98,8 +123,6 @@
     .swiper-slide.swiper-slide-active {
       box-shadow: 2px 2px 100px 8px rgba(0, 0, 0, 0.25);
     }
-
-    
 
     .swiper-button-prev {
       left: 10px;
@@ -146,7 +169,7 @@
           font-size: 0.8vw;
           font-weight: 400;
         }
-        button:hover{
+        button:hover {
           cursor: pointer;
         }
       }
@@ -382,14 +405,12 @@
 
 @media screen and (max-width: 768px) {
   .Universal-Home {
-    header {
+    .home-header {
       height: 80vh;
-      .power h1 {
-        font-size: 2rem;
-        p {
-          margin: 2rem 0 0 0;
-          font-size: 1rem;
-          line-height: normal;
+      .tags {
+        margin: 0 2rem;
+        h1 {
+          font-size: 2rem;
         }
       }
     }
@@ -410,6 +431,10 @@
           p {
             text-align: justify;
           }
+          p.highlight{
+            text-align: center;
+            font-size: 1rem;
+          }
         }
       }
     }
@@ -419,38 +444,38 @@
         padding: 2rem;
         font-size: 600;
       }
-      .mySwiper{
-        .slider-card{
+      .mySwiper {
+        .slider-card {
           flex-direction: column-reverse;
           justify-content: space-between;
           border-radius: 1rem;
           height: fit-content;
           width: fit-content;
-          .content{
+          .content {
             display: flex;
             flex-direction: column;
             align-items: center;
             width: 50vw;
             padding: 1rem;
-            h1{
+            h1 {
               font-size: 1rem;
               text-align: start;
             }
-            p{
-              font-size: .7rem;
+            p {
+              font-size: 0.7rem;
               line-height: normal;
-              margin: .5rem 0;
+              margin: 0.5rem 0;
               text-align: center;
             }
-            button{
-              font-size: .75rem;
-              padding: .5rem .75rem;
+            button {
+              font-size: 0.75rem;
+              padding: 0.5rem 0.75rem;
             }
           }
-          .img{
+          .img {
             width: 100%;
             height: 20vh;
-            img{
+            img {
               height: 100%;
               border-radius: 1rem 1rem 0 0;
               width: 100%;

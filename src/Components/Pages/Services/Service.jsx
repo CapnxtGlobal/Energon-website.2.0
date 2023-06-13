@@ -19,7 +19,11 @@ import Transportation from "../../../Assets/Images/Transportation.png";
 import MeterIcon from "../../../Assets/icons/Meter.svg";
 import wareHouseSpaceIcon from "../../../Assets/icons/Ware house space .svg";
 import polyBags from "../../../Assets/Images/polybags.jpg";
-import polyIcon from '../../../Assets/icons/Polybags.svg'
+import polyIcon from "../../../Assets/icons/Polybags.svg";
+import terminalOpsIcon from '../../../Assets/icons/terminal ops.svg';
+import pipeLineIcon from '../../../Assets/icons/Pipeline Terminal.svg';
+import bioCNGIcon from '../../../Assets/icons/Bio cng.svg';
+import polyBagsIcon from '../../../Assets/icons/Poly Bags.svg';
 import "./Service.scss";
 import Contact from "../Contact/Contact";
 import { useEffect } from "react";
@@ -39,10 +43,19 @@ function Service() {
     {
       icon: BulkBitumenicon,
       heading: "Bulk Bitumen Handling and Packing",
-      content:
-        "Our team of experts specializes in the entire process of handling and packing bulk bitumen into drums. We have state-of-the-art facilities to ensure the utmost efficiency, making sure our clients in the oil and gas industry receive the highest quality service",
+      content: `Our team of experts specializes in the entire process of handling and packing bulk bitumen into drums. We have state-of-the-art facilities to ensure the utmost efficiency, making sure our clients in the oil and gas industry receive the highest quality service`,
       image: BulkBitumen,
       link: "#bitumen",
+    },
+    {
+      icon: polyIcon,
+      heading: "Integrated Manufacturing of PP and BOPP Bags",
+      content: `Venturing into a new frontier of packaging solutions, Energon brings to you an upcoming state-of-
+      the-art plant for Polypropylene (PP) and Biaxially Oriented Polypropylene (BOPP) bags. Focused on
+      creating robust, versatile, and high-quality packaging, we're setting the stage to redefine industry
+      standards.`,
+      image: polyBags,
+      link: "#poly",
     },
     {
       icon: StorageTankicon,
@@ -68,15 +81,7 @@ function Service() {
       image: LpgBottling,
       link: "#bottle",
     },
-    {
-      icon: polyIcon,
-      heading: "Manufacturing Excellence in Polybags",
-      content: `At Energon, we produce an astounding 12 million polybags per month, reflecting our
-        commitment to high-quality and durable packaging solutions. Explore how our
-        manufacturing prowess caters to diverse industrial needs`,
-      image: polyBags,
-      link: "#poly",
-    },
+
     {
       icon: WareHouseicon,
       heading: "Warehousing & Secondary Transportation",
@@ -149,51 +154,83 @@ function Service() {
             })}
           </section>
           <section className="categories">
-            <div className="row">
-              <img src={Packgingicon} alt="" />
-              <h1 className="Value">100,000</h1>
-              <p>Drums manufactured per month</p>
+            <div className="title">
+              <h1>Our Performance, Your Confidence</h1>
+              <p>A Snapshot of Energon's Impressive Track Record</p>
             </div>
-            <div className="row">
-              <img src={BulkBitumenicon} alt="" />
-              <h1 className="Value">
-                12,000 <span className="Metrics">MT</span>
-              </h1>
-              <p>of Bitumen handled per month</p>
-            </div>
-            <div className="row">
-              <img src={StorageTankicon} alt="" />
-              <h1 className="Value">
-                2,500 <span className="Metrics">MT</span>
-              </h1>
-              <p>of Bitumen emulsions manufactured per month </p>
-            </div>
-            <div className="row">
-              <img src={wareHouseSpaceIcon} alt="" />
-              <h1 className="Value">
-                100,000 <span className="Metrics">sq.ft.</span>
-              </h1>
-              <p>of warehousing space</p>
-            </div>
-            <div className="row">
-              <img src={MeterIcon} alt="" />
-              <h1 className="Value">7,000</h1>
-              <p>
-                monthly throughput for warehousing{" "}
-                <span className="Metrics">KL</span>{" "}
-              </p>
-            </div>
-            <div className="row">
-              <img src={WareHouseicon} alt="" />
-              <h1 className="Value">
-                500,000 <span className="Metrics">sq.km</span>
-              </h1>
-              <p>secondary transportation coverage</p>
-            </div>
-            <div className="row">
-              <img src={Cylindericon} alt="" />
-              <h1 className="Value">200,000</h1>
-              <p>LPG cylinders bottled per month</p>
+            <div className="body">
+              <div className="row">
+                <img src={Packgingicon} alt="" />
+                <h1 className="Value">100,000</h1>
+                <p>Drums manufactured per month</p>
+              </div>
+              <div className="row">
+                <img src={BulkBitumenicon} alt="" />
+                <h1 className="Value">
+                  12,000 <span className="Metrics">MT</span>
+                </h1>
+                <p>of Bitumen handled per month</p>
+              </div>
+              <div className="row">
+                <img src={StorageTankicon} alt="" />
+                <h1 className="Value">
+                  2,500 <span className="Metrics">MT</span>
+                </h1>
+                <p>of Bitumen emulsions manufactured per month </p>
+              </div>
+              <div className="row">
+                <img src={wareHouseSpaceIcon} alt="" />
+                <h1 className="Value">
+                  100,000 <span className="Metrics">sq.ft.</span>
+                </h1>
+                <p>of warehousing space</p>
+              </div>
+              <div className="row">
+                <img src={terminalOpsIcon} alt="" />
+                <h1 className="Value">40000<span className="Metrics">KL</span> </h1>
+                <p>Terminals ops. per month</p>
+              </div>
+              <div className="row">
+                <img src={pipeLineIcon} alt="" />
+                <h1 className="Value">
+                200000<span className="Metrics">KL</span>
+                </h1>
+                <p>Pipeline terminals per month</p>
+              </div>
+              <div className="row">
+                <img src={bioCNGIcon} alt="" />
+                <h1 className="Value">
+                3000<span className="Metrics">MT</span>
+                </h1>
+                <p>BIO CNG per month </p>
+              </div>
+              <div className="row">
+                <img src={polyBagsIcon} alt="" />
+                <h1 className="Value">
+                  12 <span className="Metrics">million</span>
+                </h1>
+                <p>Polybags per month</p>
+              </div>
+              <div className="row">
+                <img src={MeterIcon} alt="" />
+                <h1 className="Value">7,000</h1>
+                <p>
+                  monthly throughput for warehousing{" "}
+                  <span className="Metrics">KL</span>{" "}
+                </p>
+              </div>
+              <div className="row">
+                <img src={WareHouseicon} alt="" />
+                <h1 className="Value">
+                  500,000 <span className="Metrics">sq.km</span>
+                </h1>
+                <p>secondary transportation coverage</p>
+              </div>
+              <div className="row">
+                <img src={Cylindericon} alt="" />
+                <h1 className="Value">200,000</h1>
+                <p>LPG cylinders bottled per month</p>
+              </div>
             </div>
           </section>
         </section>

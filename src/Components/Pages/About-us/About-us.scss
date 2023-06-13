@@ -3,7 +3,7 @@
   .About {
     h1 {
       padding: 2vw;
-      padding-left: 7vw;
+      padding-left: 7vw;  
       font-family: 'Oswald', sans-serif;
       font-weight: 500;
       font-size: 3vw;
@@ -13,24 +13,26 @@
       display: flex;
     //   padding-top: 5vw;
       justify-content: space-between;
+      padding: 0 5rem;
       align-items: center;
       align-items: left;
       font-family: "Montserrat", sans-serif;
       //-color: whitesmoke;
       // background-color: rED;
-
+      .col{
+        width: 45%;
+      }
       p {
         padding-top: 2vw;
         font-family: "Poppins", sans-serif;
         color: rgba(8, 0, 0, 0.722);
         line-height: 1.75vw;
         font-weight: bold;
-        padding-left: 7vw;
-        width: 36vw;
+        // width: 36vw;
       }
 
       img {
-        width: 38vw;
+        width: 100%;
         //height: 65%;
         padding-top: 4vw;
         padding-right: 7vw;
@@ -79,7 +81,7 @@
         transform: scale(1.1);
       }
       p {
-        color: #ff4500;
+        color: #000;
         font-weight: bold;
         font-size: 1.5vw;
         margin: 0.5rem 0;
@@ -134,8 +136,10 @@
     }
     .heading p {
       padding-top: 3vw;
-      font-size: 1vw;
-      padding-left: 20vw;
+      width: 70%;
+      margin: auto;
+      font-size: 1rem;
+      text-align: center;
       font-family: "Poppins", sans-serif;
       color: rgba(8, 0, 0, 0.722);
       font-weight: bold;
@@ -258,16 +262,20 @@
     .About {
       h1 {
         font-size: 2rem;
-        margin: 1rem 0;
+        margin: 2rem 0 1rem 0;
         text-align: center;
+
       }
       .body {
         padding: 1rem 0 4rem 0;
         flex-direction: column-reverse;
+        .col{
+          width: 85%;
+        }
         p {
           width: fit-content;
           line-height: normal;
-          padding: 0 2rem;
+          // padding: 0 2rem;
         }
 
         .img {
@@ -321,8 +329,10 @@
       }
       .map {
         padding: 0;
-        margin: 2rem;
-        width: fit-content;
+        margin: 2rem 0;
+        width: 100%;
+        display: flex;
+        justify-content: center;
         img {
           width: 100%;
         }
@@ -338,6 +348,7 @@
           font-size: 1rem;
           padding: 2rem 0 0 0;
           text-align: center;
+          width: 100%;
         }
       }
       .members {

@@ -222,7 +222,7 @@ function Contact() {
         )}
         <div className="mini-footer">
           <p>
-            <a href="mailto:info@energon.in">info@energon.in</a>
+          © 2012 - {new Date().getFullYear()} Energon Group | All rights reserved  
           </p>
         </div>
       </div>

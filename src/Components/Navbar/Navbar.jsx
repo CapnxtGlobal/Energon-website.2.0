@@ -64,6 +64,15 @@ function Navbar() {
             <li className={location.pathname === "/contact" ? "active" : ""}>
               <Link to="/contact">Contact Us</Link>
             </li>
+            <li>
+              <a
+                href="https://dashboard.energon.in"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <button>Login to Dashboard</button>
+              </a>
+            </li>
           </div>
         </nav>
       </section>
@@ -95,6 +104,15 @@ function Navbar() {
               </Link>
             </li>
             <li>
+              <a
+                href="https://dashboard.energon.in"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <button>Login to Dashboard</button>
+              </a>
+            </li>
+            <li>
               <div className="contact">
                 <p className="email">
                   <a href="mailto:info@energon.in">info@energon.in</a>
@@ -122,6 +140,7 @@ function Navbar() {
             <img src={logoBlack} color="white" alt="error loading" />
           </Link>
         </div>
+        <div className="dummy"></div>
       </div>
     </>
   );
