@@ -138,16 +138,21 @@ function Home() {
   return (
     <>
       <main className="Universal-Home">
-        <header>
-          <Navbar />
-          <div className="power">
+        <div className="home-header">
+          <div className="navbar-home">
+      <Navbar />
+          </div>
+          <div className="tags">
             <h1>
               Powering the <br />
               Petrochemical Industry
-              <p>"Experience, Innovation, and Excellence since 2012"</p>
             </h1>
+            <p>"Experience, Innovation, and Excellence since 2012"</p>
           </div>
-        </header>
+          <div className="slider">
+            <img src={home} alt="" />
+          </div>
+        </div>
         <div className="About">
           <div className="title">
             <h1>ABOUT US</h1>

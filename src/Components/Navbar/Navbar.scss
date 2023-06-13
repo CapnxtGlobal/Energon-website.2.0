@@ -24,8 +24,8 @@
   display: none;
 }
 .Navbarheader {
-  width: 100vw;
-  padding: 1vw 2vw;
+  width: 90vw;
+  padding: 1vw 5vw;
   transition: all 0.5s;
   nav {
     background-color: transparent;
@@ -39,14 +39,13 @@
     .logo {
       .conditional-rendering-logo img {
         width: 16vw;
-        padding-left: 4vw;
+        // padding-left: 4vw;
       }
     }
     
     .nav-links {
       display: flex;
       justify-content: space-around;
-      padding-right: 8vw;
       align-items: flex-end;
       text-align: center;
       cursor: pointer;

@@ -1,6 +1,5 @@
 import React from "react";
 import Navbar from "../../Navbar/Navbar";
-import about from "../../../Assets/Images/About-us.png";
 import safety from "../../../Assets/icons/Safety.svg";
 import quality from "../../../Assets/icons/Quality.svg";
 import integrity from "../../../Assets/icons/Integrity.svg";
