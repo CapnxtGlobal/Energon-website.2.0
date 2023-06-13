@@ -122,6 +122,9 @@ function Navbar() {
             <img src={logoBlack} color="white" alt="error loading" />
           </Link>
         </div>
+        <div className="dummy">
+          
+        </div>
       </div>
     </>
   );

@@ -53,7 +53,7 @@
         align-items: flex-start;
         text-align: center;
         padding: 4vw 0vw 4vw 4vw;
-       
+
         .Dots {
           width: 8vw;
           display: flex;
@@ -68,6 +68,7 @@
           margin-top: auto;
           margin-bottom: auto;
           margin-right: -7vw;
+          border-radius: 0.5rem;
         }
 
         .content {
@@ -120,56 +121,72 @@
     }
 
     .categories {
-
-      display: flex;
-      justify-content: space-around;
-      align-items: flex-start;
-      text-align: center;
-      padding: 2vw 0vw;
-      flex-wrap: wrap;
-      .row {
-        // border: 1px solid black;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-wrap: wrap;
-        text-align: center;
-        flex-direction: column;
-        width: 15%;
-        // background-color: rebeccapurple;
-        padding: 2vw 0vw;
-        margin: 0 3rem;
-        img {
-          width: 6vw;
-          height: 6vw;
-          transition: transform 0.2s ease;
+      .title {
+        h1 {
+          font-size: 2.5rem;
+          font-weight: 700;
+          margin: 4rem 0 2rem 0;
+          text-align: center;
         }
-        img:hover {
-          transform: scale(1.1);
-        }
-
-        .Value {
-          padding: 1.8vw 0vw 0.6vw 0vw;
-          color: #e95c28;
+        p {
+          text-align: center;
+          margin: 0 0 2rem 0;
+          color: rgb(77, 77, 77);
           font-family: "Montserrat", sans-serif;
-          font-weight: 800;
-          font-size: 2.5vw;
+          font-weight: 700;
+        }
+      }
+      .body {
+        display: flex;
+        justify-content: space-around;
+        align-items: flex-start;
+        text-align: center;
+        padding: 2vw 0vw;
+        flex-wrap: wrap;
+        .row {
+          // border: 1px solid black;
           display: flex;
           justify-content: center;
           align-items: center;
+          flex-wrap: wrap;
           text-align: center;
-
-          .Metrics {
-            font-size: 1vw;
-            font-weight: 700;
-            padding: 0vw 0.2vw;
+          flex-direction: column;
+          width: 15%;
+          // background-color: rebeccapurple;
+          padding: 2vw 0vw;
+          margin: 0 3rem;
+          img {
+            width: 6vw;
+            height: 6vw;
+            transition: transform 0.2s ease;
           }
-        }
-        p {
-          line-height: 1.8vw;
-          font-family: "Montserrat", sans-serif;
-          font-weight: 600;
-          font-size: 1.2vw;
+          img:hover {
+            transform: scale(1.1);
+          }
+
+          .Value {
+            padding: 1.8vw 0vw 0.6vw 0vw;
+            color: #e95c28;
+            font-family: "Montserrat", sans-serif;
+            font-weight: 800;
+            font-size: 2.5vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+
+            .Metrics {
+              font-size: 1vw;
+              font-weight: 700;
+              padding: 0vw 0.2vw;
+            }
+          }
+          p {
+            line-height: 1.8vw;
+            font-family: "Montserrat", sans-serif;
+            font-weight: 600;
+            font-size: 1.2vw;
+          }
         }
       }
     }
@@ -179,6 +196,7 @@
 @media screen and (max-width: 768px) {
   .Universal-Service {
     .service-Content {
+      margin-top: 3rem;
       .header {
         h1 {
           font-size: 2rem;
@@ -246,24 +264,34 @@
           }
         }
       }
-      .categories{
-        margin: 1rem 0;
-        .row{
-          width: 30%;
-          margin: 1.5rem 1rem;
-          img{
-            width: 2rem;
-            height: auto;
-          }
-          .Value{
-            font-size: 1rem;
+      .categories {
+        .title{
+          h1{
+            margin: 2rem 0 1rem 0;
+            font-size: 1.5rem;
           }
           p{
-            font-size: .5rem;
-            line-height: normal;
+            font-size: .75rem;
           }
         }
-        
+        .body {
+          margin: 1rem 0;
+          .row {
+            width: 30%;
+            margin: 1.5rem 1rem;
+            img {
+              width: 2rem;
+              height: auto;
+            }
+            .Value {
+              font-size: 1rem;
+            }
+            p {
+              font-size: 0.5rem;
+              line-height: normal;
+            }
+          }
+        }
       }
     }
   }

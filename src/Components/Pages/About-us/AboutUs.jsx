@@ -9,6 +9,7 @@ import customer from "../../../Assets/icons/Customer Focus.svg";
 import environment from "../../../Assets/icons/Environmental Responsibility.svg";
 import map from "../../../Assets/Images/map.png";
 import blackimage from "../../../Assets/Images/black-image.jpg";
+import energonOffice from "../../../Assets/Images/energon-office.png";
 import "../About-us/About-us.scss";
 import Contact from "../Contact/Contact";
 
@@ -20,7 +21,7 @@ function AboutUs() {
         <div className="About">
           <h1>About Us</h1>
           <div className="body">
-            <div>
+            <div className="col">
               <p>
                 Established in 2012.Energon has grown into a leading
                 organization in the petro products industry.
@@ -37,8 +38,8 @@ function AboutUs() {
                 Energon as a key player in the petro product sector.
               </p>
             </div>
-            <div className="img">
-              <img src={about} alt="" />
+            <div className="img col">
+              <img src={energonOffice} alt="" />
             </div>
           </div>
         </div>
@@ -60,7 +61,7 @@ function AboutUs() {
                 <img src={integrity} alt="" />
                 <p>Integrity</p>
               </div>
-  
+
               <div className="row">
                 <img src={innovation} alt="" />
                 <p>Innovation</p>
@@ -92,10 +93,12 @@ function AboutUs() {
         </section>
         <section className="team">
           <div className="heading">
-            <h1>Our Team</h1>
+            <h1>Meet Energon's Visionary Founders</h1>
             <p>
-              Energon's services span various locations in India.Explore our
-              interactive map to discover our facilities and regional offices.
+              Here, we present our formidable founders who with their vision,
+              expertise, and relentless drive have sculpted Energon into the
+              industry powerhouse it is today. Explore their stories and their
+              integral roles in shaping our distinguished trajectory.
             </p>
           </div>
           <div className="members">
@@ -132,7 +135,9 @@ function AboutUs() {
             </div>
             <div className="Anand member-content">
               <h1>Mr.Anand</h1>
-              <p className="designation">Director and Chief Operations Officer</p>
+              <p className="designation">
+                Director and Chief Operations Officer
+              </p>
               <p>
                 Mr.Anand,our esteemed Director and Chief Operations Officer,is a
                 seasoned entrepreneur with a wealth of International business

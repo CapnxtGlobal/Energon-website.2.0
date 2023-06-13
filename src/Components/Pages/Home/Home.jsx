@@ -303,10 +303,9 @@ function Home() {
               </div>
               <div className="desc">
                 <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Nostrum et labore nesciunt accusantium ut. Ea quidem
-                  perspiciatis omnis ad assumenda, illo architecto eius voluptas
-                  beatae iusto cupiditate dolorem molestiae labore.
+                  Questions or inquiries? Don't hesitate to reach out. Complete
+                  the form, and let's connect. Your journey with Energon starts
+                  here!
                 </p>
               </div>
             </div>
