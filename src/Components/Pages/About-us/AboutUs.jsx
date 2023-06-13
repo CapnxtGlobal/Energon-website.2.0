@@ -135,7 +135,7 @@ function AboutUs() {
             <div className="Anand member-content">
               <h1>Mr.Anand</h1>
               <p className="designation">
-                Director and Chief Operations Officer
+                Co-founder & Director
               </p>
               <p>
                 Mr.Anand,our esteemed Director and Chief Operations Officer,is a
