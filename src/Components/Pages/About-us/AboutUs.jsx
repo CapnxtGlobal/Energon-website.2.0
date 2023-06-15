@@ -7,11 +7,13 @@ import innovation from "../../../Assets/icons/Innovation.svg";
 import customer from "../../../Assets/icons/Customer Focus.svg";
 import environment from "../../../Assets/icons/Environmental Responsibility.svg";
 import map from "../../../Assets/Images/map.png";
-import blackimage from "../../../Assets/Images/black-image.jpg";
 import energonOffice from "../../../Assets/Images/energon-office.png";
 import "../About-us/About-us.scss";
 import Contact from "../Contact/Contact";
-
+import jishnuDantu from "../../../Assets/Images/jishnu.png";
+import sripal from "../../../Assets/Images/sripal.png";
+import kishore from "../../../Assets/Images/kishore.png";
+import dummyPerson from "../../../Assets/Images/dummy-person.png";
 function AboutUs() {
   return (
     <>
@@ -109,34 +111,32 @@ function AboutUs() {
                 prestigious Indian Institute of Technology(IIT),where he
                 specialized in Chemical Engineering.Sripal's professional
                 journey spans over 15 fruitful years,during which he garnered
-                extensive experience in the petrochemical industry.His
+                extensive experience in the petroproduct industry.His
                 deep-rooted passion for the industry is reflected in his
                 hands-on approach and strategic leadership,which has
                 significantly contributed to Energon's growth and success.
               </p>
-              <p>
+              {/* <p>
                 Sripal's nuanced understanding of the intricate dynamics of the
-                petrochemical sector coupled with his visionary approach had led
+                petroproduct sector coupled with his visionary approach had led
                 to the development of innovative strategies that have
                 distinguished Energon in a competitive marketplace.His
                 tenacity,industry knowledge,and commitment to excellence
                 continue to inspire our team and drive the company towards new
                 frontiers of achievement.
-              </p>
+              </p> */}
             </div>
             <div className="image">
-              <img src={blackimage} alt="" />
+              <img src={sripal} alt="" />
             </div>
           </div>
           <div className="members">
             <div className="photo">
-              <img src={blackimage} alt="" />
+              <img src={dummyPerson} alt="" />
             </div>
             <div className="Anand member-content">
               <h1>Mr.Anand</h1>
-              <p className="designation">
-                Co-founder & Director
-              </p>
+              <p className="designation">Co-founder & Director</p>
               <p>
                 Mr.Anand,our esteemed Director and Chief Operations Officer,is a
                 seasoned entrepreneur with a wealth of International business
@@ -152,14 +152,14 @@ function AboutUs() {
                 Energon's global connections and broadening our operational
                 horizons.
               </p>
-              <p>
+              {/* <p>
                 As a leader,Anand's multi-faceted business expertise and
                 relentless pursuit of excellence guide our operational
                 efficiency,ensuring that Energon consistently delivers the
                 highest standrads of services.His entrepreneurial spirit fuels
                 innvation within our team and continues to drive Energon towards
-                greater heights in the petrochemical industry.
-              </p>
+                greater heights in the petroproduct industry.
+              </p> */}
             </div>
           </div>
           <div className="members">
@@ -177,7 +177,7 @@ function AboutUs() {
                 our business practices,regulatory compliance,and corporate
                 governance.
               </p>
-              <p>
+              {/* <p>
                 In addition to his legal prowess,Kishore has made significant
                 strides in the management of service and retail units.His
                 successful involvement with several startups exhibits his
@@ -187,10 +187,27 @@ function AboutUs() {
                 spirit not only add a unique dimension to our leadership but
                 also contribute significantly to our strategic planning and risk
                 management.
-              </p>
+              </p> */}
             </div>
             <div className="imag">
-              <img src={blackimage} alt="" />
+              <img src={kishore} alt="" />
+            </div>
+          </div>
+          <div className="members">
+            <div className="photo">
+              <img src={jishnuDantu} alt="" />
+            </div>
+            <div className="Anand member-content">
+              <h1>Mr. Jishnu Dantu</h1>
+              <p className="designation">Director</p>
+              <p>
+                Harnessing a formidable blend of technical expertise and
+                proficiency in AI, Jishnu Dantu stands as a pillar of innovation
+                within the Energon team. His comprehensive background in
+                Artificial Intelligence and machine learning, combined with an
+                intrinsic understanding of the petroproducts industry, positions
+                him uniquely in the space where technology meets energy.
+              </p>
             </div>
           </div>
         </section>

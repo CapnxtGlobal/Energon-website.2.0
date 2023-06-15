@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import home from "../../../Assets/Images/homeheaderimage.png";
-import about from '../../../Assets/Images/About-us.png'
+import about from "../../../Assets/Images/About-us.png";
 import Ploy from "../../../Assets/icons/Polybags.svg";
 import Bio_Cng from "../../../Assets/icons/Bio Cng Plant.svg";
 import Lpg from "../../../Assets/icons/LPG Bottling 2.svg";
@@ -22,6 +22,10 @@ import BulkBitumen from "../../../Assets/Images/Bulk Bitumen .png";
 import BioGasCNG from "../../../Assets/Images/Bio gas CNG.png";
 import Transportation from "../../../Assets/Images/Transportation.png";
 import polyBags from "../../../Assets/Images/polybags.jpg";
+import headSlide1 from "../../../Assets/Images/head-slide-1.png";
+import headSlide2 from "../../../Assets/Images/head-slide-2.png";
+import headSlide3 from "../../../Assets/Images/head-slide-3.png";
+import headSlide4 from "../../../Assets/Images/head-slide-4.png";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/navigation";
@@ -30,6 +34,13 @@ import { Autoplay, Navigation, Pagination, EffectCoverflow } from "swiper";
 
 function Home() {
   const clientLogos = [hp, hmel, indianOil, rfcl, hmwsb];
+  const headSlideImages = [
+    headSlide1,
+    headSlide2,
+    headSlide3,
+    headSlide4,
+    home,
+  ];
   const [formError, setFormError] = useState(null);
   const [formData, setFormData] = useState({
     name: "",
@@ -146,7 +157,7 @@ function Home() {
           <div className="tags">
             <h1>
               Powering the <br />
-              Petrochemical Industry
+              Petroproduct Industry
             </h1>
             <p>"Experience, Innovation, and Excellence since 2012"</p>
           </div>
@@ -160,15 +171,13 @@ function Home() {
               speed={800}
               loop={true}
             >
-              <SwiperSlide className="swiper-slide">
-                <img src={home} alt="" />
-              </SwiperSlide>
-              <SwiperSlide className="swiper-slide">
-                <img src={home} alt="" />
-              </SwiperSlide>
-              <SwiperSlide className="swiper-slide">
-                <img src={home} alt="" />
-              </SwiperSlide>
+              {headSlideImages.map((img, i) => {
+                return (
+                  <SwiperSlide className="swiper-slide">
+                    <img src={img} alt="" />
+                  </SwiperSlide>
+                );
+              })}
             </Swiper>
           </div>
         </div>
