@@ -1,9 +1,8 @@
 .Universal-About {
-  //background-color: whitesmoke;
   .About {
     h1 {
-      padding: 2vw;
-      padding-left: 7vw;  
+      padding: 4rem 0 2rem 0;
+      text-align: center;
       font-family: 'Oswald', sans-serif;
       font-weight: 500;
       font-size: 3vw;
@@ -354,6 +353,7 @@
       .members {
         margin: 1rem 0;
         flex-direction: column-reverse;
+        align-items: center;
         .member-content {
           width: 100%;
           padding: 0;
@@ -362,17 +362,24 @@
             font-weight: 500;
             font-size: 1.2rem;
             color: black;
+            text-align: center;
+          }
+          h1{
+            text-align: center;
           }
           p{
             font-size: .75rem;
             line-height: normal;
             width: 100%;
+            text-align: justify;
           }
         }
         .photo,
         .image,
         .imag,
         .imge {
+          width: 80%;
+          margin: 2rem 0;
           img {
             width: 100%;
             padding: 0;
