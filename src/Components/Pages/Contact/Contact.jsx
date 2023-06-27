@@ -222,7 +222,7 @@ function Contact() {
         )}
         <div className="mini-footer">
           <p>
-          © 2012 - {new Date().getFullYear()} Energon Group | All rights reserved  
+          © 2012 - {new Date().getFullYear()} Energon Group | All rights reserved  | Powered By Vaikhari Digital
           </p>
         </div>
       </div>
