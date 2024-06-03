@@ -200,7 +200,7 @@ function Service() {
               <div className="row">
                 <img src={bioCNGIcon} alt="" />
                 <h1 className="Value">
-                3000<span className="Metrics">MT</span>
+                100<span className="Metrics">MT</span>
                 </h1>
                 <p>BIO CNG per month </p>
               </div>
